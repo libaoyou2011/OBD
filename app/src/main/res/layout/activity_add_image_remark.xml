@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/title_and_button" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:textSize="@dimen/x28"
+        android:textColor="@color/textColor_333333"
+        android:textColorHint="@color/textColor_aeaeae"
+        android:gravity="start"
+        android:padding="@dimen/x30"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/x280"
+        android:layout_margin="@dimen/x30"
+        android:hint="请输入图片备注信息" />
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x28"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginRight="@dimen/x28"
+        android:layout_marginBottom="@dimen/x10"
+        android:background="@drawable/shape_product_list_bg"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/x22"
+        android:paddingTop="@dimen/x32"
+        android:paddingRight="@dimen/x8"
+        android:paddingBottom="@dimen/x32">
+
+        <com.baolong.obd.common.widget.XCRoundRectImageView
+            android:id="@+id/img_url"
+            android:layout_width="@dimen/x150"
+            android:layout_height="@dimen/x150"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_monitor_pic" />
+
+        <LinearLayout
+            android:id="@+id/ll_detail_code"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_url"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_code_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x28"
+                android:text="@string/monitor_station_item_code"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_16" />
+
+            <TextView
+                android:id="@+id/tv_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x8"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_weight="1.0"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_detail_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_detail_code"
+            android:layout_marginTop="@dimen/x12"
+            android:layout_toRightOf="@id/img_url"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_time_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x28"
+                android:text="@string/monitor_station_add_time"
+                android:textColor="@color/textLabel"
+                android:textSize="@dimen/font_14" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x8"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_weight="1.0"
+                android:text=""
+                android:textColor="@color/textLabel"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_detail_car_no"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_detail_time"
+            android:layout_marginTop="@dimen/x12"
+            android:layout_toRightOf="@+id/img_url"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_car_no_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x28"
+                android:text="@string/monitor_station_car_no"
+                android:textColor="@color/textLabel"
+                android:textSize="@dimen/font_14" />
+
+            <TextView
+                android:id="@+id/tv_car_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x8"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_weight="1.0"
+                android:text=""
+                android:textColor="@color/textLabel"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

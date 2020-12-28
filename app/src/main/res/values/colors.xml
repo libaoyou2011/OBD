@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#008577</color>-->
+    <!--<color name="colorPrimaryDark">#00574B</color>-->
+    <!--<color name="colorAccent">#D81B60</color>-->
+
+    <!--   00（透明）-–> FF（透明）   -->
+
+    <color name="colorPrimary">#ff4285f4</color>
+    <color name="colorPrimaryDark">#ff303f9f</color>
+    <color name="colorAccent">#ff4d7bfe</color>
+
+
+    <color name="activity_bg">#ffebebeb</color>
+    <color name="background">#fff7f8f9</color>
+    <color name="black">#ff000000</color>
+    <color name="bg_search_key">#e3e3e3</color>
+    <color name="status_bar">#f9134387</color>
+    <color name="task_chat_tab_bg">#ffdbdfe3</color>
+    <color name="task_chat_tab_text_normal">#ff96979a</color>
+    <color name="task_chat_tab_text_selected">#ff6d93fd</color>
+
+    <color name="textTitle">#ff4686f8</color>
+    <color name="textColor_f7f8f9">#fff7f8f9</color>
+    <color name="textColor_333333">#ff333333</color>
+    <color name="textColor_4A4A4A">#ff4a4a4a</color>
+    <color name="textColor_4A90E2">#ff4a90e2</color>
+    <color name="textColor_4d7bfe">#ff4d7bfe</color>
+    <color name="textColor_4d7bff">#ff4d7bff</color>
+    <color name="textColor_4d7bfe_8">#144d7bfe</color>
+    <color name="textColor_51c9c0">#ff51c9c0</color>
+    <color name="textColor_666666">#ff666666</color>
+    <color name="textColor_6e6e6e">#ff6e6e6e</color>
+    <color name="textColor_aeaeae">#ffaeaeae</color>
+    <color name="textColor_cccccc">#ffcccccc</color>
+    <color name="textColor_eab358">#ffeab358</color>
+    <color name="textColor_ff585c">#ffff585c</color>
+    <color name="textColor_ffbf17">#ffffbf17</color>
+    <color name="textColor_999999">#ff999999</color>
+    <color name="textColor_dbdbdb" >#ffdbdbdb</color>
+
+    <color name="textLabel">#ff999999</color>
+    <color name="textPrimary">#ff4686f8</color>
+    <color name="textSecond">#ff8d9ca9</color>
+    <color name="textSecondTitle">#ff666666</color>
+    <color name="text_green_times">#ff30f25a</color>
+    <color name="text_red_times">#fff23d30</color>
+    <color name="text_yellow_times">#ffeab625</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="red_600">#ffdd191d</color>
+    <color name="line_border">#ffeaeaea</color>
+    <color name="white">#ffffffff</color>
+
+    <color name="background_my">#EDEDED</color>
+
+    <color name="yellow_900">#fff57f17</color>
+
+    <color name="fresh_background">#444444</color>
+
+    <color name="publish_list_bg">#3B3B3B</color>
+
+    <color name="black_alpha_32">#20000000</color>
+
+    <color name="search_car_no">#ff4a4a4a</color>
+
+    <color name="gray">#ddd</color>
+    <color name="gray_item_corner_bg">#ffefefef</color>
+    <color name="gray_item_corner_bg_press">#ccc</color>
+    <color name="gray_item_solid_bg_press">#f0f0f0</color>
+
+    <color name="tab_indicator_color">#ff4686f8</color>
+
+
+
+</resources>

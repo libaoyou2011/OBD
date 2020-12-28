@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+    <View style="@style/order_new_line" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/background">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@id/tack_chat_appbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:elevation="@dimen/len_2">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tb_title_monitor_list"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x80"
+                android:background="@color/white"
+                app:tabBackground="@color/white"
+                app:tabIndicatorColor="@color/textColor_4d7bfe"
+                app:tabIndicatorHeight="@dimen/x4"
+                app:tabSelectedTextColor="@color/textColor_4d7bfe"
+                app:tabTextColor="@color/textColor_6e6e6e" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_monitor_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        </android.support.v4.view.ViewPager>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <include layout="@layout/title" />
+
+</LinearLayout>

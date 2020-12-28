@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/x110"
+    android:layout_alignParentBottom="true"
+    android:layout_marginTop="1.0dip"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+
+        <TextView
+            android:id="@+id/tv_main_monitor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/selector_main_chat_icon"
+            android:gravity="center"
+            android:text="@string/main_viewpager_monitor"
+            android:textColor="@drawable/selector_main_text_color"
+            android:textSize="@dimen/x20" />
+
+        <ImageView
+            android:id="@+id/red_point_main_bottom_monitor"
+            android:layout_width="@dimen/x15"
+            android:layout_height="@dimen/x15"
+            android:layout_alignRight="@id/tv_main_monitor"
+            android:src="@drawable/red_point"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+
+        <TextView
+            android:id="@+id/tv_black_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/selector_main_black_car"
+            android:gravity="center"
+            android:text="@string/main_black_car"
+            android:textColor="@drawable/selector_main_text_color"
+            android:textSize="@dimen/x20" />
+
+        <ImageView
+            android:id="@+id/red_point_black_car"
+            android:layout_width="@dimen/x15"
+            android:layout_height="@dimen/x15"
+            android:layout_alignRight="@id/tv_black_car"
+            android:src="@drawable/red_point"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+
+        <TextView
+            android:id="@+id/tv_main_execute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/selector_main_mission_icon"
+            android:gravity="center"
+            android:text="@string/main_viewpager_execute"
+            android:textColor="@drawable/selector_main_text_color"
+            android:textSize="@dimen/x20" />
+
+        <ImageView
+            android:id="@+id/red_point_main_bottom_task"
+            android:layout_width="@dimen/x15"
+            android:layout_height="@dimen/x15"
+            android:layout_alignRight="@id/tv_main_execute"
+            android:src="@drawable/red_point"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_main_work"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:drawableTop="@drawable/selector_main_work_icon"
+        android:gravity="center"
+        android:text="@string/main_viewpager_find"
+        android:textColor="@drawable/selector_main_text_color"
+        android:textSize="@dimen/x20" />
+
+    <TextView
+        android:id="@+id/tv_main_mine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:drawableTop="@drawable/selector_main_mine_icon"
+        android:gravity="center"
+        android:text="@string/main_viewpager_mine"
+        android:textColor="@drawable/selector_main_text_color"
+        android:textSize="@dimen/x20" />
+</LinearLayout>

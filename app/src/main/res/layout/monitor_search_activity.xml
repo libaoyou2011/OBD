@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <View style="@style/order_new_line" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:minHeight="@dimen/x90"
+        android:orientation="horizontal">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/x16"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_weight="1.0"
+            android:background="@drawable/bg_search_edit"
+            android:dropDownVerticalOffset="@dimen/x4"
+            android:hint="请输入要搜索的站点名称"
+            android:imeOptions="actionSearch"
+            android:padding="@dimen/x10"
+            android:paddingLeft="@dimen/x15"
+            android:paddingRight="@dimen/x15"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x10"
+            android:layout_marginRight="@dimen/x16"
+            android:background="@drawable/bg_search_button"
+            android:text="取消" />
+
+        <TextView
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x10"
+            android:layout_marginRight="@dimen/x16"
+            android:background="@drawable/bg_search_button"
+            android:text="搜索" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/has_data"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/x60"
+                android:layout_marginBottom="@dimen/x40"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:text="历史记录"
+                    android:textColor="@color/textSecondTitle"
+                    android:textSize="@dimen/font_16" />
+
+                <ImageView
+                    android:id="@+id/img_clear"
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="@dimen/x40"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x30"
+                    android:src="@drawable/delete" />
+
+            </RelativeLayout>
+
+
+            <com.nex3z.flowlayout.FlowLayout
+                android:id="@+id/search_history"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/x80"
+                android:paddingLeft="@dimen/x40"
+                android:paddingRight="@dimen/x40"
+                app:flMaxRows="4" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/no_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image_no_search_history" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x60"
+                android:gravity="center"
+                android:text="暂无搜索记录"
+                android:textColor="@color/textColor_aeaeae"
+                android:textSize="@dimen/x32" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

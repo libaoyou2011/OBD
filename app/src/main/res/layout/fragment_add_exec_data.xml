@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/x20">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x100"
+                android:layout_marginLeft="@dimen/x22"
+                android:layout_marginTop="@dimen/x30"
+                android:layout_marginRight="@dimen/x44"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/x10"
+                    android:gravity="right"
+                    android:minWidth="@dimen/x160"
+                    android:text="处理人:"
+                    android:textColor="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+
+                <EditText
+                    android:id="@+id/et_do_person"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:inputType="none"
+                    android:textColor="@color/textLabel"
+                    android:textColorHint="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginTop="@dimen/x8"
+                android:layout_marginBottom="@dimen/x8"
+                android:background="@color/line_border" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x100"
+                android:layout_marginLeft="@dimen/x22"
+                android:layout_marginRight="@dimen/x44"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/x10"
+                    android:gravity="right"
+                    android:minWidth="@dimen/x160"
+                    android:text="处理时间:"
+                    android:textColor="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+
+                <EditText
+                    android:id="@+id/et_do_time"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:inputType="none"
+                    android:textColor="@color/textLabel"
+                    android:textColorHint="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginTop="@dimen/x8"
+                android:layout_marginBottom="@dimen/x8"
+                android:background="@color/line_border" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x100"
+                android:layout_marginLeft="@dimen/x22"
+                android:layout_marginRight="@dimen/x44"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/x10"
+                    android:gravity="right"
+                    android:minWidth="@dimen/x160"
+                    android:text="处理地点:"
+                    android:textColor="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+
+                <EditText
+                    android:id="@+id/et_do_place"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:textColor="@color/textLabel"
+                    android:textColorHint="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginTop="@dimen/x8"
+                android:layout_marginBottom="@dimen/x8"
+                android:background="@color/line_border" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x100"
+                android:layout_marginLeft="@dimen/x22"
+                android:layout_marginRight="@dimen/x44"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/x10"
+                    android:gravity="right"
+                    android:minWidth="@dimen/x160"
+                    android:text="CO:"
+                    android:textColor="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+
+                <EditText
+                    android:id="@+id/et_co"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:textColor="@color/textLabel"
+                    android:textColorHint="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginTop="@dimen/x8"
+                android:layout_marginBottom="@dimen/x8"
+                android:background="@color/line_border" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x100"
+                android:layout_marginLeft="@dimen/x22"
+                android:layout_marginRight="@dimen/x44"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/x10"
+                    android:gravity="right"
+                    android:minWidth="@dimen/x160"
+                    android:text="CO2:"
+                    android:textColor="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+
+                <EditText
+                    android:id="@+id/et_co_two"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:textColor="@color/textLabel"
+                    android:textColorHint="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginTop="@dimen/x8"
+                android:layout_marginBottom="@dimen/x8"
+                android:background="@color/line_border" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x100"
+                android:layout_marginLeft="@dimen/x22"
+                android:layout_marginRight="@dimen/x44"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/x10"
+                    android:gravity="right"
+                    android:minWidth="@dimen/x160"
+                    android:text="HC:"
+                    android:textColor="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+
+                <EditText
+                    android:id="@+id/et_hc"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:textColor="@color/textLabel"
+                    android:textColorHint="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginTop="@dimen/x8"
+                android:layout_marginBottom="@dimen/x8"
+                android:background="@color/line_border" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x100"
+                android:layout_marginLeft="@dimen/x22"
+                android:layout_marginRight="@dimen/x44"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/x10"
+                    android:gravity="right"
+                    android:minWidth="@dimen/x160"
+                    android:text="NO:"
+                    android:textColor="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+
+                <EditText
+                    android:id="@+id/et_no"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginStart="@dimen/x10"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:textColor="@color/textLabel"
+                    android:textColorHint="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginTop="@dimen/x8"
+                android:layout_marginBottom="@dimen/x8"
+                android:background="@color/line_border" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x100"
+                android:layout_marginLeft="@dimen/x22"
+                android:layout_marginRight="@dimen/x44"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/x10"
+                    android:gravity="right"
+                    android:minWidth="@dimen/x160"
+                    android:text="烟度:"
+                    android:textColor="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+
+                <EditText
+                    android:id="@+id/et_yd"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:textColor="@color/textLabel"
+                    android:textColorHint="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginTop="@dimen/x8"
+                android:layout_marginBottom="@dimen/x8"
+                android:background="@color/line_border" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x100"
+                android:layout_marginLeft="@dimen/x22"
+                android:layout_marginRight="@dimen/x44"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/x10"
+                    android:gravity="right"
+                    android:minWidth="@dimen/x160"
+                    android:text="不透明度:"
+                    android:textColor="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+
+                <EditText
+                    android:id="@+id/et_btgd"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:textColor="@color/textLabel"
+                    android:textColorHint="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginTop="@dimen/x8"
+                android:layout_marginBottom="@dimen/x8"
+                android:background="@color/line_border" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x22"
+                android:layout_marginRight="@dimen/x20"
+                android:gravity="top"
+                android:minHeight="@dimen/x300"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/x10"
+                    android:gravity="right"
+                    android:minWidth="@dimen/x160"
+                    android:text="处理说明:"
+                    android:textColor="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+
+                <EditText
+                    android:id="@+id/et_remark"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:background="@drawable/shape_edit_bg"
+                    android:gravity="center|left|top"
+                    android:hint="请输入"
+                    android:inputType="textMultiLine"
+                    android:maxLength="800"
+                    android:minLines="4"
+                    android:padding="10.0dip"
+                    android:paddingLeft="10.0dip"
+                    android:singleLine="false"
+                    android:textColor="@color/textLabel"
+                    android:textColorHint="@color/textLabel"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginTop="@dimen/x8"
+                android:layout_marginBottom="@dimen/x8"
+                android:background="@color/line_border" />
+
+            <TextView
+                android:id="@+id/txt_add_attachment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginTop="@dimen/x30"
+                android:background="@color/white"
+                android:clickable="true"
+                android:drawableLeft="@mipmap/ic_attachment"
+                android:drawablePadding="@dimen/x30"
+                android:focusable="true"
+                android:text="@string/text_add_attachment"
+                android:textColor="@color/textColor_4d7bfe"
+                android:textSize="@dimen/x30" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/x30"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/x64"
+                android:paddingRight="@dimen/x64">
+
+                <LinearLayout
+                    android:id="@+id/ly_image_attach"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="@dimen/x20"
+                    android:layout_marginBottom="@dimen/x20"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_image"
+                        android:layout_width="@dimen/x60"
+                        android:layout_height="@dimen/x60"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/tv_image_attach_amount"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:paddingLeft="@dimen/x10"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_file_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/x28"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/btn_commit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x40"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_marginRight="@dimen/x40"
+            android:layout_marginBottom="@dimen/x30"
+            android:background="@drawable/round_corner_blue"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_18" />
+    </LinearLayout>
+</LinearLayout>

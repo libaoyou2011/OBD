@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <Button
+        android:id="@+id/choose_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/x30"
+        android:layout_marginEnd="@dimen/x30"
+        android:layout_marginBottom="@dimen/x10"
+        android:background="@drawable/bg_publish_photos"
+        android:elevation="4dp"
+        android:text="选取图片"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/publish_choose_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginEnd="@dimen/x30"
+        android:layout_marginBottom="@dimen/x20"
+        android:background="@drawable/bg_publish_photos"
+        android:elevation="4dp"
+        android:text="发布图片"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"></android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

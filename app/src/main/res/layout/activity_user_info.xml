@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_my"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <include layout="@layout/title" />
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x50"
+        android:layout_marginBottom="@dimen/x2"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/x15"
+            android:paddingLeft="@dimen/x20"
+            android:paddingTop="@dimen/x30"
+            android:paddingBottom="@dimen/x30"
+            android:layout_weight="1"
+            android:text="@string/user_info_name"
+            android:textColor="@color/textColor_666666"
+            android:textAlignment="viewEnd"/>
+
+        <EditText
+            android:id="@+id/et_user_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/x15"
+            android:paddingLeft="@dimen/x10"
+            android:paddingTop="@dimen/x30"
+            android:paddingRight="@dimen/x10"
+            android:paddingBottom="@dimen/x30"
+            android:layout_weight="3"
+            android:text=""
+            android:textSize="@dimen/font_14"
+            android:textColor="@color/textColor_666666"
+            android:background="@null" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/x2"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_user_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/x15"
+            android:paddingLeft="@dimen/x20"
+            android:paddingTop="@dimen/x30"
+            android:paddingBottom="@dimen/x30"
+            android:layout_weight="1"
+            android:text="@string/user_info_phone"
+            android:textColor="@color/textColor_666666"
+            android:textAlignment="viewEnd"/>
+
+        <EditText
+            android:id="@+id/et_user_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/x15"
+            android:paddingLeft="@dimen/x10"
+            android:paddingTop="@dimen/x30"
+            android:paddingRight="@dimen/x10"
+            android:paddingBottom="@dimen/x30"
+            android:layout_weight="3"
+            android:text=""
+            android:textSize="@dimen/font_14"
+            android:textColor="@color/textColor_666666"
+            android:background="@null" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/x2"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_user_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/x15"
+            android:paddingLeft="@dimen/x20"
+            android:paddingTop="@dimen/x30"
+            android:paddingBottom="@dimen/x30"
+            android:layout_weight="1"
+            android:text="@string/user_info_email"
+            android:textColor="@color/textColor_666666"
+            android:textAlignment="viewEnd"/>
+
+        <EditText
+            android:id="@+id/et_user_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/x15"
+            android:paddingLeft="@dimen/x10"
+            android:paddingTop="@dimen/x30"
+            android:paddingRight="@dimen/x10"
+            android:paddingBottom="@dimen/x30"
+            android:layout_weight="3"
+            android:text=""
+            android:textSize="@dimen/font_14"
+            android:textColor="@color/textColor_666666"
+            android:background="@null" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/x2"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_user_gender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/x15"
+            android:paddingLeft="@dimen/x20"
+            android:paddingTop="@dimen/x30"
+            android:paddingBottom="@dimen/x30"
+            android:layout_weight="1"
+            android:text="@string/user_info_gender"
+            android:textColor="@color/textColor_666666"
+            android:textAlignment="viewEnd"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup_gender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:paddingTop="@dimen/x15"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <RadioButton
+                android:id="@+id/radioButton_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:checked="true"
+                android:text="男" />
+            <RadioButton
+                android:id="@+id/radioButton_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x30"
+                android:layout_gravity="center_horizontal"
+                android:checked="false"
+                android:text="女" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/bt_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x50"
+        android:text="@string/user_info_save"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_solid_blue_bg"/>
+
+
+</LinearLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_my"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/x20"
+        android:paddingBottom="@dimen/x20">
+
+        <ImageView
+            android:layout_width="@dimen/x96"
+            android:layout_height="@dimen/x96"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@mipmap/ic_my_touxiang" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_marginBottom="@dimen/x20"
+            android:text="用户名"
+            android:textColor="@color/textColor_333333"
+            android:textSize="@dimen/font_16" />
+
+        <TextView
+            android:id="@+id/tv_station_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x15"
+            android:text="瑶海监测站"
+            android:textColor="@color/textColor_666666"
+            android:textSize="@dimen/font_16"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@drawable/line_horizontal"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/tv_user_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_my_xinxi"
+            android:drawablePadding="@dimen/x15"
+            android:paddingLeft="@dimen/x50"
+            android:paddingTop="@dimen/x30"
+            android:paddingRight="@dimen/x60"
+            android:paddingBottom="@dimen/x30"
+            android:text="我的信息"
+            android:textColor="@color/textColor_666666"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/tv_choose_photos"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_my_info"
+            android:drawablePadding="@dimen/x15"
+            android:paddingLeft="@dimen/x50"
+            android:paddingTop="@dimen/x30"
+            android:paddingRight="@dimen/x60"
+            android:paddingBottom="@dimen/x30"
+            android:text="拍照处理上传"
+            android:visibility="gone"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/tv_station_set"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_my_jiancezhan"
+            android:drawablePadding="@dimen/x15"
+            android:paddingLeft="@dimen/x50"
+            android:paddingTop="@dimen/x30"
+            android:paddingRight="@dimen/x60"
+            android:paddingBottom="@dimen/x30"
+            android:text="监测站设置"
+            android:gravity="center_vertical"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_authentication"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_my_mima"
+            android:drawablePadding="@dimen/x15"
+            android:paddingLeft="@dimen/x50"
+            android:paddingTop="@dimen/x30"
+            android:paddingRight="@dimen/x60"
+            android:paddingBottom="@dimen/x30"
+            android:text="修改密码"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/tv_current_server"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/x15"
+            android:paddingLeft="@dimen/x50"
+            android:paddingTop="@dimen/x30"
+            android:paddingRight="@dimen/x60"
+            android:paddingBottom="@dimen/x30"
+            android:text="当前服务地址:"
+            android:gravity="center_vertical"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_current_version"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_my_version"
+            android:drawablePadding="@dimen/x15"
+            android:paddingLeft="@dimen/x50"
+            android:paddingTop="@dimen/x30"
+            android:paddingRight="@dimen/x60"
+            android:paddingBottom="@dimen/x30"
+            android:text="当前版本"
+            android:gravity="center_vertical"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_send"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/x50"
+            android:paddingTop="@dimen/x30"
+            android:paddingRight="@dimen/x60"
+            android:paddingBottom="@dimen/x30">
+
+            <TextView
+                android:id="@+id/tv_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_my_send"
+                android:drawablePadding="@dimen/x15"
+                android:text="监管发送设置"
+                android:gravity="center_vertical"/>
+
+            <Switch
+                android:id="@+id/switch_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x26"
+                android:switchMinWidth="40dp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x10"
+        android:layout_marginTop="@dimen/x80"
+        android:layout_marginEnd="@dimen/x10"
+        android:divider="@drawable/line_horizontal"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/tv_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_blue_bg"
+            android:gravity="center"
+            android:paddingTop="@dimen/x20"
+            android:paddingBottom="@dimen/x20"
+            android:text="退出登录"
+            android:textColor="@color/textColor_666666"
+            android:textSize="@dimen/x30" />
+    </LinearLayout>
+
+</LinearLayout>

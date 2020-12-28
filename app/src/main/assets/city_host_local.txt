@@ -1,0 +1,18 @@
+[
+    {
+        "cityName":"安徽宝龙环保有限公司_外网",
+        "hostUrl":"http://36.7.144.182:8181",
+        "enable":true,
+        "IsCheck":false,
+        "addressCenterLat":"31.8684804238",
+        "addressCenterLng":"117.1766054997"
+    },
+    {
+        "cityName":"安徽宝龙环保有限公司_内网",
+        "hostUrl":"http://10.10.10.243:8181",
+        "enable":true,
+        "IsCheck":false,
+        "addressCenterLat":"31.8684804238",
+        "addressCenterLng":"117.1766054997"
+    }
+]

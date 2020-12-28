@@ -1,0 +1,176 @@
+{
+  "news": {
+    "pageNum": 3,
+    "pageSize": 3,
+    "backIcon": "assets://icons/back_service_news_color.png",
+    "tags": [
+      "决策产品",
+      "头条",
+      "全部"
+    ]
+  },
+  "products": [
+    {
+      "title": "实况监测",
+      "color": "#376fd0",
+      "backIcon": "assets://icons/back_monitor_color.png",
+      "rows": 2,
+      "cols": 3,
+      "items": [
+        {
+          "title": "车量比重",
+          "desc": "车量比重",
+          "code": "CarRate",
+          "icon": "analysis_car_type",
+          "activity": "/modules/analyze/dataAnalyzeApp",
+          "params": {
+          },
+          "iconSize": 36,
+          "updateCode": 50
+        },
+        {
+          "title": "车流量统计",
+          "desc": "车流量统计",
+          "code": "CarNum",
+          "icon": "analysis_car_flow",
+          "activity": "/modules/analyze/carFlowApp",
+          "params": {
+          },
+          "iconSize": 36,
+          "updateCode": 63
+        },
+        {
+          "title": "有效率统计",
+          "desc": "有效率统计",
+          "code": "rain",
+          "icon": "analysis_effiect",
+          "activity": "/modules/analyze/app/dataValidApp",
+          "params": {
+          },
+          "iconSize": 36,
+          "updateCode": 50
+        },
+        {
+          "title": "违章查询",
+          "desc": "违章查询",
+          "code": "rain",
+          "icon": "analysis_rule_break",
+          "activity": "cn.nmc.weatherapp.activity.product.ProductMonitorRainMapActivity",
+          "params": {
+          },
+          "iconSize": 36,
+          "updateCode": 50
+        },
+        {
+          "title": "尾气与空气质量",
+          "desc": "尾气与空气质量",
+          "code": "temperature",
+          "icon": "analysis_air",
+          "activity": "/analyze/airQuality/app/draw",
+          "params": {
+          },
+          "iconSize": 36,
+          "updateCode": 63
+        },
+        {
+          "title": "AQI与车流量",
+          "desc": "AQI与车流量",
+          "code": "temperature",
+          "icon": "analysis_aqi",
+          "activity": "/analyze/airQuality/app/carFlowAndAqi",
+          "params": {
+          },
+          "iconSize": 36,
+          "updateCode": 63
+        },
+        {
+          "title": "分时段对比",
+          "desc": "分时段对比",
+          "code": "temperature",
+          "icon": "analysis_tim_part",
+          "activity": "cn.nmc.weatherapp.activity.product.ProductMonitorTemperatureMapActivity",
+          "params": {
+          },
+          "iconSize": 36,
+          "updateCode": 63
+        },
+        {
+          "title": "环境空气质量",
+          "desc": "环境空气质量",
+          "code": "temperature",
+          "icon": "analysis_atmosphere",
+          "activity": "/analyze/airQuality/app/draw",
+          "params": {
+          },
+          "iconSize": 36,
+          "updateCode": 63
+        }
+      ]
+    },
+    {
+      "title": "预警预报",
+      "color": "#2ab72d",
+      "backIcon": "assets://icons/back_forecast_color.png",
+      "rows": 1,
+      "cols": 4,
+      "items": [
+        {
+          "title": " 降水 ",
+          "desc": "降水",
+          "code": "forecast_rain",
+          "icon": "https://mds.nmc.cn/rain_color__forecast.png",
+          "activity": "cn.nmc.weatherapp.activity.product.ProductForecastRainActivity",
+          "params": {
+            "subject": "1",
+            "id": "1"
+          },
+          "iconSize": 36,
+          "updateCode": -1
+        },
+        {
+          "title": "环境",
+          "desc": "环境",
+          "code": "forecast_environment",
+          "icon": "https://mds.nmc.cn/product_env_color__forecast.png",
+          "activity": "cn.nmc.weatherapp.activity.product.ProductWarningEnvActivity",
+          "params": {
+            "subject": "1",
+            "id": "1",
+            "timeRange": [
+              4,
+              16
+            ]
+          },
+          "iconSize": 36,
+          "updateCode": -1
+        },
+        {
+          "title": "强天气",
+          "desc": "强天气",
+          "code": "forecast_forceWeather",
+          "icon": "https://mds.nmc.cn/product_strong_weather_color_forecast.png",
+          "activity": "cn.nmc.weatherapp.activity.product.ProductWarningSpcActivity",
+          "params": {
+            "subject": "1",
+            "id": "1"
+          },
+          "iconSize": 36,
+          "updateCode": -1
+        },
+        {
+          "title": "预警信号",
+          "desc": "预警信号",
+          "code": "forecast_single",
+          "icon": "assets://icons/warning_signal_normal_color.png",
+          "activity": "cn.nmc.weatherapp.activity.product.ProductWarningSignalActivity",
+          "params": {
+            "subject": "1",
+            "id": "1"
+          },
+          "iconSize": 36,
+          "updateCode": -1
+        }
+      ]
+    }
+  ]
+}

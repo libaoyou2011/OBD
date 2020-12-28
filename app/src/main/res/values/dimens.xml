@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="x1">0.5dip</dimen>
+    <dimen name="x2">1.0dip</dimen>
+    <dimen name="x4">2.0dip</dimen>
+    <dimen name="x6">3.0dip</dimen>
+    <dimen name="x8">4.0dip</dimen>
+    <dimen name="x10">5.0dip</dimen>
+    <dimen name="x12">6.0dip</dimen>
+    <dimen name="x14">7.0dip</dimen>
+    <dimen name="x15">7.5dip</dimen>
+    <dimen name="x16">8.0dip</dimen>
+    <dimen name="x18">9.0dip</dimen>
+    <dimen name="x20">10.0dip</dimen>
+    <dimen name="x22">11.0dip</dimen>
+    <dimen name="x26">13.0dip</dimen>
+    <dimen name="x28">14.0dip</dimen>
+    <dimen name="x24">12.0dip</dimen>
+    <dimen name="x30">15.0dip</dimen>
+    <dimen name="x32">16.0dip</dimen>
+    <dimen name="x35">17.5dip</dimen>
+    <dimen name="x36">18.0dip</dimen>
+    <dimen name="x40">20.0dip</dimen>
+    <dimen name="x42">21.0dip</dimen>
+    <dimen name="x44">22.0dip</dimen>
+    <dimen name="x48">24.0dip</dimen>
+    <dimen name="x50">25.0dip</dimen>
+    <dimen name="x60">30.0dip</dimen>
+    <dimen name="x62">31.0dip</dimen>
+    <dimen name="x64">32.0dip</dimen>
+    <dimen name="x66">33.0dip</dimen>
+    <dimen name="x69">34.5dip</dimen>
+    <dimen name="x70">35.0dip</dimen>
+    <dimen name="x80">40.0dip</dimen>
+    <dimen name="x88">44.0dip</dimen>
+    <dimen name="x90">45.0dip</dimen>
+    <dimen name="x96">48.0dip</dimen>
+    <dimen name="x100">50.0dip</dimen>
+    <dimen name="x130">65.0dip</dimen>
+    <dimen name="x110">55.0dip</dimen>
+    <dimen name="x116">58.0dip</dimen>
+    <dimen name="x150">75.0dip</dimen>
+    <dimen name="x174">87.0dip</dimen>
+    <dimen name="x200">100.0dip</dimen>
+    <dimen name="x160">80.0dip</dimen>
+    <dimen name="x240">120.0dip</dimen>
+    <dimen name="x280">140.0dip</dimen>
+    <dimen name="x300">150.0dip</dimen>
+    <dimen name="x400">200.0dip</dimen>
+    <dimen name="x420">210.0dip</dimen>
+    <dimen name="x450">225.0dip</dimen>
+    <dimen name="x500">250.0dip</dimen>
+    <dimen name="x548">274.0dip</dimen>
+
+    <dimen name="x600">300.0dip</dimen>
+
+
+    <dimen name="font_10">10.0sp</dimen>
+    <dimen name="font_12">12.0sp</dimen>
+    <dimen name="font_14">14.0sp</dimen>
+    <dimen name="font_16">16.0sp</dimen>
+    <dimen name="font_18">18.0sp</dimen>
+    <dimen name="font_34">34.0sp</dimen>
+
+
+
+    <dimen name="len_6">6.0dip</dimen>
+    <dimen name="len_3">3.0dip</dimen>
+
+    <dimen name="len_2">2.0dip</dimen>
+    <dimen name="len_16">16.0dip</dimen>
+    <dimen name="len_20">20.0dip</dimen>
+    <dimen name="len_44">44.0dip</dimen>
+    <dimen name="len_48">48.0dip</dimen>
+    <dimen name="len_100">100.0dip</dimen>
+
+
+</resources>

@@ -1,0 +1,141 @@
+<resources>
+    <string name="app_name">重柴监管</string>
+    <string name="app_full_name">重柴尾气排放监管平台</string>
+
+    <string name="appbar_scrolling_view_behavior">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+
+    <string name="main_viewpager_monitor">监测</string>
+    <string name="main_black_car">黑烟车</string>
+    <string name="main_viewpager_execute">超标车</string>
+    <string name="main_viewpager_work">查车</string>
+    <string name="main_viewpager_analysis">统计</string>
+    <string name="main_viewpager_find">查询</string>
+    <string name="main_viewpager_mine">我的</string>
+
+    <string name="title_assist_permissions">授予权限</string>
+
+    <string name="label_permission_network">网络访问权限</string>
+    <string name="label_permission_network_desc">用于即时通讯传输</string>
+    <string name="label_permission_read">读取文件权限</string>
+    <string name="label_permission_read_desc">用于设置头像与发送图片</string>
+    <string name="label_permission_write">写入权限</string>
+    <string name="label_permission_write_desc">用于日志存储</string>
+    <string name="label_permission_record_audio">拨打电话权限</string>
+    <string name="label_permission_record_audio_desc">用于通讯录直接拨打电话</string>
+
+    <string name="monitor_search_hint">输入监测点名称</string>
+    <string name="monitor_search_station">监测点搜索</string>
+    <string name="monitor_station_code">站点编号:</string>
+    <string name="monitor_station_name">站点名称:</string>
+    <string name="monitor_station_sum">本日监测总数:</string>
+    <string name="monitor_station_unit">次</string>
+    <string name="monitor_station_cb">超标:</string>
+    <string name="monitor_station_average">5分钟内平均速度:</string>
+    <string name="monitor_station_location_type">点位类型:</string>
+    <string name="monitor_station_run_direction">车流方向:</string>
+    <string name="monitor_station_cds">车道数:</string>
+    <string name="monitor_station_add_date">运行日期:</string>
+    <string name="monitor_station_video">查看视频:</string>
+    <string name="monitor_station_list_title">监测列表</string>
+    <string name="monitor_station_location_map">定位到地图</string>
+    <string name="monitor_station_remake">自动校准</string>
+    <string name="monitor_station_remake_tips">已发送到设备</string>
+
+
+    <string name="monitor_msg_demo">今日监测量:%s次,超标%s次,超标率%s</string>
+    <string name="monitor_map_bz">标准</string>
+    <string name="monitor_map_kq">AQI</string>
+    <string name="monitor_map_lk">路况</string>
+    <string name="monitor_map_tq">天气</string>
+
+    <string name="data_empty">暂无数据</string>
+    <string name="monitor_station_add_time">监测时间:</string>
+    <string name="monitor_station_car_no">车牌号:</string>
+    <string name="monitor_station_item_code">记录编号:</string>
+    <string name="monitor_station_detail_title">监测记录</string>
+
+    <string name="monitor_station_warn_title">预警信息</string>
+    <string name="monitor_station_warn_title1">设备状态预警</string>
+
+
+    <string name="black_car_title">黑烟车数据审核</string>
+    <string name="black_car_filter_time_start">开始时间</string>
+    <string name="black_car_filter_time_end">结束时间</string>
+    <string name="black_car_filter_clear_all">清空</string>
+    <string name="black_car_filter_confirm">确定</string>
+
+
+    <string name="execution_code">记录编号:</string>
+    <string name="execution_add_time">监测时间:</string>
+    <string name="execution_car_no">车牌号:</string>
+    <string name="black_car_tv">是否黑烟车:</string>
+    <string name="execution_look">查看</string>
+    <string name="execution_do">处理</string>
+    <string name="execution_sh">审核</string>
+
+    <string name="work_cancel">取消</string>
+    <string name="work_confirm">确认</string>
+
+    <string name="updata_cancel">稍后再说</string>
+    <string name="updata_ok">立即更新</string>
+    <string name="updata_info_version">最新版本：V%s</string>
+
+    <string name="updata_info_title">更新内容：</string>
+    <string name="updata_info_size">新版本大小：%s</string>
+
+    <string name="login_get_token">正在获取授权...</string>
+    <string name="login_get_token_again">重新获取授权</string>
+    <string name="login_set_server_url">设置服务器地址</string>
+    <string name="login_phone_hint">输入账号</string>
+    <string name="login_pwd_hint">输入密码</string>
+    <string name="login_forget_pwd">忘记密码</string>
+    <string name="login_fail">登录失败</string>
+
+    <string name="my_station_list_title">监测站列表</string>
+    <string name="my_station_code">监测站编号:</string>
+    <string name="my_station_name">监测站名称:</string>
+    <string name="my_station_type">监测站类型:</string>
+
+    <string name="my_publish_photos_title">拍照上传</string>
+    <string name="permission_request_denied">需要相应的权限</string>
+    <string name="error_gif">长宽不小于 %1$dpx，且大小不超过 %2$sM。</string>
+    <string name="error_original">大小不超过 %1$sM。</string>
+
+    <string name="my_change_password_title">修改密码</string>
+    <string name="my_older_password_label">旧密码：</string>
+    <string name="my_older_password_tip">若包含字母，请注意区分大小写</string>
+    <string name="my_new_password_label">新密码：</string>
+    <string name="my_change_password_confirm">确定</string>
+
+    <string name="user_info_title">我的信息</string>
+    <string name="user_info_name">用户名称：</string>
+    <string name="user_info_phone">手机号码：</string>
+    <string name="user_info_email">邮箱：</string>
+    <string name="user_info_gender">性别：</string>
+    <string name="user_info_save">保存</string>
+
+    <string name="execution_main_title">超标车</string>
+    <string name="execution_add_title">处理</string>
+    <string name="text_add_attachment">添加附件</string>
+
+    <string name="car_no_main_title">车辆查询</string>
+    <string name="car_clear_search_history">清除查询纪录</string>
+    <string name="car_no_info_title">车牌号</string>
+    <string name="car_check_no_pass">未通过</string>
+    <string name="car_check_pass">通过</string>
+
+    <string name="find_huanjian_detail_title">环检详情</string>
+
+    <string name="car_yc_buhege">不合格</string>
+    <string name="car_yc_hege">合格</string>
+    <string name="car_yc_wuxiao">无效</string>
+
+
+    <string name="analysis_title">查询与统计分析</string>
+
+    <string name="telemetry_title">遥测数据</string>
+
+    <string name="monitor_video_title">视频预览</string>
+
+
+</resources>

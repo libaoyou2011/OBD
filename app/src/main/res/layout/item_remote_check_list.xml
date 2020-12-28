@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginRight="@dimen/x20"
+        android:layout_marginBottom="@dimen/x10"
+        android:background="@drawable/shape_corner_list_bg"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/x22"
+        android:paddingTop="@dimen/x32"
+        android:paddingRight="@dimen/x8"
+        android:paddingBottom="@dimen/x32">
+
+        <LinearLayout
+            android:id="@+id/ll_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <com.baolong.obd.common.widget.XCRoundRectImageView
+                android:id="@+id/img_url"
+                android:layout_width="@dimen/x150"
+                android:layout_height="@dimen/x150"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_monitor_pic" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_status"
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/x62"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x12"
+            android:background="@drawable/btn_orange_bg"
+            android:scaleType="centerCrop"
+            android:text="@string/car_check_pass"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_12" />
+
+        <LinearLayout
+            android:id="@+id/ll_detail_code"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/btn_status"
+            android:layout_toRightOf="@id/ll_order"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:text="记录编号:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_16" />
+
+            <TextView
+                android:id="@+id/tv_test_no"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x8"
+                android:layout_marginRight="@dimen/x20"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_detail_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_detail_code"
+            android:layout_marginTop="@dimen/x12"
+            android:layout_toLeftOf="@id/btn_status"
+            android:layout_toRightOf="@id/ll_order"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_time_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:text="监测时间:"
+                android:textColor="@color/textLabel"
+                android:textSize="@dimen/font_14" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x8"
+                android:layout_marginRight="@dimen/x20"
+                android:textColor="@color/textLabel"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_detail_car_no"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_detail_time"
+            android:layout_marginTop="@dimen/x12"
+            android:layout_toLeftOf="@id/btn_status"
+            android:layout_toRightOf="@id/ll_order"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_car_no_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:text="监测站点:"
+                android:textColor="@color/textLabel"
+                android:textSize="@dimen/font_14" />
+
+            <TextView
+                android:id="@+id/tv_station_no"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x8"
+                android:layout_marginRight="@dimen/x20"
+                android:textColor="@color/textLabel"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

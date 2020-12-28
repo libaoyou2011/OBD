@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.baolong.obd.blackcar.utils.ExpandGridView
+        android:id="@+id/gv_category"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:numColumns="2" />
+
+    <EditText
+        android:id="@+id/et_filter_value"
+        android:layout_width="@dimen/x200"
+        android:layout_height="@dimen/x70"
+        android:layout_marginStart="@dimen/x14"
+        android:layout_marginTop="@dimen/x14"
+        android:layout_marginBottom="@dimen/x14"
+        android:background="@drawable/shape_edit_bg"
+        android:textSize="@dimen/font_14"
+        android:textAlignment="center"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:imeOptions="actionDone"
+        android:paddingLeft="@dimen/x14"
+        android:paddingRight="@dimen/x14" />
+    <!--android:inputType="numberDecimal"-->
+
+
+    <LinearLayout
+        android:id="@+id/ll_filter_Time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+        <TextView
+            android:id="@+id/et_filter_value_begin"
+            android:layout_width="@dimen/x200"
+            android:layout_height="@dimen/x70"
+            android:layout_marginStart="@dimen/x14"
+            android:layout_marginTop="@dimen/x14"
+            android:layout_marginBottom="@dimen/x14"
+            android:background="@drawable/shape_edit_bg"
+            android:hint="@string/black_car_filter_time_start"
+            android:textSize="@dimen/font_12"
+            android:gravity="center"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:imeOptions="actionDone"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="—"
+            android:layout_marginStart="@dimen/x14"/>
+        <TextView
+            android:id="@+id/et_filter_value_end"
+            android:layout_width="@dimen/x200"
+            android:layout_height="@dimen/x70"
+            android:layout_marginStart="@dimen/x14"
+            android:layout_marginTop="@dimen/x14"
+            android:layout_marginBottom="@dimen/x14"
+            android:background="@drawable/shape_edit_bg"
+            android:hint="@string/black_car_filter_time_end"
+            android:textSize="@dimen/font_12"
+            android:gravity="center"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:paddingLeft="@dimen/x14"
+            android:paddingRight="@dimen/x14" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

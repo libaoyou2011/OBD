@@ -1,0 +1,68 @@
+﻿{
+	"items": [{
+            "key": "jlbh",
+            "name": "记录编号",
+            "value": ""
+        },
+	    {
+			"key": "dwbh",
+			"name": "点位编号",
+			"value": ""
+		},
+		{
+			"key": "jcrq",
+			"name": "监测时间",
+			"value": ""
+		},
+		{
+			"key": "cdxh",
+			"name": "车道序号",
+			"value": ""
+		},
+		{
+			"key": "cdpd",
+			"name": "车道坡度",
+			"value": ""
+		},
+		{
+			"key": "hphm",
+			"name": "号牌号码",
+			"value": ""
+		},
+		{
+			"key": "cpys",
+			"name": "车牌颜色",
+			"value": ""
+		},
+		{
+			"key": "btgdxz",
+			"name": "K(不透光烟度)限值",
+			"value": ""
+		},
+		{
+			"key": "btgdjg",
+			"name": "K(不透光烟度)结果",
+			"value": ""
+		},
+		{
+			"key": "hdxz",
+			"name": "烟度(林格曼黑度)限值",
+			"value": ""
+		},
+		{
+			"key": "lgmhd",
+			"name": "烟度(林格曼黑度)结果",
+			"value": ""
+		},
+		{
+        	"key": "sbzxd",
+        	"name": "识别置信度",
+        	"value": ""
+        },
+        {
+        	"key": "isBlackCar",
+        	"name": "是否黑烟车",
+        	"value": ""
+        }
+	]
+}

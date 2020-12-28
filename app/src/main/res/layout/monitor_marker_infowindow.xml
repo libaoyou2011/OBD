@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/x12"
+    android:paddingEnd="@dimen/x12"
+    android:paddingTop="@dimen/x12"
+    android:paddingBottom="@dimen/x20"
+    android:background="@drawable/bonuspack_bubble">
+
+    <TextView
+        android:id="@+id/txt_station_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/x8"
+        android:layout_marginBottom="@dimen/x4"
+        android:textColor="@color/textSecondTitle"
+        android:textSize="@dimen/font_16" />
+    <TextView
+        android:id="@+id/txt_station_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/txt_station_name"
+        app:layout_constraintTop_toTopOf="@id/txt_station_name"
+        android:layout_marginStart="@dimen/x32"
+        android:textColor="@color/textLabel"
+        android:textSize="@dimen/font_16" />
+
+
+    <TextView
+        android:id="@+id/label_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/txt_station_name"
+        app:layout_constraintTop_toBottomOf="@id/txt_station_name"
+        android:layout_marginTop="@dimen/x8"
+        android:layout_marginBottom="@dimen/x4"
+        android:text="@string/monitor_station_sum"
+        android:textColor="@color/textLabel"
+        android:textSize="@dimen/font_14" />
+    <TextView
+        android:id="@+id/txt_monitor_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/label_sum"
+        app:layout_constraintTop_toTopOf="@+id/label_sum"
+        android:layout_marginStart="@dimen/x8"
+        android:textColor="@color/text_yellow_times"
+        android:textSize="@dimen/font_14" />
+    <TextView
+        android:id="@+id/label_sum_per"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/txt_monitor_sum"
+        app:layout_constraintTop_toTopOf="@+id/label_sum"
+        android:layout_marginStart="@dimen/x2"
+        android:text="@string/monitor_station_unit"
+        android:textColor="@color/textLabel"
+        android:textSize="@dimen/font_14" />
+    <TextView
+        android:id="@+id/label_over"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/label_sum_per"
+        app:layout_constraintTop_toTopOf="@+id/label_sum"
+        android:layout_marginStart="@dimen/x22"
+        android:text="@string/monitor_station_cb"
+        android:textColor="@color/textLabel"
+        android:textSize="@dimen/font_14" />
+    <TextView
+        android:id="@+id/txt_over_times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/label_over"
+        app:layout_constraintTop_toTopOf="@+id/label_sum"
+        android:layout_marginStart="@dimen/x8"
+        android:textColor="@color/text_red_times"
+        android:textSize="@dimen/font_14" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/txt_over_times"
+        app:layout_constraintTop_toTopOf="@+id/label_sum"
+        android:layout_marginStart="@dimen/x2"
+        android:text="@string/monitor_station_unit"
+        android:textColor="@color/textLabel"
+        android:textSize="@dimen/font_14" />
+
+
+    <!--<TextView
+        android:id="@+id/label_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/label_sum"
+        app:layout_constraintTop_toBottomOf="@id/label_sum"
+        android:layout_marginTop="@dimen/x8"
+        android:layout_marginBottom="@dimen/x4"
+        android:text="@string/monitor_station_average"
+        android:textColor="@color/textLabel"
+        android:textSize="@dimen/font_14" />
+    <TextView
+        android:id="@+id/txt_average"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/label_v"
+        app:layout_constraintTop_toTopOf="@+id/label_v"
+        android:layout_marginBottom="@dimen/x4"
+        android:textColor="@color/text_green_times"
+        android:textSize="@dimen/font_14" />-->
+
+
+    <TextView
+        android:id="@+id/label_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/txt_station_name"
+        app:layout_constraintTop_toBottomOf="@id/label_sum"
+        android:layout_marginTop="@dimen/x8"
+        android:layout_marginBottom="@dimen/x4"
+        android:text="@string/monitor_station_location_type"
+        android:textColor="@color/textLabel"
+        android:textSize="@dimen/font_14" />
+    <TextView
+        android:id="@+id/txt_location_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/label_type"
+        app:layout_constraintTop_toTopOf="@+id/label_type"
+        android:layout_marginStart="@dimen/x2"
+        android:textColor="@color/textLabel"
+        android:textSize="@dimen/font_14" />
+    <TextView
+        android:id="@+id/label_direction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/txt_location_type"
+        app:layout_constraintTop_toTopOf="@+id/label_type"
+        android:layout_marginStart="@dimen/x22"
+        android:text="@string/monitor_station_run_direction"
+        android:textColor="@color/textLabel"
+        android:textSize="@dimen/font_14" />
+    <TextView
+        android:id="@+id/txt_direction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/label_direction"
+        app:layout_constraintTop_toTopOf="@+id/label_type"
+        android:layout_marginStart="@dimen/x2"
+        android:textColor="@color/textLabel"
+        android:textSize="@dimen/font_14" />
+
+
+    <TextView
+        android:id="@+id/label_cds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/txt_station_name"
+        app:layout_constraintTop_toBottomOf="@id/label_type"
+        android:layout_marginTop="@dimen/x8"
+        android:layout_marginBottom="@dimen/x4"
+        android:text="@string/monitor_station_cds"
+        android:textColor="@color/textLabel"
+        android:textSize="@dimen/font_14" />
+    <TextView
+        android:id="@+id/txt_cds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/label_cds"
+        app:layout_constraintTop_toTopOf="@+id/label_cds"
+        android:layout_marginStart="@dimen/x2"
+        android:textColor="@color/textLabel"
+        android:textSize="@dimen/font_14" />
+    <TextView
+        android:id="@+id/label_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/txt_cds"
+        app:layout_constraintTop_toTopOf="@+id/label_cds"
+        android:layout_marginStart="@dimen/x22"
+        android:text="@string/monitor_station_add_date"
+        android:textColor="@color/textLabel"
+        android:textSize="@dimen/font_14" />
+    <TextView
+        android:id="@+id/txt_add_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/label_date"
+        app:layout_constraintTop_toTopOf="@+id/label_cds"
+        android:layout_marginStart="@dimen/x2"
+        android:textColor="@color/textLabel"
+        android:textSize="@dimen/font_14" />
+
+
+    <TextView
+        android:id="@+id/site_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/txt_station_name"
+        app:layout_constraintTop_toBottomOf="@id/label_cds"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/x8"
+        android:text="@string/monitor_station_video"
+        android:textColor="@color/textPrimary"
+        android:textSize="@dimen/font_14"
+        android:drawableEnd="@mipmap/map_into2"
+        android:drawablePadding="@dimen/x4"
+        android:visibility="gone"/>
+    <!--    <ImageView-->
+    <!--        android:id="@+id/img_goto_list"-->
+    <!--        android:layout_height="@dimen/x32"-->
+    <!--        android:layout_width="@dimen/x32"-->
+    <!--        app:layout_constraintLeft_toRightOf="@id/site_video"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/site_video"-->
+    <!--        android:layout_marginBottom="@dimen/x8"-->
+    <!--        android:src="@mipmap/map_into"-->
+    <!--        android:visibility="visible" />-->
+
+</android.support.constraint.ConstraintLayout>

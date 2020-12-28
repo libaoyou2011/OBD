@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <View style="@style/order_new_line" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:background="@color/background">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:elevation="@dimen/len_2">
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="enterAlways|scroll">
+                <!--想要滚动到屏幕外，必须设置app:layout_scrollFlags属性
+                    scroll：向上滚动，先 AppBarLayout完全隐藏，再滚动 Scrolling View；
+                           向下滑动，先 Scrolling View 顶部完全出现后，再开始滚动 AppBarLayout 到完全显示
+                    enterAlways：向下滚动先显示 AppBarLayout到完全，再滚动 Scrolling View。
+                -->
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_pic"
+                    android:layout_width="fill_parent"
+                    android:layout_height="210.0dip"
+                    android:layout_gravity="center_horizontal" />
+
+                <net.lucode.hackware.magicindicator.MagicIndicator
+                    android:id="@+id/magic_indicator4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x40"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="@dimen/x20"
+                    android:gravity="center" />
+            </FrameLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_jc_car"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/len_44"
+                android:layout_margin="@dimen/x24"
+                android:background="@color/white"
+                app:tabBackground="@color/white"
+                app:tabIndicatorColor="@color/tab_indicator_color"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/textColor_4d7bfe"
+                app:tabTextAppearance="@android:style/TextAppearance"
+                app:tabTextColor="@color/textColor_6e6e6e" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_jc_car"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:minHeight="400.0dip"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <!--
+        表示使用android.support.design.widget.AppBarLayout$ScrollingViewBehavior
+        来处理 ViewPager 与 AppBarLayout 的关系
+        -->
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_confirm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_commit"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x40"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginBottom="@dimen/x30"
+            android:layout_weight="1.0"
+            android:background="@drawable/round_corner_blue"
+            android:text="是黑烟车"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_18" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_marginRight="@dimen/x40"
+            android:layout_marginBottom="@dimen/x30"
+            android:layout_weight="1.0"
+            android:background="@drawable/round_corner_blue"
+            android:text="不是黑烟车"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_18" />
+    </LinearLayout>
+</LinearLayout>

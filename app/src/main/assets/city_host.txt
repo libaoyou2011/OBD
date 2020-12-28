@@ -1,0 +1,18 @@
+[
+    {
+        "cityName":"山西省长治市_内网",
+        "hostUrl":"http://10.10.10.160:8181/",
+        "enable":true,
+        "IsCheck":false,
+        "addressCenterLat":"36.250333",
+        "addressCenterLng":"113.165555"
+    },
+    {
+        "cityName":"安徽宝龙环保有限公司",
+        "hostUrl":"http://36.7.144.182:8181",
+        "enable":true,
+        "IsCheck":false,
+        "addressCenterLat":"31.8684804238",
+        "addressCenterLng":"117.1766054997"
+    }
+]

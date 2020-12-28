@@ -1,0 +1,56 @@
+[{
+  	"cityName": "河南安阳市",
+  	"hostUrl": "http://61.54.242.78:10010/",
+  	"enable": true,
+  	"IsCheck": false,
+  	"addressCenterLat":"36.1037898321",
+  	"addressCenterLng":"114.3395767433"
+  },
+  {
+     "cityName": "河北衡水市",
+     "hostUrl": "http://121.17.30.107:10010/",
+     "enable": true,
+     "IsCheck": true,
+     "addressCenterLat":"37.7451221103",
+     "addressCenterLng":"115.6769599685"
+  },
+  {
+ 	"cityName": "合肥宝龙公司",
+ 	"hostUrl": "http://36.7.144.182:8888",
+ 	"enable": true,
+ 	"IsCheck": false,
+    "addressCenterLat":"31.8684804238",
+    "addressCenterLng":"117.1766054997"
+ },
+ {
+  	"cityName": "安徽宝龙环保有限公司55",
+  	"hostUrl": "http://10.10.10.55:8181",
+  	"enable": true,
+  	"IsCheck": false,
+    "addressCenterLat":"31.8684804238",
+    "addressCenterLng":"117.1766054997"
+ },
+ {
+       "cityName": "安徽宝龙环保有限公司_内网",
+       "hostUrl": "http://10.10.10.243:8181",
+       "enable": true,
+       "IsCheck": false,
+       "addressCenterLat":"31.8684804238",
+       "addressCenterLng":"117.1766054997"
+ },
+ {
+        "cityName": "安徽宝龙环保有限公司_外网",
+        "hostUrl": "http://36.7.144.182:8181",
+        "enable": true,
+        "IsCheck": false,
+        "addressCenterLat":"31.8684804238",
+        "addressCenterLng":"117.1766054997"
+ },
+ {
+  	"cityName": "北京华志信公司",
+  	"hostUrl": "http://114.255.129.73:8888/",
+  	"enable": true,
+  	"IsCheck": false,
+    "addressCenterLat":"31.8684804238",
+    "addressCenterLng":"117.2566054997"
+  }]

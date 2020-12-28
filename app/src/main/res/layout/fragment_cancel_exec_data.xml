@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:background="@color/white"
+        android:scrollbars="none"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="@dimen/x20"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x100"
+                android:layout_marginStart="@dimen/x22"
+                android:layout_marginTop="@dimen/x30"
+                android:layout_marginEnd="@dimen/x44">
+
+                <TextView
+                    android:textSize="@dimen/font_16"
+                    android:textColor="@color/textLabel"
+                    android:gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/x10"
+                    android:minWidth="@dimen/x160"
+                    android:text="处理人:" />
+
+                <EditText
+                    android:id="@+id/et_do_person"
+                    android:textSize="@dimen/font_16"
+                    android:textColor="@color/textLabel"
+                    android:textColorHint="@color/textLabel"
+                    android:background="@null"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_weight="1.0"
+                    android:inputType="none" />
+            </LinearLayout>
+
+            <View
+                android:background="@color/line_border"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginTop="@dimen/x8"
+                android:layout_marginBottom="@dimen/x8" />
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x100"
+                android:layout_marginStart="@dimen/x22"
+                android:layout_marginEnd="@dimen/x44">
+
+                <TextView
+                    android:textSize="@dimen/font_16"
+                    android:textColor="@color/textLabel"
+                    android:gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/x10"
+                    android:minWidth="@dimen/x160"
+                    android:text="处理时间:" />
+
+                <EditText
+                    android:id="@+id/et_do_time"
+                    android:textSize="@dimen/font_16"
+                    android:textColor="@color/textLabel"
+                    android:textColorHint="@color/textLabel"
+                    android:background="@null"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginStart="@dimen/x10"
+                    android:layout_weight="1.0"
+                    android:inputType="none" />
+            </LinearLayout>
+
+            <View
+                android:background="@color/line_border"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginTop="@dimen/x8"
+                android:layout_marginBottom="@dimen/x8" />
+
+            <LinearLayout
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x22"
+                android:layout_marginEnd="@dimen/x20"
+                android:minHeight="@dimen/x300">
+
+                <TextView
+                    android:textSize="@dimen/font_16"
+                    android:textColor="@color/textLabel"
+                    android:gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/x10"
+                    android:minWidth="@dimen/x160"
+                    android:text="取消说明:" />
+
+                <EditText
+                    android:id="@+id/et_remark"
+                    android:textSize="@dimen/font_16"
+                    android:textColor="@color/textLabel"
+                    android:textColorHint="@color/textLabel"
+                    android:gravity="center|start|top"
+                    android:background="@drawable/shape_edit_bg"
+                    android:padding="10.0dip"
+                    android:paddingStart="10.0dip"
+                    android:paddingEnd="0dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginStart="@dimen/x10"
+                    android:hint="请输入"
+                    android:minLines="4"
+                    android:singleLine="false"
+                    android:maxLength="800"
+                    android:inputType="textMultiLine" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:textSize="@dimen/font_18"
+            android:textColor="@color/white"
+            android:id="@id/btn_commit"
+            android:background="@drawable/round_corner_blue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x40"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_marginRight="@dimen/x40"
+            android:layout_marginBottom="@dimen/x30"
+            android:text="提交" />
+    </LinearLayout>
+</LinearLayout>

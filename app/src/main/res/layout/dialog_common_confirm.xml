@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_corner_list_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/x10"
+        android:layout_marginEnd="@dimen/x10"
+        android:layout_marginTop="@dimen/x40"
+        android:textSize="@dimen/x30"
+        android:text="确认删除所有数据吗"
+        android:textColor="@color/textColor_333333"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/x88"
+        android:weightSum="2.0"
+        android:layout_marginTop="@dimen/x40">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/work_cancel"
+            android:textSize="@dimen/x32"
+            android:textColor="@color/textColor_999999"
+            android:background="@drawable/shape_choose_product_dialog_left" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/work_confirm"
+            android:textSize="@dimen/x32"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_choose_product_dialog_right" />
+    </LinearLayout>
+</LinearLayout>
