@@ -27,6 +27,9 @@ import java.util.List;
 @Route(path = "/execution/AddExecDataActivity")
 public class AddExecDataActivity extends BaseActivity
         implements ViewPager.OnPageChangeListener {
+    private boolean b1Edit;
+
+
     private static final String TAG = AddExecDataActivity.class.getSimpleName();
     private boolean bEdit;
     private List<Fragment> mFragmentList;
