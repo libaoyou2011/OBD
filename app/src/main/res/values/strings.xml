@@ -4,13 +4,13 @@
 
     <string name="appbar_scrolling_view_behavior">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
 
-    <string name="main_viewpager_monitor">监测</string>
-    <string name="main_black_car">黑烟车</string>
-    <string name="main_viewpager_execute">超标车</string>
-    <string name="main_viewpager_work">查车</string>
-    <string name="main_viewpager_analysis">统计</string>
-    <string name="main_viewpager_find">查询</string>
+    <string name="main_viewpager_monitor">实时数据</string>
+    <string name="main_black_car">车辆状态</string>
+    <string name="main_viewpager_find">统计分析</string>
     <string name="main_viewpager_mine">我的</string>
+<!--    <string name="main_viewpager_execute">超标车</string>-->
+<!--    <string name="main_viewpager_work">查车</string>-->
+<!--    <string name="main_viewpager_analysis">统计</string>-->
 
     <string name="title_assist_permissions">授予权限</string>
 
@@ -131,7 +131,7 @@
     <string name="car_yc_wuxiao">无效</string>
 
 
-    <string name="analysis_title">查询与统计分析</string>
+    <string name="analysis_title">统计信息</string>
 
     <string name="telemetry_title">遥测数据</string>
 

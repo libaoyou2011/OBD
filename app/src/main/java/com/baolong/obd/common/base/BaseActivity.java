@@ -16,6 +16,7 @@ import com.baolong.obd.R;
 import com.baolong.obd.common.model.notice.ImNoticeModel;
 import com.baolong.obd.common.presenter.BasePresenter;
 import com.baolong.obd.common.utils.NoTitleUtil;
+import com.baolong.obd.main.ViewManager;
 import com.bumptech.glide.Glide;
 //import com.hzx.huanping.common.model.notice.AlerterBusiness;
 import com.baolong.obd.common.utils.ToastUtils;

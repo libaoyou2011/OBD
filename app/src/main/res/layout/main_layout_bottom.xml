@@ -23,14 +23,6 @@
             android:text="@string/main_viewpager_monitor"
             android:textColor="@drawable/selector_main_text_color"
             android:textSize="@dimen/x20" />
-
-        <ImageView
-            android:id="@+id/red_point_main_bottom_monitor"
-            android:layout_width="@dimen/x15"
-            android:layout_height="@dimen/x15"
-            android:layout_alignRight="@id/tv_main_monitor"
-            android:src="@drawable/red_point"
-            android:visibility="gone" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -58,30 +50,6 @@
             android:visibility="gone" />
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.0">
-
-        <TextView
-            android:id="@+id/tv_main_execute"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:drawableTop="@drawable/selector_main_mission_icon"
-            android:gravity="center"
-            android:text="@string/main_viewpager_execute"
-            android:textColor="@drawable/selector_main_text_color"
-            android:textSize="@dimen/x20" />
-
-        <ImageView
-            android:id="@+id/red_point_main_bottom_task"
-            android:layout_width="@dimen/x15"
-            android:layout_height="@dimen/x15"
-            android:layout_alignRight="@id/tv_main_execute"
-            android:src="@drawable/red_point"
-            android:visibility="gone" />
-    </RelativeLayout>
 
     <TextView
         android:id="@+id/tv_main_work"

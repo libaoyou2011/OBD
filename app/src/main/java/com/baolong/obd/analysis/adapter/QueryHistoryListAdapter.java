@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QueryHistoryListAdapter extends RecyclerView.Adapter<QueryHistoryListAdapter.MyViewHolder> {
-    private Context mContext;
+    private final Context mContext;
     private List<AnalysisLayoutModel.ProductsBean.ItemsBean> mLists;
     private OnHistoryLongClickListener mOnLongClickListener;
     private OnHistoryClickListener mOnHistoryClickListener;

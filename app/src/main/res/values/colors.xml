@@ -72,6 +72,17 @@
 
     <color name="tab_indicator_color">#ff4686f8</color>
 
+    <color name="analysis_label">#6E6E6E</color>
+    <color name="analysis_divide">#98F296</color>
+    <color name="chart_red">#FE4643</color>
+    <color name="chart_blue">#33B7E5</color>
+    <color name="chart_green">#98CD00</color>
+    <color name="chart_purple">#AA67CC</color>
+    <color name="chart_yellow">#FFBC34</color>
+    <color name="chart_gray">#C0C1C0</color>
+    <color name="chart_blue_dark">#304FFE</color>
+    <color name="chart_ju">#FF7043</color>
+
 
 
 </resources>

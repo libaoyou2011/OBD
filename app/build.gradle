@@ -177,9 +177,9 @@ dependencies {
 
     // 高德地图    navi导航SDK 5.0.0以后版本包含了3D地图SDK，所以请不要同时引入 map3d 和 navi SDK。
     //implementation 'com.amap.api:3dmap:6.7.0'     //3D地图so及jar,
-    implementation 'com.amap.api:location:4.5.1'   //定位功能
-    implementation 'com.amap.api:search:6.5.0'    //搜索功能
-    implementation 'com.amap.api:navi-3dmap:6.6.0_3dmap6.7.0'   //导航
+//    implementation 'com.amap.api:location:4.5.1'   //定位功能
+//    implementation 'com.amap.api:search:6.5.0'    //搜索功能
+//    implementation 'com.amap.api:navi-3dmap:6.6.0_3dmap6.7.0'   //导航
 
     //FastJson
     //implementation 'com.alibaba:dubbo-serialization-fastjson:2.6.5'
@@ -232,8 +232,11 @@ dependencies {
     implementation 'commons-codec:commons-codec:1.11'
 
     //海康视频
-    implementation files('libs/AudioEngineSDK.jar')
-    implementation files('libs/HCNetSDK.jar')
-    implementation files('libs/jna.jar')
-    implementation files('libs/PlayerSDK.jar')
+//    implementation files('libs/AudioEngineSDK.jar')
+//    implementation files('libs/HCNetSDK.jar')
+//    implementation files('libs/jna.jar')
+//    implementation files('libs/PlayerSDK.jar')
+
+    //MPAndroidChart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }

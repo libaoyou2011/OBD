@@ -51,8 +51,10 @@
     <dimen name="x450">225.0dip</dimen>
     <dimen name="x500">250.0dip</dimen>
     <dimen name="x548">274.0dip</dimen>
-
     <dimen name="x600">300.0dip</dimen>
+    <dimen name="x800">400.0dip</dimen>
+    <dimen name="x860">430.0dip</dimen>
+
 
 
     <dimen name="font_10">10.0sp</dimen>
@@ -64,10 +66,9 @@
 
 
 
-    <dimen name="len_6">6.0dip</dimen>
-    <dimen name="len_3">3.0dip</dimen>
-
     <dimen name="len_2">2.0dip</dimen>
+    <dimen name="len_3">3.0dip</dimen>
+    <dimen name="len_6">6.0dip</dimen>
     <dimen name="len_16">16.0dip</dimen>
     <dimen name="len_20">20.0dip</dimen>
     <dimen name="len_44">44.0dip</dimen>

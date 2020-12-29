@@ -106,6 +106,26 @@
         <activity
             android:name="com.baolong.obd.component.webview.ReportProductWebActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".analysis.activity.AnalysisDataActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".analysis.activity.AnalysisValidActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".analysis.activity.AnalysisExceedActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".analysis.activity.AnalysisCarNumActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".analysis.activity.AnalysisCarFlowActivity"
+            android:screenOrientation="portrait">
+        </activity>
 
         <activity
             android:name="com.baolong.obd.my.activity.StationListActivity"
@@ -118,11 +138,11 @@
 <!--            android:theme="@android:style/Theme.Translucent">-->
 <!--        </activity>-->
 
-        <service android:name="com.amap.api.location.APSService"/>
+<!--        <service android:name="com.amap.api.location.APSService"/>-->
 
-        <activity
-            android:name="com.amap.api.navi.AmapRouteActivity"
-            android:screenOrientation="portrait" />
+<!--        <activity-->
+<!--            android:name="com.amap.api.navi.AmapRouteActivity"-->
+<!--            android:screenOrientation="portrait" />-->
 
         <activity
             android:name="com.baolong.obd.my.activity.PublishActivity"
@@ -163,10 +183,6 @@
         <activity
             android:name="com.baolong.obd.blackcar.activity.BlackCarDetailActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name="com.baolong.obd.monitor.haikang.HKPreviewActivity"
-            android:screenOrientation="portrait">
-        </activity>
 
         <provider
             android:name="android.support.v4.content.FileProvider"

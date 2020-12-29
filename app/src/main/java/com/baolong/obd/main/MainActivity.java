@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,7 +18,6 @@ import com.hwangjr.rxbus.RxBus;
 import com.baolong.obd.common.base.BaseActivity;
 import com.baolong.obd.common.base.BaseApplication;
 import com.baolong.obd.common.base.BaseFragment;
-import com.baolong.obd.common.base.ViewManager;
 
 import java.util.List;
 import java.util.Timer;
@@ -28,18 +26,13 @@ import java.util.TimerTask;
 @Route(path = Constance.ACTIVITY_URL_MAIN)
 public class MainActivity extends BaseActivity
         implements View.OnClickListener, ViewPager.OnPageChangeListener, IContract.View {
-    public static final String INTENT_GOTO_KEY = "goto";
-    public static final String INTENT_MISSION_VALUE = "mission";
     private List<BaseFragment> mFragmentList;
     private TextView mTv_black_car;
-    private TextView mTv_execute;
     private TextView mTv_mine;
     private TextView mTv_monitor;
     private TextView mTv_work;
     private ViewPager mViewPager;
     private ViewPagerFragmentAdapter mViewPagerFragmentAdapter;
-    private ImageView redPointMianBottomChat;
-    private ImageView redPointMianBottomTask;
 
     public static Intent getIntent(Context paramContext) {
         Intent localIntent = new Intent();
@@ -50,23 +43,18 @@ public class MainActivity extends BaseActivity
     private void updateBottomLinearLayoutSelect(boolean[] paramArrayOfBoolean) {
         this.mTv_monitor.setSelected(paramArrayOfBoolean[0]);
         this.mTv_black_car.setSelected(paramArrayOfBoolean[1]);
-        this.mTv_execute.setSelected(paramArrayOfBoolean[2]);
-        this.mTv_work.setSelected(paramArrayOfBoolean[3]);
-        this.mTv_mine.setSelected(paramArrayOfBoolean[4]);
+        this.mTv_work.setSelected(paramArrayOfBoolean[2]);
+        this.mTv_mine.setSelected(paramArrayOfBoolean[3]);
     }
 
     protected void initView() {
-        setContentView(R.layout.activity_main);
         this.mTv_monitor = ((TextView) findViewById(R.id.tv_main_monitor));
         this.mTv_black_car = ((TextView) findViewById(R.id.tv_black_car));
-        this.mTv_execute = ((TextView) findViewById(R.id.tv_main_execute));
         this.mTv_work = ((TextView) findViewById(R.id.tv_main_work));
         this.mTv_mine = ((TextView) findViewById(R.id.tv_main_mine));
-        this.redPointMianBottomChat = ((ImageView) findViewById(R.id.red_point_main_bottom_monitor));
-        this.redPointMianBottomTask = ((ImageView) findViewById(R.id.red_point_main_bottom_task));
+
         this.mTv_monitor.setOnClickListener(this);
         this.mTv_black_car.setOnClickListener(this);
-        this.mTv_execute.setOnClickListener(this);
         this.mTv_work.setOnClickListener(this);
         this.mTv_mine.setOnClickListener(this);
 
@@ -79,7 +67,7 @@ public class MainActivity extends BaseActivity
         this.mFragmentList = ViewManager.getInstance().getAllFragment();
         this.mViewPagerFragmentAdapter = new ViewPagerFragmentAdapter(mFragmentManager, this.mFragmentList);
         this.mViewPager.setAdapter(this.mViewPagerFragmentAdapter);
-        this.mViewPager.setOffscreenPageLimit(BaseApplication.MainPageSize-1);
+        this.mViewPager.setOffscreenPageLimit(BaseApplication.MainPageSize-2);
         this.mViewPager.addOnPageChangeListener(this);
         this.mViewPager.setCurrentItem(0);
         this.mTv_monitor.setSelected(true);
@@ -110,17 +98,13 @@ public class MainActivity extends BaseActivity
             if (this.mViewPager.getCurrentItem() != 1) {
                 this.mViewPager.setCurrentItem(1);
             }
-        } else if (paramView.getId() == R.id.tv_main_execute) {
+        } else if (paramView.getId() == R.id.tv_main_work) {
             if (this.mViewPager.getCurrentItem() != 2) {
                 this.mViewPager.setCurrentItem(2);
             }
-        } else if (paramView.getId() == R.id.tv_main_work) {
+        } else if (paramView.getId() == R.id.tv_main_mine) {
             if (this.mViewPager.getCurrentItem() != 3) {
                 this.mViewPager.setCurrentItem(3);
-            }
-        } else if (paramView.getId() == R.id.tv_main_mine) {
-            if (this.mViewPager.getCurrentItem() != 4) {
-                this.mViewPager.setCurrentItem(4);
             }
         }
     }
@@ -128,6 +112,8 @@ public class MainActivity extends BaseActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
         initView();
         initData();
         RxBus.get().register(this);
@@ -202,10 +188,10 @@ public class MainActivity extends BaseActivity
     public void onPageScrolled(int paramInt1, float paramFloat, int paramInt2) {
     }
 
-    public void onPageSelected(int paramInt) {
+    public void onPageSelected(int i) {
         boolean[] arrayOfBoolean = new boolean[BaseApplication.MainPageSize];
-        arrayOfBoolean[paramInt] = true;
+        arrayOfBoolean[i] = true;
         updateBottomLinearLayoutSelect(arrayOfBoolean);
-        ((BaseFragment) this.mFragmentList.get(paramInt)).refresh();
+        ((BaseFragment) this.mFragmentList.get(i)).refresh();
     }
 }

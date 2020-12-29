@@ -15,6 +15,9 @@ import com.baolong.obd.common.base.BaseActivity;
 import com.baolong.obd.execution.fragment.ExecListFragment;
 import com.baolong.obd.querycar.fragment.QueryCarMainFragment;
 
+/**
+ *  遥测数据、车辆查询
+ */
 @Route(path = "/analysis/activity/AnalysisCommentActivity")
 public class AnalysisCommentActivity extends BaseActivity {
 

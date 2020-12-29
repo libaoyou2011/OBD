@@ -1,3 +1,4 @@
+/*
 package com.baolong.obd.monitor.adapter;
 
 import android.content.Context;
@@ -16,11 +17,12 @@ import com.baolong.obd.common.utils.ToastUtils;
 import com.baolong.obd.monitor.data.entity.GetTodayAmountModel2;
 import com.baolong.obd.monitor.data.entity.MarkerObject;
 import com.baolong.obd.monitor.data.entity.SiteInfoItemV3;
-import com.baolong.obd.monitor.haikang.HKPreviewActivity;
 
+*/
 /**
  * InfoWindowAdapter  initMap时调用
- */
+ *//*
+
 public class MonitorInfoWindowAdapter implements AMap.InfoWindowAdapter {
     private static final String TAG = MonitorInfoWindowAdapter.class.getSimpleName();
     private final Context mContext;
@@ -43,9 +45,11 @@ public class MonitorInfoWindowAdapter implements AMap.InfoWindowAdapter {
         return null;
     }
 
-    /**
+    */
+/**
      * 自定义InfoWindow窗口
-     */
+     *//*
+
     public void render(Marker marker, View view) {
         LogUtil.i(TAG, "显示InfoWindow reder()");
         TextView stationCode = (TextView) view.findViewById(R.id.txt_station_code);
@@ -108,4 +112,4 @@ public class MonitorInfoWindowAdapter implements AMap.InfoWindowAdapter {
         }
 
     }
-}
+}*/

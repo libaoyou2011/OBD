@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:paddingTop="7dp"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp"
+    android:paddingBottom="5dp"
+    android:background="@drawable/tuli_solid_white_bg"
+    >
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:singleLine="false"
+        android:text="12j3fjjf"
+        android:textSize="12dp"
+        android:textColor="@android:color/black"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    <!--   -->
+
+</RelativeLayout>
+

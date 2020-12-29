@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:weightSum="4">
+
+    <View
+        android:id="@+id/v_top"
+        style="@style/order_new_line" />
+
+    <include layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--NO 污染物统计-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/x26"
+                android:layout_marginTop="@dimen/x36"
+                android:layout_marginEnd="@dimen/x26"
+                android:text="NO污染物统计"
+                android:textColor="@color/analysis_label"
+                android:textSize="@dimen/font_16" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x6"
+                android:layout_marginStart="@dimen/x26"
+                android:layout_marginEnd="@dimen/x26"
+                android:layout_marginBottom="@dimen/x36"
+                android:background="@color/analysis_divide" />
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bar_chart_no"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x800" />
+
+            <!--CO 污染物统计-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/x26"
+                android:layout_marginTop="@dimen/x36"
+                android:layout_marginEnd="@dimen/x26"
+                android:text="CO污染物统计"
+                android:textColor="@color/analysis_label"
+                android:textSize="@dimen/font_16" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x6"
+                android:layout_marginStart="@dimen/x26"
+                android:layout_marginEnd="@dimen/x26"
+                android:layout_marginBottom="@dimen/x36"
+                android:background="@color/analysis_divide" />
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bar_chart_co"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x800" />
+
+            <!--HC 污染物统计-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/x26"
+                android:layout_marginTop="@dimen/x36"
+                android:layout_marginEnd="@dimen/x26"
+                android:text="HC污染物统计"
+                android:textColor="@color/analysis_label"
+                android:textSize="@dimen/font_16" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x6"
+                android:layout_marginStart="@dimen/x26"
+                android:layout_marginEnd="@dimen/x26"
+                android:layout_marginBottom="@dimen/x36"
+                android:background="@color/analysis_divide" />
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bar_chart_hc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x800" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

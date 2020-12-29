@@ -4,6 +4,7 @@ package com.baolong.obd.analysis.fragment;
 
 import android.content.Intent;
 
+import com.baolong.obd.BuildConfig;
 import com.baolong.obd.R;
 import com.baolong.obd.analysis.activity.AnalysisCommentActivity;
 import com.baolong.obd.analysis.data.entity.AnalysisLayoutModel;
@@ -69,13 +70,22 @@ public class AnalysisMainFragment extends BaseFragment
                 new QueryHistoryListAdapter.OnHistoryClickListener() {
                     @Override
                     public void onItemClick(AnalysisLayoutModel.ProductsBean.ItemsBean itemsBean) {
+                        // 遥测数据、车辆查询
                         if (!TextUtils.isEmpty(itemsBean.getActivity())) {
-                            Intent intent = new Intent(getContext(), AnalysisCommentActivity.class);
-                            intent.putExtra("title", itemsBean.getDesc());
-                            intent.putExtra("type", itemsBean.getCode());
-                            ActivityUtils.activitySwitch(getActivity(), intent);
+                            try {
+                                //Intent intent = new Intent(getContext(), AnalysisCommentActivity.class);
+
+                                Class clasz = Class.forName(BuildConfig.APPLICATION_ID + itemsBean.getActivity());
+                                Intent intent = new Intent(getContext(), clasz);
+                                intent.putExtra("title", itemsBean.getDesc());
+                                intent.putExtra("type", itemsBean.getCode());
+                                ActivityUtils.activitySwitch(getActivity(), intent);
+                            }catch (Exception e) {
+                                LogUtil.i(TAG, "点击通知获取Activity出错：" + e);
+                            }
 
                         } else if (!TextUtils.isEmpty(itemsBean.getWebUrl())) {
+                            // 统计分析
                             Intent intent = new Intent(getContext(), ProductWebActivity.class);
                             intent.putExtra("title", itemsBean.getTitle());
                             intent.putExtra("url", FileUtils.CombineUrl(BaseApplication.host, itemsBean.getWebUrl()));
@@ -195,9 +205,9 @@ public class AnalysisMainFragment extends BaseFragment
 //        this.queryHistoryListAdapter.setData(data);
 //    }
 
-    public class SpaceItemDecoration extends RecyclerView.ItemDecoration {
+    public static class SpaceItemDecoration extends RecyclerView.ItemDecoration {
 
-        private int space;
+        private final int space;
 
         public SpaceItemDecoration(int space) {
             this.space = space;

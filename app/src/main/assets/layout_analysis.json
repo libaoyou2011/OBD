@@ -8,44 +8,20 @@
       "cols": 3,
       "items": [
         {
-          "title": "遥测查询",
-          "desc": "遥测数据",
-          "code": "telemetryData",
-          "icon": "analysis_telemetry",
+          "title": "车辆接入统计",
+          "desc": "车辆接入统计",
+          "code": "analysis_car_number",
+          "icon": "analysis_car_number",
           "webUrl": null,
-          "activity": "AnalysisCommentActivity.class",
+          "activity": ".analysis.activity.AnalysisCarNumActivity",
           "params": {
           },
           "iconSize": 36,
           "updateCode": 50
         },
         {
-          "title": "车辆查询",
-          "desc": "车辆查询",
-          "code": "findCar",
-          "icon": "analysis_find_car",
-          "webUrl": null,
-          "activity": "AnalysisCommentActivity.class",
-          "params": {
-          },
-          "iconSize": 36,
-          "updateCode": 50
-        },
-        {
-          "title": "车辆比重",
-          "desc": "车辆比重",
-          "code": "carRate",
-          "icon": "analysis_car_type",
-          "webUrl": "/modules/analyze/dataAnalyzeApp",
-          "activity": null,
-          "params": {
-          },
-          "iconSize": 36,
-          "updateCode": 50
-        },
-        {
-          "title": "车流量统计",
-          "desc": "车流量统计",
+          "title": "监测记录统计",
+          "desc": "监测记录统计",
           "code": "carNum",
           "icon": "analysis_car_flow",
           "webUrl": "/modules/analyze/carFlowApp",
@@ -56,8 +32,8 @@
           "updateCode": 63
         },
         {
-          "title": "有效率统计",
-          "desc": "有效率统计",
+          "title": "NO排放统计",
+          "desc": "NO排放统计",
           "code": "rain",
           "icon": "analysis_effiect",
           "webUrl": "/modules/analyze/app/dataValidApp",
@@ -68,24 +44,48 @@
           "updateCode": 50
         },
         {
-          "title": "尾气与空气质量",
-          "desc": "尾气与空气质量",
-          "code": "temperature",
-          "icon": "analysis_air",
-          "webUrl": "/analyze/airQuality/app/draw",
-          "activity": null,
+          "title": "车辆比重",
+          "desc": "车辆比重",
+          "code": "carRate",
+          "icon": "analysis_car_type",
+          "webUrl": null,
+          "activity":  ".analysis.activity.AnalysisDataActivity",
+          "params": {
+          },
+          "iconSize": 36,
+          "updateCode": 50
+        },
+        {
+          "title": "车流量统计",
+          "desc": "车流量统计",
+          "code": "carNum",
+          "icon": "analysis_car_flow",
+          "webUrl": null,
+          "activity": ".analysis.activity.AnalysisCarFlowActivity",
           "params": {
           },
           "iconSize": 36,
           "updateCode": 63
         },
         {
+          "title": "有效率统计",
+          "desc": "有效率统计",
+          "code": "rain",
+          "icon": "analysis_effiect",
+          "webUrl": null,
+          "activity": ".analysis.activity.AnalysisValidActivity",
+          "params": {
+          },
+          "iconSize": 36,
+          "updateCode": 50
+        },
+        {
           "title": "超标数据统计",
           "desc": "超标数据统计",
           "code": "analysis_exceed_tj",
           "icon": "analysis_exceed",
-          "webUrl": "/modules/analyze/cbDataAnalyzeApp",
-          "activity": null,
+          "webUrl": null,
+          "activity": ".analysis.activity.AnalysisExceedActivity",
           "params": {
           },
           "iconSize": 36,
@@ -96,8 +96,8 @@
           "desc": "车辆号码统计",
           "code": "analysis_car_number",
           "icon": "analysis_car_number",
-          "webUrl": "/modules/analyze/showCarAscriptionApp",
-          "activity": null,
+          "webUrl": null,
+          "activity": ".analysis.activity.AnalysisCarNumActivity",
           "params": {
           },
           "iconSize": 36,

@@ -1,3 +1,4 @@
+/**
 package com.baolong.obd.monitor.fragment;
 
 import android.Manifest;
@@ -719,9 +720,11 @@ public class MonitorMainFragment extends BaseFragment
         LogUtil.i(TAG, "aqi length after:" + mAqiMarkerList.size());
     }
 
-    /**
+    */
+/**
      * 画点位图片
-     */
+     *//*
+
     protected int getSiteBitmap(SiteInfoItemV3 stationInfo) {
         if ("A".equalsIgnoreCase(stationInfo.getDwlx())) {           //点位类型  A:垂直  B:水平  C:移动
             if ("1".equalsIgnoreCase(stationInfo.getDwzt())) {
@@ -760,9 +763,11 @@ public class MonitorMainFragment extends BaseFragment
         return R.mipmap.legend2_1;
     }
 
-    /**
+    */
+/**
      * 画空气质量图片
-     */
+     *//*
+
     public Bitmap getAirBitmap(Context context, SiteAqiInfoItemV3 siteAqiInfoItemV3) {
 
         TextPaint textPaint = new TextPaint();
@@ -793,9 +798,11 @@ public class MonitorMainFragment extends BaseFragment
         p.setStyle(Paint.Style.FILL);
 
 
-        /**
+        */
+/**
          * 先画一个圆当边线 在画一个内圆做背景
-         */
+         *//*
+
 //        p.setColor(Color.WHITE);
 //        canvas.drawCircle(Converter.dip2px(context, 15.0f), Converter.dip2px(context, 15.0f), Converter.dip2px(context, 15.0f), p);
         p.setColor(getAirColor(siteAqiInfoItemV3.getAQI()));
@@ -807,12 +814,14 @@ public class MonitorMainFragment extends BaseFragment
         return bitmap;
     }
 
-    /**
+    */
+/**
      * 画空气质量颜色
      *
      * @param aqiValue 空气质量--值
      * @return 空气质量--颜色
-     */
+     *//*
+
     public int getAirColor(double aqiValue) {
         int color = Color.parseColor("#6ec129");
         if (aqiValue > 50) {
@@ -909,9 +918,11 @@ public class MonitorMainFragment extends BaseFragment
         }
     }
 
-    /**
+    */
+/**
      * 实现 LocationSource接口, 用于激活定位，实例化对象，设置监听等
-     */
+     *//*
+
     @Override
     public void activate(LocationSource.OnLocationChangedListener listener) {
         // TODO Auto-generated method stub
@@ -919,9 +930,11 @@ public class MonitorMainFragment extends BaseFragment
         mOnLocationChangedListener = listener;
     }
 
-    /**
+    */
+/**
      * 实现 LocationSource接口, 用于停止定位，释放资源
-     */
+     *//*
+
     @Override
     public void deactivate() {
         // TODO Auto-generated method stub
@@ -986,9 +999,11 @@ public class MonitorMainFragment extends BaseFragment
         deactivate();
     }
 
-    /**
+    */
+/**
      * 方法必须重写
-     */
+     *//*
+
     @Override
     public void onSaveInstanceState(@NonNull Bundle bundle) {
         LogUtil.i(TAG, "onSaveInstanceState");
@@ -1363,3 +1378,4 @@ public class MonitorMainFragment extends BaseFragment
 
 }
 
+*/
