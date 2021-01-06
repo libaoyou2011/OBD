@@ -107,6 +107,18 @@
             android:name="com.baolong.obd.component.webview.ReportProductWebActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".analysis.activity.AnalysisCQJRActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".analysis.activity.AnalysisJCJLActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".analysis.activity.AnalysisNOxActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
             android:name=".analysis.activity.AnalysisDataActivity"
             android:screenOrientation="portrait">
         </activity>

@@ -1,24 +1,62 @@
 package com.baolong.obd.analysis;
 
+import com.baolong.obd.analysis.data.entity.CQJRModel;
 import com.baolong.obd.analysis.data.entity.CarFlowModel;
 import com.baolong.obd.analysis.data.entity.CarNumModel;
 import com.baolong.obd.analysis.data.entity.DataModel;
-import com.baolong.obd.blackcar.data.entity.FilterCategoryModel;
+import com.baolong.obd.analysis.data.entity.JCJLModel;
+import com.baolong.obd.analysis.data.entity.NOxModel;
 //import com.baolong.obd.blackcar.data.entity.ResponseBlackCountModel;
-import com.baolong.obd.blackcar.data.entity.ResponseExhaustListModel;
-import com.baolong.obd.blackcar.data.entity.ResponseVehicleInfoListModel;
-import com.baolong.obd.common.network.ResponseWrapper;
 import com.baolong.obd.common.network.ResponseWrapperList;
-
-import java.math.BigDecimal;
-import java.util.Date;
+import com.baolong.obd.common.network.ResponseWrapperListOld;
 
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 import rx.Observable;
 
 public class AnalysisApis {
+    /*
+     * 统计：1.车辆（车企）接入统计
+     */
+    public static abstract interface GEtAnalysisCQJR {
+        @GET("http://10.10.10.243:8383/prod-api/modules/zcsjfx/cljrtj")
+        public abstract Observable<ResponseWrapperListOld<CQJRModel>> req(
+                @Query("type") String paramString6 //type=clzs、zxsl、lxsl、bjsl
+        );
+
+    }
+
+    /*
+     * 统计：2.监测记录统计
+     */
+    public static abstract interface GEtAnalysisJCJL {
+        @GET("http://10.10.10.243:8383/prod-api/modules/zcsjfx/zcpfDataBymonth")
+        public abstract Observable<ResponseWrapperListOld<JCJLModel>> req(
+                @Query("yearxz") String paramString1,
+                @Query("hphm") String paramString2,
+                @Query("beginTime") String paramString3,
+                @Query("endTime") String paramString4
+        );
+
+    }
+
+    /*
+     * 统计：3.NOx排放统计
+     */
+    public static abstract interface GEtAnalysisNOx {
+        @GET("http://10.10.10.243:8383/prod-api/modules/zcsjfx/findNox")
+        public abstract Observable<ResponseWrapperListOld<NOxModel>> req(
+                @Query("hphm") String paramString1,
+                @Query("beginTime") String paramString2,
+                @Query("endTime") String paramString3
+        );
+
+    }
+
+
     /*
      * 数据统计分析
      */

@@ -118,9 +118,9 @@ public class ExecutionMainFragment extends BaseFragment
         this.mFragmentList.add(ALLExecListFragment);
 
         final ArrayList<String> list = new ArrayList<String>();
-        list.add("未处罚车辆");
-        list.add("已处罚车辆");
-        list.add("超标车辆");
+        list.add("在线车辆");
+        list.add("离线车辆");
+        list.add("报警车辆");
 
         FragmentManager fragmentManager = this.getChildFragmentManager();
         this.mViewPagerFragmentAdapter = new ViewPagerFragmentAdapter(fragmentManager, this.mFragmentList, list);

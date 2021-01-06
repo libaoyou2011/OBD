@@ -136,13 +136,13 @@ public class BlackCarListFragment extends BaseFragment
                 final BlackCarListPresenter tempBlackCarListPresenter = BlackCarListFragment.this.mBlackCarListPresenter;
                 final String type = BlackCarListFragment.this.mTableType;
 
-                if (Table_wsh.equals(type)) {
-                    tempBlackCarListPresenter.getDshData("0", mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
-                } else if (Table_ysh.equals(type)) {
-                    tempBlackCarListPresenter.getYshData("0", "1", mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
-                } else if (Table_aLL.equals(type)) {
-                    tempBlackCarListPresenter.getAllData( mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
-                }
+//                if (Table_wsh.equals(type)) {
+//                    tempBlackCarListPresenter.getDshData("0", mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
+//                } else if (Table_ysh.equals(type)) {
+//                    tempBlackCarListPresenter.getYshData("0", "1", mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
+//                } else if (Table_aLL.equals(type)) {
+//                    tempBlackCarListPresenter.getAllData( mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
+//                }
             }
         });
         this.mRefreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
@@ -155,13 +155,13 @@ public class BlackCarListFragment extends BaseFragment
                     final BlackCarListPresenter tempBlackCarListPresenter = BlackCarListFragment.this.mBlackCarListPresenter;
                     final String type = BlackCarListFragment.this.mTableType;
 
-                    if (Table_wsh.equals(type)) {
-                        tempBlackCarListPresenter.getDshData("0", mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
-                    } else if (Table_ysh.equals(type)) {
-                        tempBlackCarListPresenter.getYshData("0", "1", mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
-                    } else if (Table_aLL.equals(type)) {
-                        tempBlackCarListPresenter.getAllData( mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
-                    }
+//                    if (Table_wsh.equals(type)) {
+//                        tempBlackCarListPresenter.getDshData("0", mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
+//                    } else if (Table_ysh.equals(type)) {
+//                        tempBlackCarListPresenter.getYshData("0", "1", mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
+//                    } else if (Table_aLL.equals(type)) {
+//                        tempBlackCarListPresenter.getAllData( mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
+//                    }
                 }
             }
         });

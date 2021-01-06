@@ -8,12 +8,12 @@
       "cols": 3,
       "items": [
         {
-          "title": "车辆接入统计",
-          "desc": "车辆接入统计",
+          "title": "车企接入统计",
+          "desc": "车企接入统计",
           "code": "analysis_car_number",
           "icon": "analysis_car_number",
           "webUrl": null,
-          "activity": ".analysis.activity.AnalysisCarNumActivity",
+          "activity": ".analysis.activity.AnalysisCQJRActivity",
           "params": {
           },
           "iconSize": 36,
@@ -24,84 +24,24 @@
           "desc": "监测记录统计",
           "code": "carNum",
           "icon": "analysis_car_flow",
-          "webUrl": "/modules/analyze/carFlowApp",
-          "activity": null,
+          "webUrl": null,
+          "activity": ".analysis.activity.AnalysisJCJLActivity",
           "params": {
           },
           "iconSize": 36,
           "updateCode": 63
         },
         {
-          "title": "NO排放统计",
-          "desc": "NO排放统计",
-          "code": "rain",
-          "icon": "analysis_effiect",
-          "webUrl": "/modules/analyze/app/dataValidApp",
-          "activity": null,
-          "params": {
-          },
-          "iconSize": 36,
-          "updateCode": 50
-        },
-        {
-          "title": "车辆比重",
-          "desc": "车辆比重",
-          "code": "carRate",
-          "icon": "analysis_car_type",
-          "webUrl": null,
-          "activity":  ".analysis.activity.AnalysisDataActivity",
-          "params": {
-          },
-          "iconSize": 36,
-          "updateCode": 50
-        },
-        {
-          "title": "车流量统计",
-          "desc": "车流量统计",
-          "code": "carNum",
-          "icon": "analysis_car_flow",
-          "webUrl": null,
-          "activity": ".analysis.activity.AnalysisCarFlowActivity",
-          "params": {
-          },
-          "iconSize": 36,
-          "updateCode": 63
-        },
-        {
-          "title": "有效率统计",
-          "desc": "有效率统计",
+          "title": "NOx排放统计",
+          "desc": "NOx排放统计",
           "code": "rain",
           "icon": "analysis_effiect",
           "webUrl": null,
-          "activity": ".analysis.activity.AnalysisValidActivity",
+          "activity": ".analysis.activity.AnalysisNOxActivity",
           "params": {
           },
           "iconSize": 36,
           "updateCode": 50
-        },
-        {
-          "title": "超标数据统计",
-          "desc": "超标数据统计",
-          "code": "analysis_exceed_tj",
-          "icon": "analysis_exceed",
-          "webUrl": null,
-          "activity": ".analysis.activity.AnalysisExceedActivity",
-          "params": {
-          },
-          "iconSize": 36,
-          "updateCode": 63
-        },
-        {
-          "title": "车辆号码统计",
-          "desc": "车辆号码统计",
-          "code": "analysis_car_number",
-          "icon": "analysis_car_number",
-          "webUrl": null,
-          "activity": ".analysis.activity.AnalysisCarNumActivity",
-          "params": {
-          },
-          "iconSize": 36,
-          "updateCode": 63
         }
       ]
     }

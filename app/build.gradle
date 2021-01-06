@@ -21,7 +21,7 @@ android {
     }
     defaultConfig {
         applicationId "com.baolong.obd"
-        minSdkVersion 19
+        minSdkVersion 15
         targetSdkVersion 28
         versionCode 30
         versionName "3.0.0"

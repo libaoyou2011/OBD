@@ -135,7 +135,7 @@ public class ExecListFragment extends BaseFragment
                 final ExecutionListPresenter tempExecutionListPresenter = mExecutionListPresenter;
 
                 //未处罚车辆、已处罚车辆、超标车数据
-                if (!Table_telemetry.equals(mType)) {
+                /*if (!Table_telemetry.equals(mType)) {
                     // pdjg         判断结果 (0-不合格、 1-合格、 2-无效)
                     // isornopunish 处罚状态 (0:未处罚、 1:已处罚、 null:所有监测纪录)
                     //tempProcessedListPresenter.getData("0", mType, mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
@@ -153,7 +153,7 @@ public class ExecListFragment extends BaseFragment
 
                 } else { //遥测数据
                     tempExecutionListPresenter.getTelemetryData(mPageSize, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
-                }
+                }*/
             }
         });
         this.mRefreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
@@ -164,7 +164,7 @@ public class ExecListFragment extends BaseFragment
                     final ExecutionListPresenter tempExecutionListPresenter = mExecutionListPresenter;
 
                     //未处罚车辆、已处罚车辆、超标车数据
-                    if (!Table_telemetry.equals(mType)) {
+                    /*if (!Table_telemetry.equals(mType)) {
                         // pdjg         判断结果 (0-不合格、 1-合格、 2-无效)
                         // isornopunish 处罚状态 (0:未处罚、 1:已处罚、 null:所有监测纪录)
                         //tempProcessedListPresenter.getData("0", mType, mPageSize, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
@@ -179,7 +179,7 @@ public class ExecListFragment extends BaseFragment
                         int isBlackCar = 0; //是否是黑烟车 (0-不是、 1-是)
 
                         tempExecutionListPresenter.getTelemetryData(mPageSize, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
-                    }
+                    }*/
                 }
             }
         });

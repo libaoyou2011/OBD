@@ -54,6 +54,8 @@
     <dimen name="x600">300.0dip</dimen>
     <dimen name="x800">400.0dip</dimen>
     <dimen name="x860">430.0dip</dimen>
+    <dimen name="x900">450.0dip</dimen>
+
 
 
 

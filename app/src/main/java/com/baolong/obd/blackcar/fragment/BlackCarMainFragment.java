@@ -117,9 +117,9 @@ public class BlackCarMainFragment extends BaseFragment
         fragmentList.add(execListFragment3);
 
         final ArrayList<String> list = new ArrayList<String>();
-        list.add("未审核");
-        list.add("已审核");
-        list.add("所有数据");
+        list.add("合格");
+        list.add("超标");
+        list.add("未判定");
 
         FragmentManager fragmentManager = this.getChildFragmentManager();
         this.mViewPagerFragmentAdapter = new ViewPagerFragmentAdapter(fragmentManager, fragmentList, list);

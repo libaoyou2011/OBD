@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:weightSum="4">
+
+    <include layout="@layout/title" />
+
+    <View
+        android:id="@+id/v_top"
+        style="@style/order_new_line" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--数据统计分析-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="@dimen/x26"
+            android:layout_marginTop="@dimen/x36"
+            android:layout_marginEnd="@dimen/x26"
+            android:text="NOx排放统计"
+            android:textColor="@color/analysis_label"
+            android:textSize="@dimen/font_16" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x6"
+            android:layout_marginStart="@dimen/x26"
+            android:layout_marginEnd="@dimen/x26"
+            android:layout_marginBottom="@dimen/x36"
+            android:background="@color/text_yellow_times" />
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/line_chart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x900"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

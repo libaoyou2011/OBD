@@ -58,7 +58,7 @@
     <string name="monitor_station_warn_title1">设备状态预警</string>
 
 
-    <string name="black_car_title">黑烟车数据审核</string>
+    <string name="black_car_title">OBD实时数据</string>
     <string name="black_car_filter_time_start">开始时间</string>
     <string name="black_car_filter_time_end">结束时间</string>
     <string name="black_car_filter_clear_all">清空</string>
@@ -114,7 +114,7 @@
     <string name="user_info_gender">性别：</string>
     <string name="user_info_save">保存</string>
 
-    <string name="execution_main_title">超标车</string>
+    <string name="execution_main_title">车辆状态</string>
     <string name="execution_add_title">处理</string>
     <string name="text_add_attachment">添加附件</string>
 
