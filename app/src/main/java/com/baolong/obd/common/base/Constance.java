@@ -13,6 +13,8 @@ public class Constance {
     public static final String ACTIVITY_URL_Search = "/monitor/SearchStationActivity";
 
     public static final String ACTIVITY_URL_BlackCarDetailActivity = "/blackcar/activity/BlackCarDetailActivity";
+    public static final String ACTIVITY_URL_BlackCarDetailZCActivity = "/blackcar/activity/BlackCarDetailZCActivity";
+
     public static final String ACTIVITY_URL_StationDetailActivity = "/monitor/activity/BlackCarDetailActivity";
 
 }

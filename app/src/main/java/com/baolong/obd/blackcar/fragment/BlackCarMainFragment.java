@@ -39,9 +39,9 @@ public class BlackCarMainFragment extends BaseFragment
         implements View.OnClickListener, BlackCarMainContract.View {
     private static final String TAG = "BlackCarMainFragment";
 
-    public static final String Table_wsh = "wshBlackCar";
-    public static final String Table_ysh = "yshBlackCar";
-    public static final String Table_aLL = "allBlackCar";
+    public static final String Table_hg = "1";
+    public static final String Table_cb = "0";
+    public static final String Table_wpd = "2";
 
     private View mRootView;
     View mLineView;
@@ -69,7 +69,7 @@ public class BlackCarMainFragment extends BaseFragment
         mLineView = this.mRootView.findViewById(R.id.v_top);
 
         TextView mTopRightTv = ((TextView) this.mRootView.findViewById(R.id.tv_right_text));
-        mTopRightTv.setVisibility(View.VISIBLE);
+        mTopRightTv.setVisibility(View.INVISIBLE);
         mTopRightTv.setText("筛选");
         mTopRightTv.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -100,19 +100,19 @@ public class BlackCarMainFragment extends BaseFragment
         //未审核
         final BlackCarListFragment execListFragment = new BlackCarListFragment();
         final Bundle arguments = new Bundle();
-        arguments.putString("type", Table_wsh);
+        arguments.putString("type", Table_hg);
         execListFragment.setArguments(arguments);
         fragmentList.add(execListFragment);
         //已审核
         final BlackCarListFragment execListFragment2 = new BlackCarListFragment();
         final Bundle arguments2 = new Bundle();
-        arguments2.putString("type", Table_ysh);
+        arguments2.putString("type", Table_cb);
         execListFragment2.setArguments(arguments2);
         fragmentList.add(execListFragment2);
         //所有数据
         final BlackCarListFragment execListFragment3 = new BlackCarListFragment();
         final Bundle arguments3 = new Bundle();
-        arguments3.putString("type", Table_aLL);
+        arguments3.putString("type", Table_wpd);
         execListFragment3.setArguments(arguments3);
         fragmentList.add(execListFragment3);
 

@@ -36,6 +36,7 @@ public class BlcakCarDetailListAdapter extends RecyclerView.Adapter<BlcakCarDeta
         return this.mLists;
     }
 
+    @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup paramViewGroup, int paramInt) {
         View view = LayoutInflater.from(paramViewGroup.getContext()).inflate(R.layout.item_station_detail_jc, paramViewGroup, false);
@@ -57,7 +58,7 @@ public class BlcakCarDetailListAdapter extends RecyclerView.Adapter<BlcakCarDeta
         return this.mLists.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         TextView name;
         TextView value;
 

@@ -31,9 +31,9 @@ import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-import static com.baolong.obd.blackcar.fragment.BlackCarMainFragment.Table_aLL;
-import static com.baolong.obd.blackcar.fragment.BlackCarMainFragment.Table_wsh;
-import static com.baolong.obd.blackcar.fragment.BlackCarMainFragment.Table_ysh;
+import static com.baolong.obd.blackcar.fragment.BlackCarMainFragment.Table_hg;
+import static com.baolong.obd.blackcar.fragment.BlackCarMainFragment.Table_wpd;
+import static com.baolong.obd.blackcar.fragment.BlackCarMainFragment.Table_cb;
 
 public class BlackCarDetailJcFragment extends BaseFragment implements VehicleInfoContract.View {
     private static final String TAG = BlackCarDetailJcFragment.class.getSimpleName();
@@ -316,11 +316,11 @@ public class BlackCarDetailJcFragment extends BaseFragment implements VehicleInf
         try {
             if (this.mType.equals("0")) {
                 // 黑烟数据
-                if (Table_wsh.equals(this.mFromType)) {
+                if (Table_hg.equals(this.mFromType)) {
                     fileName = "black_car_data_wsh.txt";
-                } else if (Table_ysh.equals(this.mFromType)) {
+                } else if (Table_cb.equals(this.mFromType)) {
                     fileName = "black_car_data_ysh.txt";
-                } else if (Table_aLL.equals(this.mFromType)) {
+                } else if (Table_wpd.equals(this.mFromType)) {
                     fileName = "black_car_data_wsh.txt";
                 }
             } else {

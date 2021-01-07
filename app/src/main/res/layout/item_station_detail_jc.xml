@@ -2,9 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="@dimen/x50"
+    android:layout_marginLeft="@dimen/x44"
     android:layout_marginTop="@dimen/x15"
-    android:layout_marginRight="@dimen/x50"
+    android:layout_marginRight="@dimen/x44"
     android:gravity="center_vertical"
     android:orientation="horizontal">
 
@@ -16,7 +16,8 @@
         android:layout_weight="1.0"
         android:text="监测"
         android:textColor="@color/textLabel"
-        android:textSize="@dimen/font_14" />
+        android:textSize="@dimen/font_14"
+        android:layout_marginStart="@dimen/x28" />
 
     <TextView
         android:id="@+id/item_txt_value"
@@ -25,8 +26,10 @@
         android:layout_marginLeft="@dimen/x8"
         android:layout_marginRight="@dimen/x30"
         android:layout_weight="1.0"
-        android:gravity="left"
+        android:gravity="start"
         android:text="2"
         android:textColor="@color/textSecondTitle"
-        android:textSize="@dimen/font_14" />
+        android:textSize="@dimen/font_14"
+        android:layout_marginStart="@dimen/x8"
+        android:layout_marginEnd="@dimen/x30" />
 </LinearLayout>

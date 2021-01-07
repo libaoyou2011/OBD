@@ -13,15 +13,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.baolong.obd.R;
-import com.baolong.obd.blackcar.data.entity.Exhaust;
+import com.baolong.obd.blackcar.data.entity.ExhaustZC;
 import com.baolong.obd.common.widget.XCRoundRectImageView;
 import com.baolong.obd.component.media.AppImageDisplay;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.baolong.obd.analysis.activity.AnalysisCommentActivity.Table_telemetry;
-import static com.baolong.obd.blackcar.fragment.BlackCarMainFragment.Table_wsh;
 
 public class BlackCarListAdapter extends RecyclerView.Adapter<BlackCarListAdapter.MyViewHolder> {
     private Context mContext;
@@ -29,21 +26,21 @@ public class BlackCarListAdapter extends RecyclerView.Adapter<BlackCarListAdapte
     private OnItemClickListener mItemClickListener;
     private OnItemLongClickListener mItemLongClickListener;
     private OnActionClickListener mOnActionClickListener;
-    private List<Exhaust> mLists;
+    private List<ExhaustZC> mLists;
 
     public BlackCarListAdapter(Context paramContext, String paramString) {
         this.mContext = paramContext;
         this.mType = paramString;
     }
 
-    public void setData(List<Exhaust> paramList) {
+    public void setData(List<ExhaustZC> paramList) {
         this.mLists = paramList;
         notifyDataSetChanged();
     }
 
-    public List<Exhaust> getData() {
+    public List<ExhaustZC> getData() {
         if (this.mLists == null) {
-            return new ArrayList<Exhaust>();
+            return new ArrayList<ExhaustZC>();
         }
         return this.mLists;
     }
@@ -77,79 +74,39 @@ public class BlackCarListAdapter extends RecyclerView.Adapter<BlackCarListAdapte
 
     @Override
     public void onBindViewHolder(MyViewHolder myViewHolder, int position) {
-        Exhaust exhaust = (Exhaust) this.mLists.get(position);
+        ExhaustZC exhaust = (ExhaustZC) this.mLists.get(position);
         //root点击事件在ExeListFragment中回调，将该item数据返回
         myViewHolder.root.setTag(exhaust);
 
-        //将所有的图片拼接到一起
-        StringBuilder urlSB = new StringBuilder();
-        if (!TextUtils.isEmpty(exhaust.getTp1())) {
-            urlSB.append(exhaust.getTp1());
-        }
-        if (!TextUtils.isEmpty(exhaust.getTp2())) {
-            if (!TextUtils.isEmpty(urlSB.toString())) {
-                urlSB.append(";");
-            }
-            urlSB.append(exhaust.getTp2());
-        }
-        if (!TextUtils.isEmpty(exhaust.getTp3())) {
-            if (!TextUtils.isEmpty(urlSB.toString())) {
-                urlSB.append(";");
-            }
-            urlSB.append(exhaust.getTp3());
-        }
-        if (!TextUtils.isEmpty(exhaust.getTp4())) {
-            if (!TextUtils.isEmpty(urlSB.toString())) {
-                urlSB.append(";");
-            }
-            urlSB.append(exhaust.getTp4());
-        }
-        if (!TextUtils.isEmpty(exhaust.getTp5())) {
-            if (!TextUtils.isEmpty(urlSB.toString())) {
-                urlSB.append(";");
-            }
-            urlSB.append(exhaust.getTp5());
-        }
-        //显示的首张图片URL
-        String[] urlArray = urlSB.toString().split(";");
-        String pictureUrl = null;
-        if (urlArray.length > 0) {
-            pictureUrl = urlArray[0];
-        }
-        //glide加载图片
-        if (!TextUtils.isEmpty(pictureUrl)) {
-            AppImageDisplay.showImg("profile", pictureUrl, this.mContext, R.drawable.img_monitor_pic, myViewHolder.header);
-        }
-
-        myViewHolder.recordNo.setText(exhaust.getJlbh());
-        myViewHolder.carNo.setText(exhaust.getHphm());
-        myViewHolder.addTime.setText(exhaust.getJcrq());
-        if (exhaust.getSiteInfo() != null) {
-            myViewHolder.stationName.setText(exhaust.getSiteInfo().getDwmc());
+        if (exhaust != null) {
+            myViewHolder.vinTv.setText(TextUtils.isEmpty(exhaust.getVin()) ? "--" : exhaust.getVin());
+            myViewHolder.cphTV.setText(TextUtils.isEmpty(exhaust.getHphm()) ? "--" : exhaust.getHphm());
+            myViewHolder.zdhTv.setText(TextUtils.isEmpty(exhaust.getObdbh()) ? "--" : exhaust.getObdbh());
+            myViewHolder.cjsjTv.setText(TextUtils.isEmpty(exhaust.getCjsj()) ? "--" : exhaust.getCjsj());
         }
 
         // item项右上角审核状态
         //if (exhaust.getBlackSmokeReview() == 0) {
-        if (Table_wsh.equals(this.mType)) {
-            //未审核 --> 审核
-            myViewHolder.actionContainer.setBackgroundResource(R.drawable.exec_no_do);
-            Drawable drawable = this.mContext.getResources().getDrawable(R.drawable.ic_exec_do);
-            myViewHolder.isDone.setCompoundDrawablesWithIntrinsicBounds(null, drawable, null, null);
-            myViewHolder.isDone.setText(R.string.execution_sh);
-
-        } else {
+//        if (Table_wsh.equals(this.mType)) {
+//            //未审核 --> 审核
+//            myViewHolder.actionContainer.setBackgroundResource(R.drawable.exec_no_do);
+//            Drawable drawable = this.mContext.getResources().getDrawable(R.drawable.ic_exec_do);
+//            myViewHolder.isDone.setCompoundDrawablesWithIntrinsicBounds(null, drawable, null, null);
+//            myViewHolder.isDone.setText(R.string.execution_sh);
+//
+//        } else {
             //已审核 --> 查看
             myViewHolder.actionContainer.setBackgroundResource(R.drawable.exec_done);
             Drawable drawable = this.mContext.getResources().getDrawable(R.drawable.ic_exec_look);
             myViewHolder.isDone.setCompoundDrawablesWithIntrinsicBounds(null, drawable, null, null);
             myViewHolder.isDone.setText(R.string.execution_look);
-        }
+//        }
 
         // 是否黑烟车项：是否显示
-        if (Table_wsh.equals(this.mType) || Table_telemetry.equals(this.mType)) {
-            //如果是 "未审核" 导航页，则不显示该项
-            myViewHolder.isBlackCarLl.setVisibility(View.GONE);
-        } else {
+//        if (Table_wsh.equals(this.mType) || Table_telemetry.equals(this.mType)) {
+//            //如果是 "未审核" 导航页，则不显示该项
+//            myViewHolder.isBlackCarLl.setVisibility(View.GONE);
+//        } else {
             //如果是 "已审核"、"所有数据" 导航页，则显示是否是黑烟车
 //V3报错
 //            if (exhaust.getBlackSmokeReview() != 0) {  //已审核
@@ -165,7 +122,7 @@ public class BlackCarListAdapter extends RecyclerView.Adapter<BlackCarListAdapte
 //                    myViewHolder.isBlackCar.setText("否");
 //                }
 //            }
-        }
+//        }
 
         if (this.mItemClickListener != null) {
             myViewHolder.root.setOnClickListener((view) -> {
@@ -173,14 +130,14 @@ public class BlackCarListAdapter extends RecyclerView.Adapter<BlackCarListAdapte
             });
         }
 
-        if (this.mItemLongClickListener != null) {
-            myViewHolder.root.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
-                    return mItemLongClickListener.onItemLongClick(exhaust);
-                }
-            });
-        }
+//        if (this.mItemLongClickListener != null) {
+//            myViewHolder.root.setOnLongClickListener(new View.OnLongClickListener() {
+//                @Override
+//                public boolean onLongClick(View v) {
+//                    return mItemLongClickListener.onItemLongClick(exhaust);
+//                }
+//            });
+//        }
 
         if (this.mOnActionClickListener != null) {
             myViewHolder.actionContainer.setOnClickListener((view) -> {
@@ -190,39 +147,35 @@ public class BlackCarListAdapter extends RecyclerView.Adapter<BlackCarListAdapte
     }
 
     public interface OnItemClickListener {
-        void onItemClick(Exhaust dataDetail, String s);
+        void onItemClick(ExhaustZC dataDetail, String s);
     }
 
     public interface OnItemLongClickListener {
-        boolean onItemLongClick(Exhaust exhaust);
+        boolean onItemLongClick(ExhaustZC exhaust);
     }
 
     public interface OnActionClickListener {
-        void onActionClick(Exhaust dataDetail, String mType);
+        void onActionClick(ExhaustZC dataDetail, String mType);
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
-        LinearLayout actionContainer;
-        TextView addTime;
-        TextView carNo;
-        XCRoundRectImageView header;
-        TextView isBlackCar;
-        LinearLayout isBlackCarLl;
-        TextView isDone;
-        TextView recordNo;
         RelativeLayout root;
-        TextView stationName;
+        TextView vinTv; //车架号
+        TextView cphTV; //车牌号
+        TextView zdhTv; //终端号
+        TextView cjsjTv; //采集时间
+
+        LinearLayout actionContainer;
+        TextView isDone;
 
         MyViewHolder(View paramView) {
             super(paramView);
             this.root = ((RelativeLayout) paramView.findViewById(R.id.rl_root));
-            this.header = ((XCRoundRectImageView) paramView.findViewById(R.id.round_img_url));
-            this.isBlackCarLl = ((LinearLayout) paramView.findViewById(R.id.ll_detail_is_black_car));
-            this.recordNo = ((TextView) paramView.findViewById(R.id.tv_id));
-            this.addTime = ((TextView) paramView.findViewById(R.id.tv_time));
-            this.carNo = ((TextView) paramView.findViewById(R.id.tv_car_no));
-            this.stationName = ((TextView) paramView.findViewById(R.id.txt_station_name));
-            this.isBlackCar = ((TextView) paramView.findViewById(R.id.tv_is_black_car));
+            this.vinTv = ((TextView) paramView.findViewById(R.id.tv_vin_content));
+            this.cphTV = ((TextView) paramView.findViewById(R.id.tv_cph_content));
+            this.zdhTv = ((TextView) paramView.findViewById(R.id.tv_zdh_content));
+            this.cjsjTv = ((TextView) paramView.findViewById(R.id.txt_time_content));
+
             this.actionContainer = ((LinearLayout) paramView.findViewById(R.id.ll_action_container));
             this.isDone = ((TextView) paramView.findViewById(R.id.txt_is_done));
         }

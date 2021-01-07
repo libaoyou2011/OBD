@@ -12,6 +12,8 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.baolong.obd.R;
 import com.baolong.obd.blackcar.contract.ProcessListContract;
 import com.baolong.obd.blackcar.data.entity.Exhaust;
+import com.baolong.obd.blackcar.data.entity.ExhaustZC;
+import com.baolong.obd.blackcar.event.UpdateBlackSumEvent;
 import com.baolong.obd.common.base.Constance;
 import com.baolong.obd.common.utils.LogUtil;
 import com.hwangjr.rxbus.RxBus;
@@ -29,10 +31,6 @@ import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
 import java.util.List;
-
-import static com.baolong.obd.blackcar.fragment.BlackCarMainFragment.Table_aLL;
-import static com.baolong.obd.blackcar.fragment.BlackCarMainFragment.Table_wsh;
-import static com.baolong.obd.blackcar.fragment.BlackCarMainFragment.Table_ysh;
 
 public class BlackCarListFragment extends BaseFragment
         implements View.OnClickListener, ProcessListContract.View {
@@ -73,9 +71,9 @@ public class BlackCarListFragment extends BaseFragment
         this.mAdapter = new BlackCarListAdapter(getActivity(), this.mTableType);
         this.mAdapter.setOnItemClickListener(new BlackCarListAdapter.OnItemClickListener() {
             @Override
-            public void onItemClick(Exhaust dataDetail, String s) {
+            public void onItemClick(ExhaustZC dataDetail, String s) {
                 ARouter.getInstance()
-                        .build(Constance.ACTIVITY_URL_BlackCarDetailActivity)
+                        .build(Constance.ACTIVITY_URL_BlackCarDetailZCActivity)
                         .withString("tableType", mTableType)
                         .withString("optionType", OptionType_Review)
                         .withParcelable("exhaust", dataDetail)
@@ -95,23 +93,22 @@ public class BlackCarListFragment extends BaseFragment
             }
         });*/
         this.mAdapter.setOnActionClickListener(new BlackCarListAdapter.OnActionClickListener() {
-            public void onActionClick(Exhaust dataDetail, String mType) {
-
-                if (Table_wsh.equals(mTableType)) {
-                    ARouter.getInstance()
-                            .build(Constance.ACTIVITY_URL_BlackCarDetailActivity)
-                            .withString("tableType", mTableType)
-                            .withString("optionType", OptionType_Judge)
-                            .withParcelable("exhaust", dataDetail)
-                            .navigation();
-                } else {
-                    ARouter.getInstance()
-                            .build(Constance.ACTIVITY_URL_BlackCarDetailActivity)
-                            .withString("tableType", mTableType)
-                            .withString("optionType", OptionType_Review)
-                            .withParcelable("exhaust", dataDetail)
-                            .navigation();
-                }
+            public void onActionClick(ExhaustZC dataDetail, String mType) {
+//                if (Table_wsh.equals(mTableType)) {
+//                    ARouter.getInstance()
+//                            .build(Constance.ACTIVITY_URL_BlackCarDetailActivity)
+//                            .withString("tableType", mTableType)
+//                            .withString("optionType", OptionType_Judge)
+//                            .withParcelable("exhaust", dataDetail)
+//                            .navigation();
+//                } else {
+                ARouter.getInstance()
+                        .build(Constance.ACTIVITY_URL_BlackCarDetailZCActivity)
+                        .withString("tableType", mTableType)
+                        .withString("optionType", OptionType_Review)
+                        .withParcelable("exhaust", dataDetail)
+                        .navigation();
+//                }
             }
         });
 
@@ -134,11 +131,10 @@ public class BlackCarListFragment extends BaseFragment
                 BlackCarListFragment.this.mHasNoMore = false;
                 BlackCarListFragment.this.mPageNum = 1;
                 final BlackCarListPresenter tempBlackCarListPresenter = BlackCarListFragment.this.mBlackCarListPresenter;
-                final String type = BlackCarListFragment.this.mTableType;
-
+                tempBlackCarListPresenter.getZcListData(mTableType, mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
 //                if (Table_wsh.equals(type)) {
 //                    tempBlackCarListPresenter.getDshData("0", mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
-//                } else if (Table_ysh.equals(type)) {
+//                } else if (Table_cb.equals(type)) {
 //                    tempBlackCarListPresenter.getYshData("0", "1", mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
 //                } else if (Table_aLL.equals(type)) {
 //                    tempBlackCarListPresenter.getAllData( mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
@@ -153,7 +149,7 @@ public class BlackCarListFragment extends BaseFragment
                 if (!BlackCarListFragment.this.mHasNoMore) {
                     BlackCarListFragment.this.mPageNum++;
                     final BlackCarListPresenter tempBlackCarListPresenter = BlackCarListFragment.this.mBlackCarListPresenter;
-                    final String type = BlackCarListFragment.this.mTableType;
+                    tempBlackCarListPresenter.getZcListData(mTableType, mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
 
 //                    if (Table_wsh.equals(type)) {
 //                        tempBlackCarListPresenter.getDshData("0", mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
@@ -242,9 +238,10 @@ public class BlackCarListFragment extends BaseFragment
     public void showLoading() {
     }
 
+
     @Override
     public void setData(List<Exhaust> exhaustList) {
-        hideLoading();
+        /*hideLoading();
         if (exhaustList == null) {
             return;
         }
@@ -266,6 +263,43 @@ public class BlackCarListFragment extends BaseFragment
 //                RxBus.get().post((Object) new UpdateBlackSumEvent(BlackCarMainFragment.Table_aLL, -1, -1, exhaustList.getTotal()));
 //            }
 
+            this.mAdapter.setData(exhaustList);
+
+        } else {
+            this.mAdapter.getData().addAll(exhaustList);
+            this.mAdapter.notifyDataSetChanged();
+
+        }*/
+    }
+
+    @Override
+    public void setZcData(List<ExhaustZC> exhaustList, int total) {
+        hideLoading();
+        if (exhaustList == null) {
+            return;
+        }
+        LogUtil.i(TAG, "items num:" + exhaustList.size());
+
+        this.sumLoaded = true;
+        if (exhaustList.size() < this.mPageRow) {
+            // 此页不超过15条数据，则是最后一页
+            this.mHasNoMore = true;
+        }
+
+        if (mPageNum == 1) {
+            // 1.更新总数
+            switch (mTableType) {
+                case BlackCarMainFragment.Table_hg:    // mType处罚状态 (0:未处罚、 1:已处罚、 null:所有监测纪录)
+                    RxBus.get().post((Object) new UpdateBlackSumEvent(mTableType, total, -1, -1));
+                    break;
+                case BlackCarMainFragment.Table_cb:
+                    RxBus.get().post((Object) new UpdateBlackSumEvent(mTableType, -1, total, -1));
+                    break;
+                case BlackCarMainFragment.Table_wpd:
+                    RxBus.get().post((Object) new UpdateBlackSumEvent(mTableType, -1, -1, total));
+                    break;
+            }
+            // 2.更新列表集合
             this.mAdapter.setData(exhaustList);
 
         } else {

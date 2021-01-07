@@ -44,7 +44,7 @@
                 android:textSize="@dimen/font_16" />
 
             <TextView
-                android:id="@id/tv_id"
+                android:id="@+id/tv_id"
                 android:layout_width="0.0dip"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/x1"

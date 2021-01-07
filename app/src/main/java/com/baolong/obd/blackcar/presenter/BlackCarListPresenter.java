@@ -3,6 +3,7 @@ package com.baolong.obd.blackcar.presenter;
 import com.baolong.obd.blackcar.BlackCarApis;
 import com.baolong.obd.blackcar.contract.ProcessListContract;
 import com.baolong.obd.blackcar.data.entity.Exhaust;
+import com.baolong.obd.blackcar.data.entity.ExhaustZC;
 import com.baolong.obd.blackcar.data.entity.FilterCategoryModel;
 import com.baolong.obd.blackcar.data.entity.FilterBlackParams;
 import com.baolong.obd.blackcar.event.UpdateBlackSumEvent;
@@ -322,7 +323,50 @@ public class BlackCarListPresenter implements ProcessListContract.Presenter {
                             //1.更新列表数据
                             BlackCarListPresenter.this.mView.setData((List<Exhaust>) responseWrapperList.getRows());
                             //2.更新总数统计
-                            RxBus.get().post((Object) new UpdateBlackSumEvent("wsh", -1,  -1, responseWrapperList.getTotal()));
+                            RxBus.get().post((Object) new UpdateBlackSumEvent("wsh", -1, -1, responseWrapperList.getTotal()));
+                        } else {
+                            BlackCarListPresenter.this.mView.showFail("黑烟车数据查询失败！");
+                        }
+                        BlackCarListPresenter.this.mView.hideLoading();
+                    }
+                });
+    }
+
+    @Override
+    public void getZcListData(String pdjg, int pageSize, int pageNum, String orderByColumn, String isAsc, List<FilterCategoryModel> filterCategoryModelList) {
+        if (this.mView != null) {
+            this.mView.showLoading();
+        }
+
+        RetrofitManager.getInstance().createReq(BlackCarApis.GetZcList.class)
+                .req(pdjg, pageSize, pageNum)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<ResponseWrapperList<ExhaustZC>>() {
+                    @Override
+                    public void onCompleted() {
+                    }
+
+                    @Override
+                    public void onError(Throwable throwable) {
+                        try {
+                            throwable.printStackTrace();
+                        } catch (Exception ex) {
+                            ex.printStackTrace();
+                        } finally {
+                            if (BlackCarListPresenter.this.mView != null) {
+                                BlackCarListPresenter.this.mView.showFail("黑烟车数据查询失败！");
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onNext(ResponseWrapperList<ExhaustZC> responseWrapperList) {
+                        if (BlackCarListPresenter.this.mView == null) {
+                            return;
+                        }
+                        if (responseWrapperList.getCode() == 200) {
+                            BlackCarListPresenter.this.mView.setZcData((List<ExhaustZC>) responseWrapperList.getRows(), responseWrapperList.getTotal());
                         } else {
                             BlackCarListPresenter.this.mView.showFail("黑烟车数据查询失败！");
                         }

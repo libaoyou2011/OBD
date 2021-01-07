@@ -52,7 +52,7 @@
     <string name="monitor_station_add_time">监测时间:</string>
     <string name="monitor_station_car_no">车牌号:</string>
     <string name="monitor_station_item_code">记录编号:</string>
-    <string name="monitor_station_detail_title">监测记录</string>
+    <string name="monitor_station_detail_title">监测记录详情</string>
 
     <string name="monitor_station_warn_title">预警信息</string>
     <string name="monitor_station_warn_title1">设备状态预警</string>
@@ -136,6 +136,14 @@
     <string name="telemetry_title">遥测数据</string>
 
     <string name="monitor_video_title">视频预览</string>
+
+
+    <string name="zc_monitor_vin">VIN：</string>
+    <string name="zc_monitor_zdh">终端号：</string>
+    <string name="zc_monitor_chp">车牌号：</string>
+    <string name="zc_monitor_time">采集时间：</string>
+
+
 
 
 </resources>

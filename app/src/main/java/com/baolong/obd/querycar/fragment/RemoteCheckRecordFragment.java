@@ -33,8 +33,8 @@ import com.baolong.obd.querycar.adapter.RemoteCheckListAdapter;
 import com.baolong.obd.querycar.contract.QueryCarListContract;
 import com.baolong.obd.common.base.BaseFragment;
 
-import static com.baolong.obd.blackcar.fragment.BlackCarMainFragment.Table_aLL;
 import static com.baolong.obd.blackcar.fragment.BlackCarListFragment.OptionType_Review;
+import static com.baolong.obd.blackcar.fragment.BlackCarMainFragment.Table_wpd;
 
 /**
  * 车辆 (遥测、超标) 记录
@@ -75,7 +75,7 @@ public class RemoteCheckRecordFragment extends BaseFragment
 
                 ARouter.getInstance()
                         .build(Constance.ACTIVITY_URL_StationDetailActivity)
-                        .withString("tableType", Table_aLL)
+                        .withString("tableType", Table_wpd)
                         .withString("optionType", OptionType_Review)
                         .withParcelable("exhaust", exhaust)
                         .navigation();

@@ -66,7 +66,7 @@ public class BaseApplication extends Application {
 
         Utils.init(this);
 
-        GlobalAppComponent.init(this);
+        //GlobalAppComponent.init(this);
 
         host = UserSP.getStationLocalHost();
         cookie = UserSP.getCookie();

@@ -1,9 +1,10 @@
 package com.baolong.obd.blackcar.event;
+
 /**
- *  列表返回时刷新统计数量
- *
- *  发送： RxBus.get().post();
- *  接收：@Subscribe注解 通过注解接受：UpdateBlackSumEvent
+ * 列表返回时刷新统计数量
+ * <p>
+ * 发送： RxBus.get().post();
+ * 接收：@Subscribe注解 通过注解接受：UpdateBlackSumEvent
  */
 public class UpdateBlackSumEvent {
     private String id;
@@ -11,7 +12,7 @@ public class UpdateBlackSumEvent {
     private int yshSum;
     private int allSum;
 
-    public UpdateBlackSumEvent(final String mId, final int wcfSum, final int ycfSum, final int allSum) {
+    public UpdateBlackSumEvent(String mId, int wcfSum, int ycfSum, int allSum) {
         this.id = mId;
         this.wshSum = wcfSum;
         this.yshSum = ycfSum;

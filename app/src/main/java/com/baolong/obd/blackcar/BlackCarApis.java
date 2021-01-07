@@ -1,6 +1,7 @@
 package com.baolong.obd.blackcar;
 
 import com.baolong.obd.blackcar.data.entity.Exhaust;
+import com.baolong.obd.blackcar.data.entity.ExhaustZC;
 import com.baolong.obd.blackcar.data.entity.FilterCategoryModel;
 import com.baolong.obd.blackcar.data.entity.BlackCountModel;
 import com.baolong.obd.blackcar.data.entity.ResponseVehicleInfoListModel;
@@ -159,6 +160,18 @@ public class BlackCarApis {
         @FormUrlEncoded
         @POST("/datatable/vehicleinfo/app/list")
         public abstract Observable<ResponseWrapper<ResponseVehicleInfoListModel>> req(@Field("hphm") String paramString1, @Field("hpys") String paramString2);
+    }
+
+    /**
+     * 实时数据:
+     */
+    public static abstract interface GetZcList {
+        @GET("http://10.10.10.243:8383/prod-api/modules/exhaustByzc/list")
+        public abstract Observable<ResponseWrapperList<ExhaustZC>> req(
+                @Query("pdjg") String paramString1,
+                @Query("pageSize") int paramString2,
+                @Query("pageNum") int paramString3
+        );
     }
 
 }
