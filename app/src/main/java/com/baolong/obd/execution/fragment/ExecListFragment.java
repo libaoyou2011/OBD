@@ -19,6 +19,8 @@ import com.baolong.obd.common.utils.ActivityUtils;
 import com.baolong.obd.common.utils.LogUtil;
 import com.baolong.obd.component.webview.ReportProductWebActivity;
 import com.baolong.obd.execution.contract.ExecutionListContract;
+import com.baolong.obd.execution.data.entity.OBDCar;
+import com.baolong.obd.execution.event.UpdateExeSumEvent;
 import com.baolong.obd.monitor.activity.StationDetailActivity;
 import com.hwangjr.rxbus.RxBus;
 import com.hwangjr.rxbus.annotation.Subscribe;
@@ -71,9 +73,9 @@ public class ExecListFragment extends BaseFragment
         this.mRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         this.mAdapter = new ExecListAdapter(getActivity(), this.mType);
-        this.mAdapter.setOnItemClickListener(new ExecListAdapter.OnItemClickListener() {
+        /*this.mAdapter.setOnItemClickListener(new ExecListAdapter.OnItemClickListener() {
             @Override
-            public void onItemClick(Exhaust exhaust, String paramString) {
+            public void onItemClick(OBDCar exhaust, String paramString) {
 //                ARouter.getInstance()
 //                        .build("/monitor/activity/BlackCarDetailActivity")
 //                        .withString("jzbh", detail.getStationno())
@@ -86,11 +88,11 @@ public class ExecListFragment extends BaseFragment
                     ActivityUtils.activitySwitch((Activity) getContext(), intent, true);
                 }
             }
-        });
+        });*/
 
-        this.mAdapter.setOnItemLongClickListener(new ExecListAdapter.OnItemLongClickListener() {
+        /*this.mAdapter.setOnItemLongClickListener(new ExecListAdapter.OnItemLongClickListener() {
             @Override
-            public boolean onItemLongClick(Exhaust exhaust) {
+            public boolean onItemLongClick(OBDCar exhaust) {
                 if (exhaust != null) {
                     Intent intent = new Intent(getContext(), ReportProductWebActivity.class);
                     intent.putExtra("title", "预览报告");
@@ -100,9 +102,9 @@ public class ExecListFragment extends BaseFragment
                 }
                 return true;
             }
-        });
+        });*/
 
-        this.mAdapter.setOnActionClickListener(new ExecListAdapter.OnActionClickListener() {
+        /*this.mAdapter.setOnActionClickListener(new ExecListAdapter.OnActionClickListener() {
             @Override
             public void onActionClick(Exhaust exhaust, String type) {
                 if (exhaust != null) {
@@ -116,7 +118,7 @@ public class ExecListFragment extends BaseFragment
                     ActivityUtils.activitySwitch((Activity) getContext(), intent, true);
                 }
             }
-        });
+        });*/
 
         this.mRecycler.setAdapter(this.mAdapter);
     }
@@ -133,6 +135,14 @@ public class ExecListFragment extends BaseFragment
                 mHasNoMore = false;
                 mPageNum = 1;
                 final ExecutionListPresenter tempExecutionListPresenter = mExecutionListPresenter;
+
+                if (Table_wcf.equals(mType)) {
+                    //超标：未审核
+                    tempExecutionListPresenter.getOBDCarData(mPageSize, mPageNum, mType,null, mFilterCategoryModelList);
+                } else if (Table_ycf.equals(mType)){
+                    //超标：已审核
+                    tempExecutionListPresenter.getOBDCarData(mPageSize, mPageNum, mType,null, mFilterCategoryModelList);
+                }
 
                 //未处罚车辆、已处罚车辆、超标车数据
                 /*if (!Table_telemetry.equals(mType)) {
@@ -163,6 +173,13 @@ public class ExecListFragment extends BaseFragment
                     mPageNum++;
                     final ExecutionListPresenter tempExecutionListPresenter = mExecutionListPresenter;
 
+                    if (Table_wcf.equals(mType)) {
+                        //超标：未审核
+                        tempExecutionListPresenter.getOBDCarData(mPageSize, mPageNum, mType,null, mFilterCategoryModelList);
+                    } else if (Table_ycf.equals(mType)){
+                        //超标：已审核
+                        tempExecutionListPresenter.getOBDCarData(mPageSize, mPageNum, mType,null, mFilterCategoryModelList);
+                    }
                     //未处罚车辆、已处罚车辆、超标车数据
                     /*if (!Table_telemetry.equals(mType)) {
                         // pdjg         判断结果 (0-不合格、 1-合格、 2-无效)
@@ -262,7 +279,7 @@ public class ExecListFragment extends BaseFragment
 
     @Override
     public void setWcfData(List<Exhaust> exhaustList) {
-        hideLoading();
+        /*hideLoading();
         if (exhaustList == null) {
             return;
         }
@@ -287,13 +304,13 @@ public class ExecListFragment extends BaseFragment
             this.mAdapter.getData().addAll(exhaustList);
             this.mAdapter.notifyDataSetChanged();
 
-        }
+        }*/
 
     }
 
     @Override
     public void setYcfooAllData(List<Exhaust> exhaustList) {
-        hideLoading();
+        /*hideLoading();
         if (exhaustList == null) {
             return;
         }
@@ -317,13 +334,13 @@ public class ExecListFragment extends BaseFragment
             this.mAdapter.getData().addAll(exhaustList);
             this.mAdapter.notifyDataSetChanged();
 
-        }
+        }*/
 
     }
 
     @Override
     public void setTelemetryData(List<Exhaust> exhaustList) {
-        hideLoading();
+        /*hideLoading();
         if (exhaustList == null) {
             return;
         }
@@ -339,8 +356,38 @@ public class ExecListFragment extends BaseFragment
         } else {
             this.mAdapter.getData().addAll(exhaustList);
             this.mAdapter.notifyDataSetChanged();
+        }*/
+
+    }
+
+    @Override
+    public void setOBDCarData(List<OBDCar> exhaustList, int total) {
+        hideLoading();
+        if (exhaustList == null) {
+            return;
+        }
+        LogUtil.i(TAG, "items num:" + exhaustList.size());
+
+        if (exhaustList.size() < this.mPageSize) {
+            // 此页不超过15条数据，则是最后一页
+            this.mHasNoMore = true;
         }
 
+        if (mPageNum == 1) {
+            // 1.更新总数
+            if ("0".equals(mType)){   // mType处罚状态 (0:未处罚、 1:已处罚、 null:所有监测纪录)
+                RxBus.get().post((Object) new UpdateExeSumEvent(mType, total, -1, -1));
+            } else if ("1".equals(mType)){
+                RxBus.get().post((Object) new UpdateExeSumEvent(mType, -1, total, -1));
+            }
+
+            // 2.更新列表集合
+            this.mAdapter.setData(exhaustList);
+        } else {
+            this.mAdapter.getData().addAll(exhaustList);
+            this.mAdapter.notifyDataSetChanged();
+
+        }
     }
 
 }

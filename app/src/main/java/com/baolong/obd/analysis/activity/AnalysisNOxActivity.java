@@ -197,7 +197,7 @@ public class AnalysisNOxActivity extends BaseActivity implements NOxContract.Vie
         bottomAxis.setValueFormatter(new IndexAxisValueFormatter(valuesX)); //自定义数值格式
         bottomAxis.setLabelCount(valuesX.size(),false); //设置页签的个数 ，false则不强制执行，true强制执行，比例可能会不均匀
         bottomAxis.setLabelRotationAngle(90);
-        //bottomAxis.setAxisLineColor(Color.BLUE); //设置该轴轴行的颜色。
+        bottomAxis.setAxisLineColor(getResources().getColor(R.color.analysis_label_name)); //设置该轴轴行的颜色。
         //bottomAxis.setAxisLineWidth(1f);//设置该轴轴行的宽度。
         bottomAxis.setAvoidFirstLastClipping(false);
     }
@@ -211,7 +211,7 @@ public class AnalysisNOxActivity extends BaseActivity implements NOxContract.Vie
 
         leftAxis.setTypeface(Typeface.DEFAULT_BOLD); //设置坐标轴标签文字样式
         leftAxis.setAxisLineWidth(1f); //设置坐标轴的宽度
-        //leftAxis.setAxisLineColor(Color.parseColor("#1A00CAE3")); //设置坐标轴的颜色
+        leftAxis.setAxisLineColor(getResources().getColor(R.color.analysis_label_name)); //设置坐标轴的颜色
         /*leftAxis .setValueFormatter(new ValueFormatter() {
             @Override
             public String getFormattedValue(float value) {
@@ -236,17 +236,18 @@ public class AnalysisNOxActivity extends BaseActivity implements NOxContract.Vie
 
 
         //设置总数的柱状图
-        LineDataSet lineDataSet = new LineDataSet(values, "NOx浓度");
+        LineDataSet lineDataSet = new LineDataSet(values, "NOx浓度均值");
         lineDataSet.setHighlightEnabled(true);
         lineDataSet.setMode(LineDataSet.Mode.HORIZONTAL_BEZIER); //设置折线图的显示模式
-        lineDataSet.setColor(this.getResources().getColor(R.color.chart_yellow));//设置线的颜色  单色
+        lineDataSet.setColor(getResources().getColor(R.color.analysis_label_name));//设置线的颜色  单色
         lineDataSet.setLineWidth(1.5f); //设置线的宽度
         lineDataSet.setDrawCircles(true);
         lineDataSet.setDrawCircleHole(false);
         lineDataSet.setCircleRadius(4f);//设置每个折线点的大小
         lineDataSet.setAxisDependency(YAxis.AxisDependency.LEFT); ////设置线数据依赖于左侧y轴
         lineDataSet.setDrawFilled(true);//设置数据覆盖的阴影层
-        lineDataSet.setDrawValues(true); //不绘制线的数据
+        lineDataSet.setFillColor(getResources().getColor(R.color.analysis_line_fill)); //设置数据覆盖的阴影层颜色
+        lineDataSet.setDrawValues(true); //绘制线的数据
         lineDataSet.setValueTextColor(this.getResources().getColor(R.color.textColor_333333));//设置数据的文本颜色，如果不绘制线的数据 这句代码也不用设置了
         lineDataSet.setValueTextSize(10f);//如果不绘制线的数据 这句代码也不用设置了
         //lineDataSet.setFormSize(0f);//设置当前这条线的图例的大小

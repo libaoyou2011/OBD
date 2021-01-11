@@ -190,6 +190,7 @@ public class AnalysisJCJLActivity extends BaseActivity implements JCJLContract.V
         //bottomAxis.setAxisLineColor(Color.BLUE); //设置该轴轴行的颜色。
         bottomAxis.setAxisLineWidth(1f);//设置该轴轴行的宽度。
         bottomAxis.setAvoidFirstLastClipping(false);
+        bottomAxis.setGranularity(1f);//禁止放大后x轴标签重绘
     }
 
     /**

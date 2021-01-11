@@ -150,11 +150,11 @@ public class AnalysisCQJRActivity extends BaseActivity implements CQJRContract.V
 
         //5. 图例
         Legend legend = mChart.getLegend();
-        legend.setEnabled(false);//设置Legend启用或禁用。
+        legend.setEnabled(true);//设置Legend启用或禁用。
         //legend.setTextColor(int color) //设置图例标签的颜色。
         //legend.setTextSize(float size) //设置在DP传说标签的文字大小。
         //legend.setWordWrapEnabled(boolean enabled) //如果启用，Legend 的内容将不会超出图表边界之外，而是创建一个新的行。 请注意，这会降低性能和仅适用于”legend 位于图表下面”的情况。
-        legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.LEFT);//图例水平居中
+        legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);//图例水平居中
         legend.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP); //图例在图表上方
         //legend.setOrientation(Legend.LegendOrientation.HORIZONTAL); //图例的方向为水平
         //legend.setDrawInside(false); //绘制在chart的外侧
@@ -220,7 +220,7 @@ public class AnalysisCQJRActivity extends BaseActivity implements CQJRContract.V
             barEntryList.add(new BarEntry(i + 0.5f, (float) mItems.get(i).getNum()));
         }
         //设置总数的柱状图
-        BarDataSet barDataSet = new BarDataSet(barEntryList, "接入车辆数");
+        BarDataSet barDataSet = new BarDataSet(barEntryList, "企业");
         barDataSet.setAxisDependency(YAxis.AxisDependency.LEFT);
         //单一色
         barDataSet.setColor(getResources().getColor(R.color.chart_blue));

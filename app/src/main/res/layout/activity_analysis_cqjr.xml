@@ -12,35 +12,59 @@
         android:id="@+id/v_top"
         style="@style/order_new_line" />
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="@dimen/x20"
+        android:paddingBottom="@dimen/x20"
+        android:background="@drawable/bg_analysis_chart">
 
-        <!--数据统计分析-->
         <TextView
+            android:id="@+id/table_name"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="@dimen/x26"
-            android:layout_marginTop="@dimen/x36"
-            android:layout_marginEnd="@dimen/x26"
-            android:text="车企接入统计"
-            android:textColor="@color/analysis_label"
-            android:textSize="@dimen/font_16" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/x6"
-            android:layout_marginStart="@dimen/x26"
-            android:layout_marginEnd="@dimen/x26"
-            android:layout_marginBottom="@dimen/x36"
-            android:background="@color/text_yellow_times" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x26"
+            android:layout_marginBottom="@dimen/x2"
+            android:paddingStart="@dimen/x10"
+            android:paddingEnd="@dimen/x10"
+            android:text="接入车辆数/辆"
+            android:textColor="@color/analysis_label_name"
+            android:textSize="@dimen/font_16"/>
+
         <com.github.mikephil.charting.charts.BarChart
             android:id="@+id/bar_chart"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x900"
-            android:background="@color/chart_bcg"            />
+            android:layout_height="@dimen/x900"/>
     </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical">-->
+
+<!--        &lt;!&ndash;数据统计分析&ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginStart="@dimen/x26"-->
+<!--            android:layout_marginTop="@dimen/x36"-->
+<!--            android:layout_marginEnd="@dimen/x26"-->
+<!--            android:text="车企接入统计"-->
+<!--            android:textColor="@color/analysis_label"-->
+<!--            android:textSize="@dimen/font_16" />-->
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/x6"-->
+<!--            android:layout_marginStart="@dimen/x26"-->
+<!--            android:layout_marginEnd="@dimen/x26"-->
+<!--            android:layout_marginBottom="@dimen/x36"-->
+<!--            android:background="@color/text_yellow_times" />-->
+<!--        <com.github.mikephil.charting.charts.BarChart-->
+<!--            android:id="@+id/bar_chart"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/x900"/>-->
+<!--    </LinearLayout>-->
 
 
 </LinearLayout>

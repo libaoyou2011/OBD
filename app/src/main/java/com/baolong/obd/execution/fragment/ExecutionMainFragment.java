@@ -73,7 +73,7 @@ public class ExecutionMainFragment extends BaseFragment
 
         final android.view.View lineView = this.mView.findViewById(R.id.view_ex_top);
         TextView tempTopBarRightTv = ((TextView) this.mView.findViewById(R.id.tv_right_text));
-        tempTopBarRightTv.setVisibility(View.VISIBLE);
+        tempTopBarRightTv.setVisibility(View.INVISIBLE);
         tempTopBarRightTv.setText("筛选");
         tempTopBarRightTv.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -81,7 +81,6 @@ public class ExecutionMainFragment extends BaseFragment
                 new BlackCarFilterActivity(ExecutionMainFragment.this.getContext(), convertView, lineView.getBottom(), "execution").showAsDropDown(lineView);
             }
         });
-
 
     }
 
@@ -111,16 +110,16 @@ public class ExecutionMainFragment extends BaseFragment
         hadExecListFragment.setArguments(arguments2);
         this.mFragmentList.add(hadExecListFragment);
 
-        final ExecListFragment ALLExecListFragment = new ExecListFragment();
-        final Bundle arguments3 = new Bundle();
-        arguments3.putString("type", Table_all);
-        ALLExecListFragment.setArguments(arguments3);
-        this.mFragmentList.add(ALLExecListFragment);
+//        final ExecListFragment ALLExecListFragment = new ExecListFragment();
+//        final Bundle arguments3 = new Bundle();
+//        arguments3.putString("type", Table_all);
+//        ALLExecListFragment.setArguments(arguments3);
+//        this.mFragmentList.add(ALLExecListFragment);
 
         final ArrayList<String> list = new ArrayList<String>();
         list.add("在线车辆");
         list.add("离线车辆");
-        list.add("报警车辆");
+//        list.add("报警车辆");
 
         FragmentManager fragmentManager = this.getChildFragmentManager();
         this.mViewPagerFragmentAdapter = new ViewPagerFragmentAdapter(fragmentManager, this.mFragmentList, list);

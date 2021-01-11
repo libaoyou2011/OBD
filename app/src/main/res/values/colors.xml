@@ -13,6 +13,7 @@
 
     <color name="activity_bg">#ffebebeb</color>
     <color name="background">#fff7f8f9</color>
+
     <color name="black">#ff000000</color>
     <color name="bg_search_key">#e3e3e3</color>
     <color name="status_bar">#f9134387</color>
@@ -71,6 +72,10 @@
     <color name="gray_item_solid_bg_press">#f0f0f0</color>
 
     <color name="tab_indicator_color">#ff4686f8</color>
+
+    <color name="analysis_background">#f0f2f5</color>
+    <color name="analysis_label_name">#008ACD</color>
+    <color name="analysis_line_fill">#FF409EFF</color>
 
     <color name="analysis_label">#6E6E6E</color>
     <color name="analysis_divide">#98F296</color>

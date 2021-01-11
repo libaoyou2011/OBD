@@ -138,10 +138,17 @@
     <string name="monitor_video_title">视频预览</string>
 
 
+    <string name="zc_monitor_per">条</string>
     <string name="zc_monitor_vin">VIN：</string>
     <string name="zc_monitor_zdh">终端号：</string>
     <string name="zc_monitor_chp">车牌号：</string>
     <string name="zc_monitor_time">采集时间：</string>
+
+    <string name="zc_car_per">辆</string>
+    <string name="zc_car_hphm">车牌号码：</string>
+    <string name="zc_car_vin">VIN：</string>
+    <string name="zc_car_obdbh">终端号：</string>
+    <string name="zc_car_ssqy">所属企业：</string>
 
 
 

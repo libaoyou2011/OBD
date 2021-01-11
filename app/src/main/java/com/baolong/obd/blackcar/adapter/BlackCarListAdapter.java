@@ -158,7 +158,7 @@ public class BlackCarListAdapter extends RecyclerView.Adapter<BlackCarListAdapte
         void onActionClick(ExhaustZC dataDetail, String mType);
     }
 
-    class MyViewHolder extends RecyclerView.ViewHolder {
+    static class MyViewHolder extends RecyclerView.ViewHolder {
         RelativeLayout root;
         TextView vinTv; //车架号
         TextView cphTV; //车牌号

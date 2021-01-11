@@ -1,7 +1,6 @@
 package com.baolong.obd.execution.adapter;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -13,9 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.baolong.obd.R;
-import com.baolong.obd.blackcar.data.entity.Exhaust;
-import com.baolong.obd.common.widget.XCRoundRectImageView;
-import com.baolong.obd.component.media.AppImageDisplay;
+import com.baolong.obd.execution.data.entity.OBDCar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +20,7 @@ import java.util.List;
 public class ExecListAdapter extends RecyclerView.Adapter<ExecListAdapter.MyViewHolder> {
     private Context mContext;
     private String mType;
-    private List<Exhaust> mLists;
+    private List<OBDCar> mLists;
     private OnItemClickListener mItemClickListener;
     private OnItemLongClickListener mItemLongClickListener;
     private OnActionClickListener mOnActionClickListener;
@@ -33,14 +30,14 @@ public class ExecListAdapter extends RecyclerView.Adapter<ExecListAdapter.MyView
         this.mType = paramString;
     }
 
-    public void setData(List<Exhaust> paramList) {
+    public void setData(List<OBDCar> paramList) {
         this.mLists = paramList;
         notifyDataSetChanged();
     }
 
-    public List<Exhaust> getData() {
+    public List<OBDCar> getData() {
         if (this.mLists == null) {
-            return new ArrayList<Exhaust>();
+            return new ArrayList<OBDCar>();
         } else {
             return this.mLists;
         }
@@ -66,6 +63,7 @@ public class ExecListAdapter extends RecyclerView.Adapter<ExecListAdapter.MyView
         return this.mLists.size();
     }
 
+    @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_exec_list, parent, false));
@@ -73,69 +71,30 @@ public class ExecListAdapter extends RecyclerView.Adapter<ExecListAdapter.MyView
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        final Exhaust exhaust = (Exhaust) this.mLists.get(position);
+        final OBDCar exhaust = (OBDCar) this.mLists.get(position);
 
         //root点击事件在ExeListFragment中回调，将该item数据返回
         holder.root.setTag(exhaust);
 
-        //将所有的图片拼接到一起
-        StringBuilder urlSB = new StringBuilder();
-        if (!TextUtils.isEmpty(exhaust.getTp1())) {
-            urlSB.append(exhaust.getTp1());
-        }
-        if (!TextUtils.isEmpty(exhaust.getTp2())) {
-            if (!TextUtils.isEmpty(urlSB.toString())) {
-                urlSB.append(";");
-            }
-            urlSB.append(exhaust.getTp2());
-        }
-        if (!TextUtils.isEmpty(exhaust.getTp3())) {
-            if (!TextUtils.isEmpty(urlSB.toString())) {
-                urlSB.append(";");
-            }
-            urlSB.append(exhaust.getTp3());
-        }
-        if (!TextUtils.isEmpty(exhaust.getTp4())) {
-            if (!TextUtils.isEmpty(urlSB.toString())) {
-                urlSB.append(";");
-            }
-            urlSB.append(exhaust.getTp4());
-        }
-        if (!TextUtils.isEmpty(exhaust.getTp5())) {
-            if (!TextUtils.isEmpty(urlSB.toString())) {
-                urlSB.append(";");
-            }
-            urlSB.append(exhaust.getTp5());
-        }
-        //显示的首张图片URL
-        String[] urlArray = urlSB.toString().split(";");
-        String pictureUrl = null;
-        if (urlArray.length > 0) {
-            pictureUrl = urlArray[0];
-        }
-        //glide加载图片
-        if (!TextUtils.isEmpty(pictureUrl)) {
-            AppImageDisplay.showImg("profile", pictureUrl, this.mContext, R.drawable.img_monitor_pic, holder.header);
+        if (exhaust != null) {
+            holder.hphmTv.setText(TextUtils.isEmpty(exhaust.getHphm()) ? "--" : exhaust.getHphm());
+            holder.vinTV.setText(TextUtils.isEmpty(exhaust.getVin()) ? "--" : exhaust.getVin());
+            holder.obdbhTv.setText(TextUtils.isEmpty(exhaust.getObdbh()) ? "--" : exhaust.getObdbh());
+            holder.ssqyTv.setText(TextUtils.isEmpty(exhaust.getSszz()) ? "--" : exhaust.getSszz());
         }
 
-        holder.recordNo.setText(exhaust.getJlbh());
-        holder.carNo.setText(exhaust.getHphm());
-        holder.addTime.setText(exhaust.getJcrq());
-        if (exhaust.getSiteInfo() != null) {
-            holder.stationName.setText(exhaust.getSiteInfo().getDwmc());
-        }
         // item项右上角审核状态
-        if ("0".equals(this.mType)) {
-            holder.actionContainer.setBackgroundResource(R.drawable.exec_no_do);
-            holder.isDone.setCompoundDrawablesWithIntrinsicBounds((Drawable) null, this.mContext.getResources().getDrawable(R.drawable.ic_exec_do), (Drawable) null, (Drawable) null);
-            holder.isDone.setText(R.string.execution_do);
-        } else {
-            holder.actionContainer.setBackgroundResource(R.drawable.exec_done);
-            holder.isDone.setCompoundDrawablesWithIntrinsicBounds((Drawable) null, this.mContext.getResources().getDrawable(R.drawable.ic_exec_look), (Drawable) null, (Drawable) null);
-            holder.isDone.setText(R.string.execution_look);
-        }
+//        if ("0".equals(this.mType)) {
+//            holder.actionContainer.setBackgroundResource(R.drawable.exec_no_do);
+//            holder.isDone.setCompoundDrawablesWithIntrinsicBounds((Drawable) null, this.mContext.getResources().getDrawable(R.drawable.ic_exec_do), (Drawable) null, (Drawable) null);
+//            holder.isDone.setText(R.string.execution_do);
+//        } else {
+//            holder.actionContainer.setBackgroundResource(R.drawable.exec_done);
+//            holder.isDone.setCompoundDrawablesWithIntrinsicBounds((Drawable) null, this.mContext.getResources().getDrawable(R.drawable.ic_exec_look), (Drawable) null, (Drawable) null);
+//            holder.isDone.setText(R.string.execution_look);
+//        }
 
-        if (this.mItemClickListener != null) {
+        /*if (this.mItemClickListener != null) {
             holder.root.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -160,40 +119,40 @@ public class ExecListAdapter extends RecyclerView.Adapter<ExecListAdapter.MyView
                     mOnActionClickListener.onActionClick(exhaust, mType);
                 }
             });
-        }
+        }*/
     }
 
     public static abstract interface OnActionClickListener {
-        public abstract void onActionClick(Exhaust exhaust, String paramString);
+        public abstract void onActionClick(OBDCar exhaust, String paramString);
     }
 
     public static abstract interface OnItemLongClickListener {
-        public abstract boolean onItemLongClick(Exhaust exhaust);
+        public abstract boolean onItemLongClick(OBDCar exhaust);
     }
 
     public static abstract interface OnItemClickListener {
-        public abstract void onItemClick(Exhaust exhaust, String paramString);
+        public abstract void onItemClick(OBDCar exhaust, String paramString);
     }
 
-    class MyViewHolder extends RecyclerView.ViewHolder {
-        LinearLayout actionContainer;
-        TextView addTime;
-        TextView carNo;
-        XCRoundRectImageView header;
-        TextView isDone;
-        TextView recordNo;
+    static class MyViewHolder extends RecyclerView.ViewHolder {
         RelativeLayout root;
-        TextView stationName;
+        TextView hphmTv; //车牌号
+        TextView vinTV; //VIN
+        TextView obdbhTv; //obd编号
+        TextView ssqyTv; //所属企业
+
+        LinearLayout actionContainer;
+        TextView isDone;
 
         MyViewHolder(View paramView) {
             super(paramView);
             this.root = ((RelativeLayout) paramView.findViewById(R.id.rl_root));
-            this.header = ((XCRoundRectImageView) paramView.findViewById(R.id.img_url));
+            this.hphmTv = ((TextView) paramView.findViewById(R.id.tv_vin_content));
+            this.vinTV = ((TextView) paramView.findViewById(R.id.tv_cph_content));
+            this.obdbhTv = ((TextView) paramView.findViewById(R.id.tv_zdh_content));
+            this.ssqyTv = ((TextView) paramView.findViewById(R.id.txt_time_content));
+
             this.actionContainer = ((LinearLayout) paramView.findViewById(R.id.ll_action_container));
-            this.recordNo = ((TextView) paramView.findViewById(R.id.tv_id));
-            this.addTime = ((TextView) paramView.findViewById(R.id.tv_time));
-            this.carNo = ((TextView) paramView.findViewById(R.id.tv_car_no));
-            this.stationName = ((TextView) paramView.findViewById(R.id.txt_station_name));
             this.isDone = ((TextView) paramView.findViewById(R.id.txt_is_done));
         }
     }

@@ -2,6 +2,7 @@ package com.baolong.obd.execution.presenter;
 
 import com.baolong.obd.blackcar.data.entity.Exhaust;
 import com.baolong.obd.blackcar.data.entity.FilterCategoryModel;
+import com.baolong.obd.execution.data.entity.OBDCar;
 import com.baolong.obd.execution.event.UpdateExeSumEvent;
 import com.baolong.obd.common.network.ResponseWrapperList;
 import com.baolong.obd.common.network.RetrofitManager;
@@ -353,7 +354,7 @@ public class ExecutionListPresenter implements ExecutionListContract.Presenter {
         }
 
         ((ExecutionApis.GetTelemetryDataListExe) RetrofitManager.getInstance().createReq(ExecutionApis.GetTelemetryDataListExe.class))
-                .req( pageSize, pageNum, orderByColumn, isAsc,
+                .req(pageSize, pageNum, orderByColumn, isAsc,
                         dwbh, cpys, hphm, clgs, rlzl,
                         cojgysf, cojg, nojgysf, nojg, hcjgysf, hcjg, btgdjgysf, btgdjg, co2sczysf, co2scz,
                         fsysf, fs, vspysf, vsp, hjwdysf, hjwd, sdysf, sd, dqyysf, dqy,
@@ -388,6 +389,85 @@ public class ExecutionListPresenter implements ExecutionListContract.Presenter {
                             ExecutionListPresenter.this.mView.setYcfooAllData((List<Exhaust>) responseWrapperList.getRows());
                             // 更新总数统计
                             // 遥测数据 do nothing
+                        } else {
+                            ExecutionListPresenter.this.mView.showFail("列表数据查询失败！");
+                        }
+                        ExecutionListPresenter.this.mView.hideLoading();
+                    }
+                });
+    }
+
+
+    @Override
+    public void getOBDCarData(int pageSize, int pageNum, String clzt, String hphm, List<FilterCategoryModel> filterCategoryModelList) {
+        if (this.mView != null) {
+            this.mView.showLoading();
+        }
+
+        /*if (filterCategoryModelList != null) {
+            ExeFilterParams filterParams = new ExeFilterParams(filterCategoryModelList).init();
+            dwbh = filterParams.getDwbh();
+            cpys = filterParams.getCpys();
+            hphm = filterParams.getHphm();
+            clgs = filterParams.getClgs();
+            rlzl = filterParams.getRlzl();
+
+            cojgysf = filterParams.getCojgysf();
+            cojg = filterParams.getCojg();
+            nojgysf = filterParams.getNojgysf();
+            nojg = filterParams.getNojg();
+            hcjgysf = filterParams.getHcjgysf();
+            hcjg = filterParams.getHcjg();
+            btgdjgysf = filterParams.getBtgdjgysf();
+            btgdjg = filterParams.getBtgdjg();
+            co2sczysf = filterParams.getCo2sczysf();
+            co2scz = filterParams.getCo2scz();
+            fsysf = filterParams.getFsysf();
+            fs = filterParams.getFs();
+            vspysf = filterParams.getVspysf();
+            vsp = filterParams.getVsp();
+            hjwdysf = filterParams.getHjwdysf();
+            hjwd = filterParams.getHjwd();
+            sdysf = filterParams.getSdysf();
+            sd = filterParams.getSd();
+            dqyysf = filterParams.getDqyysf();
+            dqy = filterParams.getDqy();
+            cbcsysf = filterParams.getCbcsysf();
+            cbcs = filterParams.getCbcs();
+            beginTime = filterParams.getBeginTime();
+            endTime = filterParams.getEndTime();
+        }*/
+
+        ((ExecutionApis.GetOBDCarList) RetrofitManager.getInstance().createReq(ExecutionApis.GetOBDCarList.class))
+                .req(pageSize, pageNum, clzt, hphm)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<ResponseWrapperList<OBDCar>>() {
+                    @Override
+                    public void onCompleted() {
+                    }
+
+                    @Override
+                    public void onError(Throwable paramAnonymousThrowable) {
+                        try {
+                            paramAnonymousThrowable.printStackTrace();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        } finally {
+                            if (ExecutionListPresenter.this.mView != null) {
+                                ExecutionListPresenter.this.mView.showFail("列表数据查询失败！");
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onNext(ResponseWrapperList<OBDCar> responseWrapperList) {
+                        if (ExecutionListPresenter.this.mView == null) {
+                            return;
+                        }
+                        if (responseWrapperList.getCode() == 200) {
+                            ExecutionListPresenter.this.mView.setOBDCarData((List<OBDCar>) responseWrapperList.getRows(),responseWrapperList.getTotal());
+
                         } else {
                             ExecutionListPresenter.this.mView.showFail("列表数据查询失败！");
                         }

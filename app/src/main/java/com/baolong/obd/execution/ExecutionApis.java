@@ -1,10 +1,12 @@
 package com.baolong.obd.execution;
 
 import com.baolong.obd.blackcar.data.entity.Exhaust;
+import com.baolong.obd.blackcar.data.entity.ExhaustZC;
 import com.baolong.obd.common.network.ResponseWrapper;
 import com.baolong.obd.common.network.ResponseWrapperList;
 import com.baolong.obd.execution.data.entity.GetStatisticCountModel;
 import com.baolong.obd.execution.data.entity.GetUploadImgResponseModel;
+import com.baolong.obd.execution.data.entity.OBDCar;
 import com.baolong.obd.execution.data.entity.SearchMonitoringDataResponseModel;
 
 import okhttp3.RequestBody;
@@ -254,6 +256,19 @@ public class ExecutionApis {
         @FormUrlEncoded
         @POST("blzxjcpt/api/app/uploadingFiles")
         public abstract Observable<ResponseWrapper<GetUploadImgResponseModel>> req(@Field("token") String paramString1, @Field("username") String paramString2, @Field("appid") String paramString3, @Field("fileStr") String paramString4, @Field("fileName") String paramString5, @Field("fileType") String paramString6, @Field("loginname") String paramString7);
+    }
+
+    /**
+     * 车辆状态列表:
+     */
+    public static abstract interface GetOBDCarList {
+        @GET("http://10.10.10.243:8383/prod-api/modules/equipment/list")
+        public abstract Observable<ResponseWrapperList<OBDCar>> req(
+                @Query("pageSize") int paramString1,
+                @Query("pageNum") int paramString2,
+                @Query("clzt") String paramString3,
+                @Query("hphm") String paramString4
+        );
     }
 
 }
