@@ -154,6 +154,7 @@ public class ExecListAdapter extends RecyclerView.Adapter<ExecListAdapter.MyView
 
             this.actionContainer = ((LinearLayout) paramView.findViewById(R.id.ll_action_container));
             this.isDone = ((TextView) paramView.findViewById(R.id.txt_is_done));
+            this.actionContainer.setVisibility(View.GONE);
         }
     }
 }

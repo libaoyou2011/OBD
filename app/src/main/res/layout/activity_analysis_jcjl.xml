@@ -68,7 +68,7 @@
         <com.github.mikephil.charting.charts.BarChart
             android:id="@+id/bar_chart"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/x900"/>
+            android:layout_height="@dimen/x860"/>
     </LinearLayout>
 
 

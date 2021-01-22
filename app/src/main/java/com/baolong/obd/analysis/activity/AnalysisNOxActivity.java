@@ -68,8 +68,12 @@ public class AnalysisNOxActivity extends BaseActivity implements NOxContract.Vie
 
 
     private void initTitle() {
-        ((ImageView) this.findViewById(R.id.image_title_back)).setVisibility(View.GONE);
-
+        ((ImageView) this.findViewById(R.id.image_title_back)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AnalysisNOxActivity.this.onBackPressed();
+            }
+        });
         final TextView titleTextView = (TextView) this.findViewById(R.id.tv_title);
         titleTextView.setText(mTitle);
 
