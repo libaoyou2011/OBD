@@ -64,14 +64,14 @@ public class AnalysisCQJRActivity extends BaseActivity implements CQJRContract.V
 
         final View lineView = this.findViewById(R.id.v_top);
         TextView mTopBarRightTv = ((TextView) this.findViewById(R.id.tv_right_text));
-        mTopBarRightTv.setVisibility(View.VISIBLE);
-        mTopBarRightTv.setText("筛选");
-        mTopBarRightTv.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                View convertView = LayoutInflater.from(AnalysisCQJRActivity.this).inflate(R.layout.activity_select_filter, null);
-                new BlackCarFilterActivity(AnalysisCQJRActivity.this, convertView, lineView.getBottom(), "analysis").showAsDropDown(lineView);
-            }
-        });
+        mTopBarRightTv.setVisibility(View.GONE);
+//        mTopBarRightTv.setText("筛选");
+//        mTopBarRightTv.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
+//                View convertView = LayoutInflater.from(AnalysisCQJRActivity.this).inflate(R.layout.activity_select_filter, null);
+//                new BlackCarFilterActivity(AnalysisCQJRActivity.this, convertView, lineView.getBottom(), "analysis").showAsDropDown(lineView);
+//            }
+//        });
     }
 
 

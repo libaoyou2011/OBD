@@ -439,7 +439,7 @@ public class ExecutionListPresenter implements ExecutionListContract.Presenter {
         }*/
 
         ((ExecutionApis.GetOBDCarList) RetrofitManager.getInstance().createReq(ExecutionApis.GetOBDCarList.class))
-                .req(pageSize, pageNum, clzt, hphm)
+                .req(pageSize, pageNum, clzt)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<ResponseWrapperList<OBDCar>>() {

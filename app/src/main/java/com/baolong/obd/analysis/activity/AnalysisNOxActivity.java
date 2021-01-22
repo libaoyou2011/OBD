@@ -20,6 +20,7 @@ import com.baolong.obd.analysis.presenter.NOxPresenter;
 import com.baolong.obd.blackcar.activity.BlackCarFilterActivity;
 import com.baolong.obd.blackcar.data.entity.FilterCategoryModel;
 import com.baolong.obd.common.base.BaseActivity;
+import com.baolong.obd.common.utils.DateUtils;
 import com.baolong.obd.common.utils.ToastUtils;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;
@@ -39,8 +40,11 @@ import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.hwangjr.rxbus.RxBus;
 import com.hwangjr.rxbus.annotation.Subscribe;
+import com.jaredrummler.materialspinner.MaterialSpinner;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -52,6 +56,9 @@ public class AnalysisNOxActivity extends BaseActivity implements NOxContract.Vie
     String mTitle;
     String mType = "clzs";  //type=clzs、zxsl、lxsl、bjsl
     List<FilterCategoryModel> mFilterCategoryModelList;
+
+
+    MaterialSpinner monthSpinner;
 
     private LineChart mChart;//图表
 
@@ -68,7 +75,7 @@ public class AnalysisNOxActivity extends BaseActivity implements NOxContract.Vie
 
         final View lineView = this.findViewById(R.id.v_top);
         TextView mTopBarRightTv = ((TextView) this.findViewById(R.id.tv_right_text));
-        mTopBarRightTv.setVisibility(View.VISIBLE);
+        mTopBarRightTv.setVisibility(View.GONE);
         mTopBarRightTv.setText("筛选");
         mTopBarRightTv.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -77,7 +84,6 @@ public class AnalysisNOxActivity extends BaseActivity implements NOxContract.Vie
             }
         });
     }
-
 
     /**
      * 展示数据
@@ -195,7 +201,7 @@ public class AnalysisNOxActivity extends BaseActivity implements NOxContract.Vie
         bottomAxis.setDrawGridLines(false); //设置为true，则绘制网格线。(必须 xAxis.setEnabled(true)才有效)
         bottomAxis.setCenterAxisLabels(false); //设置即可实现时折线图居中相对于x轴居中。
         bottomAxis.setValueFormatter(new IndexAxisValueFormatter(valuesX)); //自定义数值格式
-        bottomAxis.setLabelCount(valuesX.size(),false); //设置页签的个数 ，false则不强制执行，true强制执行，比例可能会不均匀
+        bottomAxis.setLabelCount(valuesX.size(), false); //设置页签的个数 ，false则不强制执行，true强制执行，比例可能会不均匀
         bottomAxis.setLabelRotationAngle(90);
         bottomAxis.setAxisLineColor(getResources().getColor(R.color.analysis_label_name)); //设置该轴轴行的颜色。
         //bottomAxis.setAxisLineWidth(1f);//设置该轴轴行的宽度。
@@ -231,7 +237,7 @@ public class AnalysisNOxActivity extends BaseActivity implements NOxContract.Vie
         //总量金额
         List<Entry> values = new ArrayList<>();
         for (int i = 0; i < mItems.size(); i++) {
-            values.add(new Entry(i ,  Float.parseFloat(mItems.get(i).getNoxjg())));
+            values.add(new Entry(i, Float.parseFloat(mItems.get(i).getNoxjg())));
         }
 
 
@@ -281,11 +287,47 @@ public class AnalysisNOxActivity extends BaseActivity implements NOxContract.Vie
 
         initTitle();
 
+        // 年 yearSpinner
+        MaterialSpinner yearSpinner = (MaterialSpinner) findViewById(R.id.spinner_year);
+        List<String> years = new ArrayList<>();
+        // 获取当前日期
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        for (int i = 0; i < 6; i++) {
+            years.add(String.valueOf(year - i));
+        }
+        yearSpinner.setItems(years);
+        yearSpinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
+            @Override
+            public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
+                //ToastUtils.longToast("Clicked year：" + item);
+                mPresenter.getData(null, getStartDate(item, monthSpinner.getText().toString()), getEndDate(item, monthSpinner.getText().toString()));
+
+            }
+        });
+
+        // 月 yearSpinner
+        monthSpinner = (MaterialSpinner) findViewById(R.id.spinner_month);
+        List<String> months = new ArrayList<>();
+        // 获取当前日期
+        for (int i = 1; i < 13; i++) {
+            months.add(String.valueOf(i));
+        }
+        monthSpinner.setItems(months);
+        //monthSpinner.setSelectedIndex(calendar.get(Calendar.MONTH)-1);
+        monthSpinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
+            @Override
+            public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
+                //ToastUtils.longToast("Clicked month：" + item);
+                mPresenter.getData(null, getStartDate(yearSpinner.getText().toString(), item), getEndDate(yearSpinner.getText().toString(), item));
+            }
+        });
+
         mChart = (LineChart) findViewById(R.id.line_chart);
         //showDataOnChart();
 
         mPresenter = new NOxPresenter(this);
-        mPresenter.getData(null, "2020-12-1", "2020-12-31");
+        mPresenter.getData(null, getStartDate(yearSpinner.getText().toString(), monthSpinner.getText().toString()), getEndDate(yearSpinner.getText().toString(), monthSpinner.getText().toString()));
 
     }
 
@@ -294,6 +336,27 @@ public class AnalysisNOxActivity extends BaseActivity implements NOxContract.Vie
         super.onDestroy();
         RxBus.get().unregister(this);
     }
+
+
+    /**
+     * 获取指定年月的起始时间
+     */
+    public String getStartDate(String year, String month) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Integer.parseInt(year), Integer.parseInt(month) - 1, 1, 0, 0, 0);
+        return DateUtils.date2Str(calendar.getTime(), DateUtils.FORMAT);
+    }
+
+    /**
+     * 获取指定年月的结束时间
+     */
+    public String getEndDate(String year, String month) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Integer.parseInt(year), Integer.parseInt(month), 1, 23, 59, 59);
+        calendar.add(Calendar.DATE, -1);
+        return DateUtils.date2Str(calendar.getTime(), DateUtils.FORMAT);
+    }
+
 
     // 数据分析——筛选对应的事件
     /*@Subscribe
@@ -320,7 +383,7 @@ public class AnalysisNOxActivity extends BaseActivity implements NOxContract.Vie
 
     public void setData(List<NOxModel> paramList) {
         //ToastUtils.shortToast(paramString);
-        if (paramList != null && paramList.size() > 0) {
+        if (paramList != null ) { //&& paramList.size() > 0
             mItems = paramList;
 
             for (int i = 0; i < mItems.size(); i++) {

@@ -1,7 +1,5 @@
 package com.baolong.obd.execution.fragment;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,13 +13,10 @@ import com.baolong.obd.blackcar.event.RefreshTelemetryListByFilter;
 import com.baolong.obd.blackcar.data.entity.Exhaust;
 import com.baolong.obd.blackcar.data.entity.FilterCategoryModel;
 import com.baolong.obd.blackcar.event.RefreshExecutionCarListByFilter;
-import com.baolong.obd.common.utils.ActivityUtils;
 import com.baolong.obd.common.utils.LogUtil;
-import com.baolong.obd.component.webview.ReportProductWebActivity;
 import com.baolong.obd.execution.contract.ExecutionListContract;
 import com.baolong.obd.execution.data.entity.OBDCar;
 import com.baolong.obd.execution.event.UpdateExeSumEvent;
-import com.baolong.obd.monitor.activity.StationDetailActivity;
 import com.hwangjr.rxbus.RxBus;
 import com.hwangjr.rxbus.annotation.Subscribe;
 import com.baolong.obd.common.base.BaseFragment;
@@ -37,8 +32,8 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import java.util.List;
 
 import static com.baolong.obd.analysis.activity.AnalysisCommentActivity.Table_telemetry;
-import static com.baolong.obd.execution.fragment.ExecutionMainFragment.Table_wcf;
-import static com.baolong.obd.execution.fragment.ExecutionMainFragment.Table_ycf;
+import static com.baolong.obd.execution.fragment.ExecutionMainFragment.Table_online;
+import static com.baolong.obd.execution.fragment.ExecutionMainFragment.Table_outline;
 
 public class ExecListFragment extends BaseFragment
         implements View.OnClickListener, ExecutionListContract.View {
@@ -47,7 +42,7 @@ public class ExecListFragment extends BaseFragment
     private View mRootView;
     private View mEmptyView;
     private boolean mHasNoMore;
-    private String mType = null; //处罚状态 int类型 必填 (0:未处罚、 1:已处罚、 null:所有监测纪录)
+    private String mType = null; //在线状态  (1:在线、 0:离线)
     private int mPageNum = 1;
     private final int mPageSize = 10;
     private RefreshLayout mRefreshLayout;
@@ -136,10 +131,10 @@ public class ExecListFragment extends BaseFragment
                 mPageNum = 1;
                 final ExecutionListPresenter tempExecutionListPresenter = mExecutionListPresenter;
 
-                if (Table_wcf.equals(mType)) {
+                if (Table_online.equals(mType)) {
                     //超标：未审核
                     tempExecutionListPresenter.getOBDCarData(mPageSize, mPageNum, mType,null, mFilterCategoryModelList);
-                } else if (Table_ycf.equals(mType)){
+                } else if (Table_outline.equals(mType)){
                     //超标：已审核
                     tempExecutionListPresenter.getOBDCarData(mPageSize, mPageNum, mType,null, mFilterCategoryModelList);
                 }
@@ -173,10 +168,10 @@ public class ExecListFragment extends BaseFragment
                     mPageNum++;
                     final ExecutionListPresenter tempExecutionListPresenter = mExecutionListPresenter;
 
-                    if (Table_wcf.equals(mType)) {
+                    if (Table_online.equals(mType)) {
                         //超标：未审核
                         tempExecutionListPresenter.getOBDCarData(mPageSize, mPageNum, mType,null, mFilterCategoryModelList);
-                    } else if (Table_ycf.equals(mType)){
+                    } else if (Table_outline.equals(mType)){
                         //超标：已审核
                         tempExecutionListPresenter.getOBDCarData(mPageSize, mPageNum, mType,null, mFilterCategoryModelList);
                     }
@@ -375,9 +370,9 @@ public class ExecListFragment extends BaseFragment
 
         if (mPageNum == 1) {
             // 1.更新总数
-            if ("0".equals(mType)){   // mType处罚状态 (0:未处罚、 1:已处罚、 null:所有监测纪录)
+            if (Table_online.equals(mType)){   // mType处罚状态 (0:未处罚、 1:已处罚、 null:所有监测纪录)
                 RxBus.get().post((Object) new UpdateExeSumEvent(mType, total, -1, -1));
-            } else if ("1".equals(mType)){
+            } else if (Table_outline.equals(mType)){
                 RxBus.get().post((Object) new UpdateExeSumEvent(mType, -1, total, -1));
             }
 

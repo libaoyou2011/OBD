@@ -22,7 +22,8 @@ public class AnalysisApis {
      * 统计：1.车辆（车企）接入统计
      */
     public static abstract interface GEtAnalysisCQJR {
-        @GET("http://10.10.10.243:8383/prod-api/modules/zcsjfx/cljrtj")
+        //@GET("http://10.10.10.243:8383/prod-api/modules/zcsjfx/cljrtj")
+        @GET("/modules/zcsjfx/app/cljrtj")
         public abstract Observable<ResponseWrapperListOld<CQJRModel>> req(
                 @Query("type") String paramString6 //type=clzs、zxsl、lxsl、bjsl
         );
@@ -33,7 +34,8 @@ public class AnalysisApis {
      * 统计：2.监测记录统计
      */
     public static abstract interface GEtAnalysisJCJL {
-        @GET("http://10.10.10.243:8383/prod-api/modules/zcsjfx/zcpfDataBymonth")
+        //@GET("http://10.10.10.243:8383/prod-api/modules/zcsjfx/zcpfDataBymonth")
+        @GET("/modules/zcsjfx/app/zcpfDataBymonth")
         public abstract Observable<ResponseWrapperListOld<JCJLModel>> req(
                 @Query("yearxz") String paramString1,
                 @Query("hphm") String paramString2,
@@ -47,7 +49,8 @@ public class AnalysisApis {
      * 统计：3.NOx排放统计
      */
     public static abstract interface GEtAnalysisNOx {
-        @GET("http://10.10.10.243:8383/prod-api/modules/zcsjfx/findNox")
+        //@GET("http://10.10.10.243:8383/prod-api/modules/zcsjfx/findNox")
+        @GET("/modules/zcsjfx/app/findNox")
         public abstract Observable<ResponseWrapperListOld<NOxModel>> req(
                 @Query("hphm") String paramString1,
                 @Query("beginTime") String paramString2,

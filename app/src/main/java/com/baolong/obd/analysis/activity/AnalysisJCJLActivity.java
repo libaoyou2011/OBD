@@ -35,8 +35,11 @@ import com.github.mikephil.charting.formatter.DefaultAxisValueFormatter;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.hwangjr.rxbus.RxBus;
 import com.hwangjr.rxbus.annotation.Subscribe;
+import com.jaredrummler.materialspinner.MaterialSpinner;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -64,14 +67,14 @@ public class AnalysisJCJLActivity extends BaseActivity implements JCJLContract.V
 
         final View lineView = this.findViewById(R.id.v_top);
         TextView mTopBarRightTv = ((TextView) this.findViewById(R.id.tv_right_text));
-        mTopBarRightTv.setVisibility(View.VISIBLE);
-        mTopBarRightTv.setText("筛选");
-        mTopBarRightTv.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                View convertView = LayoutInflater.from(AnalysisJCJLActivity.this).inflate(R.layout.activity_select_filter, null);
-                new BlackCarFilterActivity(AnalysisJCJLActivity.this, convertView, lineView.getBottom(), "analysis").showAsDropDown(lineView);
-            }
-        });
+        mTopBarRightTv.setVisibility(View.GONE);
+//        mTopBarRightTv.setText("筛选");
+//        mTopBarRightTv.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
+//                View convertView = LayoutInflater.from(AnalysisJCJLActivity.this).inflate(R.layout.activity_select_filter, null);
+//                new BlackCarFilterActivity(AnalysisJCJLActivity.this, convertView, lineView.getBottom(), "analysis").showAsDropDown(lineView);
+//            }
+//        });
     }
 
 
@@ -260,17 +263,34 @@ public class AnalysisJCJLActivity extends BaseActivity implements JCJLContract.V
 
         Intent intent = getIntent();
         mTitle = intent.getStringExtra("title");
-        //mType = intent.getStringExtra("type");
-
         RxBus.get().register(this);
 
         initTitle();
 
-        mChart = (BarChart) findViewById(R.id.bar_chart);
-        //showDataOnChart();
+        // 年 条件选择
+        MaterialSpinner spinner = (MaterialSpinner) findViewById(R.id.spinner);
+        List<String> years = new ArrayList<>();
+        // 获取当前年
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        for (int i = 0; i < 6; i++) {
+            years.add(String.valueOf(year-i));
+        }
+        spinner.setItems(years);
+        spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
+            @Override
+            public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
+                //ToastUtils.longToast("Clicked " + item);
+                mPresenter.getData(spinner.getText().toString(), null, null, null);
+            }
+        });
 
+        //chart
+        mChart = (BarChart) findViewById(R.id.bar_chart);
+
+        //showDataOnChart();
         mPresenter = new JCJLPresenter(this);
-        mPresenter.getData("2020", null, null, null);
+        mPresenter.getData(spinner.getText().toString(), null, null, null);
 
     }
 

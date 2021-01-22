@@ -166,7 +166,7 @@ public class BlackCarApis {
      * 实时数据:
      */
     public static abstract interface GetZcList {
-        @GET("http://10.10.10.243:8383/prod-api/modules/exhaustByzc/list")
+        @GET("/modules/exhaustByzc/app/list")
         public abstract Observable<ResponseWrapperList<ExhaustZC>> req(
                 @Query("pdjg") String paramString1,
                 @Query("pageSize") int paramString2,

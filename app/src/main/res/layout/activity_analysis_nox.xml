@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/analysis_background">
 
@@ -10,6 +11,66 @@
     <View
         android:id="@+id/v_top"
         style="@style/order_new_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginTop="@dimen/x20"
+        android:layout_marginRight="@dimen/x20">
+
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x10"
+            android:text="选择年份："
+            android:layout_marginRight="@dimen/x10"
+            android:layout_gravity="center_vertical"
+            />
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/spinner_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ms_padding_bottom="@dimen/x12"
+            app:ms_padding_top="@dimen/x12"
+            app:ms_popup_padding_top="@dimen/x14"
+            app:ms_popup_padding_bottom="@dimen/x14"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginRight="@dimen/x20">
+
+        <TextView
+            android:id="@+id/tv_month"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x10"
+            android:text="选择月份："
+            android:layout_marginRight="@dimen/x10"
+            android:layout_gravity="center_vertical"
+            />
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/spinner_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ms_padding_bottom="@dimen/x12"
+            app:ms_padding_top="@dimen/x12"
+            app:ms_popup_padding_top="@dimen/x14"
+            app:ms_popup_padding_bottom="@dimen/x14"/>
+    </LinearLayout>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"

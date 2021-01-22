@@ -42,9 +42,8 @@ public class ExecutionMainFragment extends BaseFragment
         implements View.OnClickListener, ExecutionMainContract.View {
     private static final String TAG = "ExecutionMainFragment";
 
-    public static final String Table_wcf = "0"; //未处罚
-    public static final String Table_ycf = "1"; //已处罚
-    public static final String Table_all = null; //超标车辆
+    public static final String Table_online = "1"; //车辆在线
+    public static final String Table_outline = "0"; //车辆离线
 
     private View mView;
 
@@ -94,32 +93,25 @@ public class ExecutionMainFragment extends BaseFragment
         this.mViewPager = (ViewPager) this.mView.findViewById(R.id.vp_main);
         final LinearLayout linearLayout = (LinearLayout) this.mTablayout.getChildAt(0);
         linearLayout.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
-        linearLayout.setDividerDrawable(ContextCompat.getDrawable((Context) this.getActivity(), R.drawable.layout_divider_vertical));
+        linearLayout.setDividerDrawable(ContextCompat.getDrawable((Context) Objects.requireNonNull(this.getActivity()), R.drawable.layout_divider_vertical));
         linearLayout.setDividerPadding((int) CommonUtils.DpToPx((Context) this.getActivity(), 10.0f));
 
         this.mFragmentList = new ArrayList<Fragment>();
         final ExecListFragment TodoExecListFragment = new ExecListFragment();
         final Bundle arguments = new Bundle();
-        arguments.putString("type", Table_wcf);
+        arguments.putString("type", Table_online);
         TodoExecListFragment.setArguments(arguments);
         this.mFragmentList.add(TodoExecListFragment);
 
         final ExecListFragment hadExecListFragment = new ExecListFragment();
         final Bundle arguments2 = new Bundle();
-        arguments2.putString("type", Table_ycf);
+        arguments2.putString("type", Table_outline);
         hadExecListFragment.setArguments(arguments2);
         this.mFragmentList.add(hadExecListFragment);
-
-//        final ExecListFragment ALLExecListFragment = new ExecListFragment();
-//        final Bundle arguments3 = new Bundle();
-//        arguments3.putString("type", Table_all);
-//        ALLExecListFragment.setArguments(arguments3);
-//        this.mFragmentList.add(ALLExecListFragment);
 
         final ArrayList<String> list = new ArrayList<String>();
         list.add("在线车辆");
         list.add("离线车辆");
-//        list.add("报警车辆");
 
         FragmentManager fragmentManager = this.getChildFragmentManager();
         this.mViewPagerFragmentAdapter = new ViewPagerFragmentAdapter(fragmentManager, this.mFragmentList, list);
