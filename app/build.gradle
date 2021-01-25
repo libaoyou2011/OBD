@@ -8,7 +8,7 @@ android {
     signingConfigs {
         release {
             keyAlias 'BaoLong'
-            keyPassword 'BaoLong681NN729KK'
+            keyPassword 'BaoLong681NNobd'
             storeFile file('E:/AAA/AndroidStudioProjects/OBD_KeyStore/obd_release_sign.jks')
             storePassword 'BaoLong681NNobd'
         }
