@@ -7,49 +7,49 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class OBDCar implements Parcelable {
+
     /**
      * {
-     * "searchValue":"",
-     * "createBy":"",
-     * "createTime":"",
-     * "updateBy":"",
-     * "updateTime":"",
+     * "searchValue":null,
+     * "createBy":null,
+     * "createTime":null,
+     * "updateBy":null,
+     * "updateTime":null,
      * "remark":null,
      * "dataScope":null,
-     * "params":{
-     * <p>
-     * },
-     * "obdbh":"141447161844556",
-     * "vin":"12345123451234501",
-     * "hphm":"皖A306k7",
-     * "sszz":"河南省赛斯电子科技有限公司",
-     * "zxcjsj":"2020年12月10日",
-     * "clzt":"1",
-     * "cllx":"",
+     * "params":{ },
+     * "obdbh":"1000000000001",
+     * "vin":"LZGKE73827H3FSLDF",
+     * "hphm":"皖AM0683",
+     * "sszz":"BCG",
+     * "zxcjsj":null,
+     * "clzt":null,
+     * "cllx":null,
      * "pfbz":"5",
-     * "sbzt":"1",
+     * "sbzt":null,
      * "rlzl":"B",
      * "del_flag":"0",
      * "zccarInfo":null,
-     * "zdpp":"北京华夏OBD",
-     * "clxh":"BJ5319CCY-AA",
-     * "fdjxh":"VIS112222345654",
-     * "clscrq":"2019年09月04日",
-     * "nsxrj":"20",
-     * "clsccj":"河南长安汽车有限公司",
-     * "fdjgl":"500",
-     * "jzzl":"1",
-     * "clsyr":"张三",
-     * "lxhm":"15313889001",
-     * "zcd":"河南",
-     * "qyxz":"民企",
-     * "jgdm":"",
+     * "zdpp":"BCG",
+     * "clxh":"333",
+     * "fdjxh":"444",
+     * "clscrq":"2021年01月26日",
+     * "nsxrj":"55500",
+     * "clsccj":"666",
+     * "fdjgl":"77",
+     * "jzzl":"5001T",
+     * "clsyr":"李保友",
+     * "lxhm":"15313889003",
+     * "zcd":"呼和浩特",
+     * "qyxz":"私营",
+     * "jgdm":"360188-12",
      * "clmx":null,
      * "cltfd":null,
-     * "frdb":null,
-     * "fzr":null,
-     * "jbr":null,
-     * "lxdh":null
+     * "frdb":"胡峰",
+     * "fzr":"胡峰",
+     * "jbr":"胡峰",
+     * "lxdh":"15566667777",
+     * "zxzt":null
      * }
      */
 
@@ -128,6 +128,46 @@ public class OBDCar implements Parcelable {
         qyxz = in.readString();
         jgdm = in.readString();
         frdb = in.readString();
+        fzr = in.readString();
+        jbr = in.readString();
+        lxdh = in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(searchValue);
+        dest.writeString(createBy);
+        dest.writeString(createTime);
+        dest.writeString(updateBy);
+        dest.writeString(updateTime);
+        dest.writeString(obdbh);
+        dest.writeString(vin);
+        dest.writeString(hphm);
+        dest.writeString(sszz);
+        dest.writeString(zxcjsj);
+        dest.writeString(clzt);
+        dest.writeString(cllx);
+        dest.writeString(pfbz);
+        dest.writeString(sbzt);
+        dest.writeString(rlzl);
+        dest.writeString(del_flag);
+        dest.writeString(zdpp);
+        dest.writeString(clxh);
+        dest.writeString(fdjxh);
+        dest.writeString(clscrq);
+        dest.writeString(nsxrj);
+        dest.writeString(clsccj);
+        dest.writeString(fdjgl);
+        dest.writeString(jzzl);
+        dest.writeString(clsyr);
+        dest.writeString(lxhm);
+        dest.writeString(zcd);
+        dest.writeString(qyxz);
+        dest.writeString(jgdm);
+        dest.writeString(frdb);
+        dest.writeString(fzr);
+        dest.writeString(jbr);
+        dest.writeString(lxdh);
     }
 
     public static final Creator<OBDCar> CREATOR = new Creator<OBDCar>() {
@@ -457,40 +497,6 @@ public class OBDCar implements Parcelable {
     @Override
     public int describeContents() {
         return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(searchValue);
-        dest.writeString(createBy);
-        dest.writeString(createTime);
-        dest.writeString(updateBy);
-        dest.writeString(updateTime);
-        dest.writeString(obdbh);
-        dest.writeString(vin);
-        dest.writeString(hphm);
-        dest.writeString(sszz);
-        dest.writeString(zxcjsj);
-        dest.writeString(clzt);
-        dest.writeString(cllx);
-        dest.writeString(pfbz);
-        dest.writeString(sbzt);
-        dest.writeString(rlzl);
-        dest.writeString(del_flag);
-        dest.writeString(zdpp);
-        dest.writeString(clxh);
-        dest.writeString(fdjxh);
-        dest.writeString(clscrq);
-        dest.writeString(nsxrj);
-        dest.writeString(clsccj);
-        dest.writeString(fdjgl);
-        dest.writeString(jzzl);
-        dest.writeString(clsyr);
-        dest.writeString(lxhm);
-        dest.writeString(zcd);
-        dest.writeString(qyxz);
-        dest.writeString(jgdm);
-        dest.writeString(frdb);
     }
 
 
