@@ -46,7 +46,7 @@ public class ExecListFragment extends BaseFragment
     private boolean mHasNoMore;
     private String mType = null; //在线状态  (1:在线、 0:离线)
     private int mPageNum = 1;
-    private final int mPageSize = 10;
+    private final int mPageSize = 15;
     private RefreshLayout mRefreshLayout;
     private RecyclerViewForEmpty mRecycler;
     private ExecListAdapter mAdapter;
@@ -144,7 +144,8 @@ public class ExecListFragment extends BaseFragment
         });
         this.mRefreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
             public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
-                refreshLayout.finishLoadMore();
+                //refreshLayout.finishLoadMore();
+                refreshLayout.finishLoadMore(2000, true, mHasNoMore);
                 if (!ExecListFragment.this.mHasNoMore) {
                     mPageNum++;
                     final ExecutionListPresenter tempExecutionListPresenter = mExecutionListPresenter;

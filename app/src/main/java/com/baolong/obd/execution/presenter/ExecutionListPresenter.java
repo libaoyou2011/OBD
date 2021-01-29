@@ -455,7 +455,7 @@ public class ExecutionListPresenter implements ExecutionListContract.Presenter {
                             e.printStackTrace();
                         } finally {
                             if (ExecutionListPresenter.this.mView != null) {
-                                ExecutionListPresenter.this.mView.showFail("列表数据查询失败！");
+                                ExecutionListPresenter.this.mView.showFail("车辆状态查询失败！");
                             }
                         }
                     }
@@ -469,7 +469,7 @@ public class ExecutionListPresenter implements ExecutionListContract.Presenter {
                             ExecutionListPresenter.this.mView.setOBDCarData((List<OBDCar>) responseWrapperList.getRows(),responseWrapperList.getTotal());
 
                         } else {
-                            ExecutionListPresenter.this.mView.showFail("列表数据查询失败！");
+                            ExecutionListPresenter.this.mView.showFail("车辆状态查询失败！");
                         }
                         ExecutionListPresenter.this.mView.hideLoading();
                     }

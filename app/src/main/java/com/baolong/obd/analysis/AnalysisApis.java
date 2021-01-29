@@ -34,7 +34,6 @@ public class AnalysisApis {
      * 统计：2.监测记录统计
      */
     public static abstract interface GEtAnalysisJCJL {
-        //@GET("http://10.10.10.243:8383/prod-api/modules/zcsjfx/zcpfDataBymonth")
         @GET("/modules/zcsjfx/app/zcpfDataBymonth")
         public abstract Observable<ResponseWrapperListOld<JCJLModel>> req(
                 @Query("yearxz") String paramString1,

@@ -262,7 +262,6 @@ public class ExecutionApis {
      * 车辆状态列表:
      */
     public static abstract interface GetOBDCarList {
-        //@GET("http://10.10.10.243:8383/prod-api/modules/equipment/list")
         @GET("/modules/equipment/app/list")
         public abstract Observable<ResponseWrapperList<OBDCar>> req(
                 @Query("pageSize") int paramString1,

@@ -355,7 +355,7 @@ public class BlackCarListPresenter implements ProcessListContract.Presenter {
                             ex.printStackTrace();
                         } finally {
                             if (BlackCarListPresenter.this.mView != null) {
-                                BlackCarListPresenter.this.mView.showFail("黑烟车数据查询失败！");
+                                BlackCarListPresenter.this.mView.showFail("实时数据查询失败！");
                             }
                         }
                     }
@@ -368,7 +368,7 @@ public class BlackCarListPresenter implements ProcessListContract.Presenter {
                         if (responseWrapperList.getCode() == 200) {
                             BlackCarListPresenter.this.mView.setZcData((List<ExhaustZC>) responseWrapperList.getRows(), responseWrapperList.getTotal());
                         } else {
-                            BlackCarListPresenter.this.mView.showFail("黑烟车数据查询失败！");
+                            BlackCarListPresenter.this.mView.showFail("实时数据查询失败！");
                         }
                         BlackCarListPresenter.this.mView.hideLoading();
                     }
