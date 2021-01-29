@@ -1,6 +1,7 @@
 package com.baolong.obd.execution.adapter;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -84,17 +85,17 @@ public class ExecListAdapter extends RecyclerView.Adapter<ExecListAdapter.MyView
         }
 
         // item项右上角审核状态
-//        if ("0".equals(this.mType)) {
-//            holder.actionContainer.setBackgroundResource(R.drawable.exec_no_do);
-//            holder.isDone.setCompoundDrawablesWithIntrinsicBounds((Drawable) null, this.mContext.getResources().getDrawable(R.drawable.ic_exec_do), (Drawable) null, (Drawable) null);
-//            holder.isDone.setText(R.string.execution_do);
-//        } else {
-//            holder.actionContainer.setBackgroundResource(R.drawable.exec_done);
-//            holder.isDone.setCompoundDrawablesWithIntrinsicBounds((Drawable) null, this.mContext.getResources().getDrawable(R.drawable.ic_exec_look), (Drawable) null, (Drawable) null);
-//            holder.isDone.setText(R.string.execution_look);
-//        }
+        /*if ("0".equals(this.mType)) {
+            holder.actionContainer.setBackgroundResource(R.drawable.exec_no_do);
+            holder.isDone.setCompoundDrawablesWithIntrinsicBounds((Drawable) null, this.mContext.getResources().getDrawable(R.drawable.ic_exec_do), (Drawable) null, (Drawable) null);
+            holder.isDone.setText(R.string.execution_do);
+        } else {
+            holder.actionContainer.setBackgroundResource(R.drawable.exec_done);
+            holder.isDone.setCompoundDrawablesWithIntrinsicBounds((Drawable) null, this.mContext.getResources().getDrawable(R.drawable.ic_exec_look), (Drawable) null, (Drawable) null);
+            holder.isDone.setText(R.string.execution_look);
+        }*/
 
-        /*if (this.mItemClickListener != null) {
+        if (this.mItemClickListener != null) {
             holder.root.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -103,16 +104,16 @@ public class ExecListAdapter extends RecyclerView.Adapter<ExecListAdapter.MyView
             });
         }
 
-        if (this.mItemLongClickListener != null) {
+        /*if (this.mItemLongClickListener != null) {
             holder.root.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
                     return mItemLongClickListener.onItemLongClick(exhaust);
                 }
             });
-        }
+        }*/
 
-        if (this.mOnActionClickListener != null) {
+       /* if (this.mOnActionClickListener != null) {
             holder.actionContainer.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -154,7 +155,6 @@ public class ExecListAdapter extends RecyclerView.Adapter<ExecListAdapter.MyView
 
             this.actionContainer = ((LinearLayout) paramView.findViewById(R.id.ll_action_container));
             this.isDone = ((TextView) paramView.findViewById(R.id.txt_is_done));
-            this.actionContainer.setVisibility(View.GONE);
         }
     }
 }

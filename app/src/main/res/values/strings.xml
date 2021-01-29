@@ -58,7 +58,7 @@
     <string name="monitor_station_warn_title1">设备状态预警</string>
 
 
-    <string name="black_car_title">OBD实时数据</string>
+    <string name="black_car_title">实时数据</string>
     <string name="black_car_filter_time_start">开始时间</string>
     <string name="black_car_filter_time_end">结束时间</string>
     <string name="black_car_filter_clear_all">清空</string>
@@ -151,6 +151,12 @@
     <string name="zc_car_ssqy">所属企业：</string>
 
 
+    <string name="cars_main_title">车辆信息</string>
+    <string name="cars_detail_title">车辆详情</string>
+    <string name="cars_detail_right_edit">修改</string>
+    <string name="cars_detail_right_submit">提交</string>
+    <string name="cars_detail_form_title_hint">门店基本信息</string>
+    <string name="cars_detail_form_content_hint">--</string>
 
 
 </resources>

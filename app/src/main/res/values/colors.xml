@@ -89,6 +89,9 @@
     <color name="chart_ju">#FF7043</color>
     <color name="chart_bcg">#8833B7E5</color>
 
+    <color name="form_item_title_default">#828296</color>
+    <color name="form_item_title_edit">#FF7043</color>
+
 
 
 

@@ -8,11 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.baolong.obd.R;
 import com.baolong.obd.blackcar.event.RefreshTelemetryListByFilter;
 import com.baolong.obd.blackcar.data.entity.Exhaust;
 import com.baolong.obd.blackcar.data.entity.FilterCategoryModel;
 import com.baolong.obd.blackcar.event.RefreshExecutionCarListByFilter;
+import com.baolong.obd.common.base.Constance;
 import com.baolong.obd.common.utils.LogUtil;
 import com.baolong.obd.execution.contract.ExecutionListContract;
 import com.baolong.obd.execution.data.entity.OBDCar;
@@ -68,22 +70,22 @@ public class ExecListFragment extends BaseFragment
         this.mRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         this.mAdapter = new ExecListAdapter(getActivity(), this.mType);
-        /*this.mAdapter.setOnItemClickListener(new ExecListAdapter.OnItemClickListener() {
+        this.mAdapter.setOnItemClickListener(new ExecListAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(OBDCar exhaust, String paramString) {
-//                ARouter.getInstance()
-//                        .build("/monitor/activity/BlackCarDetailActivity")
-//                        .withString("jzbh", detail.getStationno())
-//                        .withString("jlid", detail.getId())
-//                        .navigation();
-                if (exhaust != null) {
-                    Intent intent = new Intent(getContext(), StationDetailActivity.class);
-                    intent.putExtra("exhaust", exhaust);
-                    intent.putExtra("optionType", "review");
-                    ActivityUtils.activitySwitch((Activity) getContext(), intent, true);
-                }
+                ARouter.getInstance()
+                        .build(Constance.ACTIVITY_URL_CarDetailActivity)
+                        .withBoolean("optionType", true)
+                        .withParcelable("exhaust", exhaust)
+                        .navigation();
+//                if (exhaust != null) {
+//                    Intent intent = new Intent(getContext(), StationDetailActivity.class);
+//                    intent.putExtra("exhaust", exhaust);
+//                    intent.putExtra("optionType", "review");
+//                    ActivityUtils.activitySwitch((Activity) getContext(), intent, true);
+//                }
             }
-        });*/
+        });
 
         /*this.mAdapter.setOnItemLongClickListener(new ExecListAdapter.OnItemLongClickListener() {
             @Override
@@ -138,27 +140,6 @@ public class ExecListFragment extends BaseFragment
                     //超标：已审核
                     tempExecutionListPresenter.getOBDCarData(mPageSize, mPageNum, mType,null, mFilterCategoryModelList);
                 }
-
-                //未处罚车辆、已处罚车辆、超标车数据
-                /*if (!Table_telemetry.equals(mType)) {
-                    // pdjg         判断结果 (0-不合格、 1-合格、 2-无效)
-                    // isornopunish 处罚状态 (0:未处罚、 1:已处罚、 null:所有监测纪录)
-                    //tempProcessedListPresenter.getData("0", mType, mPageRow, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
-
-                    if (Table_wcf.equals(mType)) {
-                        //超标：未审核
-                        tempExecutionListPresenter.getWcfData("0", mType, mPageSize, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
-                    } else if (Table_ycf.equals(mType)){
-                        //超标：已审核
-                        tempExecutionListPresenter.getYcfData("0", mType, mPageSize, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
-                    } else if(mType == null){
-                        //超标：所有超标车
-                        tempExecutionListPresenter.getOverproofData("0", mType, mPageSize, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
-                    }
-
-                } else { //遥测数据
-                    tempExecutionListPresenter.getTelemetryData(mPageSize, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
-                }*/
             }
         });
         this.mRefreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
@@ -175,23 +156,6 @@ public class ExecListFragment extends BaseFragment
                         //超标：已审核
                         tempExecutionListPresenter.getOBDCarData(mPageSize, mPageNum, mType,null, mFilterCategoryModelList);
                     }
-                    //未处罚车辆、已处罚车辆、超标车数据
-                    /*if (!Table_telemetry.equals(mType)) {
-                        // pdjg         判断结果 (0-不合格、 1-合格、 2-无效)
-                        // isornopunish 处罚状态 (0:未处罚、 1:已处罚、 null:所有监测纪录)
-                        //tempProcessedListPresenter.getData("0", mType, mPageSize, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
-
-                        if ("0".equals(mType)) {
-                            tempExecutionListPresenter.getWcfData("0", mType, mPageSize, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
-                        } else {
-                            tempExecutionListPresenter.getYcfData("0", mType, mPageSize, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
-                        }
-
-                    } else { //遥测数据
-                        int isBlackCar = 0; //是否是黑烟车 (0-不是、 1-是)
-
-                        tempExecutionListPresenter.getTelemetryData(mPageSize, mPageNum, "jcrq", "desc", mFilterCategoryModelList);
-                    }*/
                 }
             }
         });

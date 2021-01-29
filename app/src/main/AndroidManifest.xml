@@ -83,23 +83,23 @@
         <activity
             android:name="com.baolong.obd.monitor.activity.SearchStationActivity"
             android:screenOrientation="portrait">
-
         </activity>
+
         <activity
             android:name="com.baolong.obd.monitor.activity.StationListActivity"
             android:screenOrientation="portrait">
-
         </activity>
+
         <activity
             android:name="com.baolong.obd.monitor.activity.StationDetailActivity"
             android:screenOrientation="portrait">
-
         </activity>
+
         <activity
             android:name="com.baolong.obd.monitor.activity.SitesStatueActivity"
             android:screenOrientation="portrait">
-
         </activity>
+
         <activity
             android:name="com.baolong.obd.component.webview.ProductWebActivity"
             android:screenOrientation="portrait" />
@@ -146,7 +146,6 @@
         <activity
             android:name=".my.activity.StationListActivity"
             android:screenOrientation="portrait">
-
         </activity>
 <!--        <activity-->
 <!--            android:name="com.tencent.bugly.beta.ui.BetaActivity"-->
@@ -163,31 +162,27 @@
         <activity
             android:name="com.baolong.obd.my.activity.PublishActivity"
             android:screenOrientation="portrait">
-
         </activity>
+
         <activity
             android:name="com.baolong.obd.querycar.activity.HuanJianDetailActivity"
             android:screenOrientation="portrait">
-
         </activity>
+
         <activity
             android:name="com.baolong.obd.my.activity.ResetPasswordActivity"
             android:screenOrientation="portrait">
-
         </activity>
 
         <activity
             android:name="com.baolong.obd.my.activity.UserInfoActivity"
             android:screenOrientation="portrait">
-
         </activity>
 
         <activity
             android:name="com.baolong.obd.analysis.activity.AnalysisCommentActivity"
             android:screenOrientation="portrait">
-
         </activity>
-
 
         <activity
             android:name="com.baolong.obd.execution.activity.AddExecDataActivity"
@@ -196,9 +191,16 @@
             android:name="com.baolong.obd.querycar.activity.CarNoInfoActivity"
             android:screenOrientation="portrait">
         </activity>
+
         <activity
             android:name="com.baolong.obd.blackcar.activity.BlackCarDetailActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.baolong.obd.execution.activity.CarDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
 
         <provider
             android:name="android.support.v4.content.FileProvider"

@@ -3,52 +3,54 @@ package com.baolong.obd.execution.data.entity;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 public class OBDCar implements Parcelable {
-
     /**
-     {
-     "searchValue":"",
-     "createBy":"",
-     "createTime":"",
-     "updateBy":"",
-     "updateTime":"",
-     "remark":null,
-     "dataScope":null,
-     "params":{
-
-     },
-     "obdbh":"141447161844556",
-     "vin":"12345123451234501",
-     "hphm":"皖A306k7",
-     "sszz":"河南省赛斯电子科技有限公司",
-     "zxcjsj":"2020年12月10日",
-     "clzt":"1",
-     "cllx":"",
-     "pfbz":"5",
-     "sbzt":"1",
-     "rlzl":"B",
-     "del_flag":"0",
-     "zccarInfo":null,
-     "zdpp":"北京华夏OBD",
-     "clxh":"BJ5319CCY-AA",
-     "fdjxh":"VIS112222345654",
-     "clscrq":"2019年09月04日",
-     "nsxrj":"20",
-     "clsccj":"河南长安汽车有限公司",
-     "fdjgl":"500",
-     "jzzl":"1",
-     "clsyr":"张三",
-     "lxhm":"15313889001",
-     "zcd":"河南",
-     "qyxz":"民企",
-     "jgdm":"",
-     "clmx":null,
-     "cltfd":null,
-     "frdb":null,
-     "fzr":null,
-     "jbr":null,
-     "lxdh":null
-     }
+     * {
+     * "searchValue":"",
+     * "createBy":"",
+     * "createTime":"",
+     * "updateBy":"",
+     * "updateTime":"",
+     * "remark":null,
+     * "dataScope":null,
+     * "params":{
+     * <p>
+     * },
+     * "obdbh":"141447161844556",
+     * "vin":"12345123451234501",
+     * "hphm":"皖A306k7",
+     * "sszz":"河南省赛斯电子科技有限公司",
+     * "zxcjsj":"2020年12月10日",
+     * "clzt":"1",
+     * "cllx":"",
+     * "pfbz":"5",
+     * "sbzt":"1",
+     * "rlzl":"B",
+     * "del_flag":"0",
+     * "zccarInfo":null,
+     * "zdpp":"北京华夏OBD",
+     * "clxh":"BJ5319CCY-AA",
+     * "fdjxh":"VIS112222345654",
+     * "clscrq":"2019年09月04日",
+     * "nsxrj":"20",
+     * "clsccj":"河南长安汽车有限公司",
+     * "fdjgl":"500",
+     * "jzzl":"1",
+     * "clsyr":"张三",
+     * "lxhm":"15313889001",
+     * "zcd":"河南",
+     * "qyxz":"民企",
+     * "jgdm":"",
+     * "clmx":null,
+     * "cltfd":null,
+     * "frdb":null,
+     * "fzr":null,
+     * "jbr":null,
+     * "lxdh":null
+     * }
      */
 
     private String searchValue;
@@ -86,10 +88,59 @@ public class OBDCar implements Parcelable {
     private String jgdm;
     private Object clmx;
     private Object cltfd;
-    private Object frdb;
-    private Object fzr;
-    private Object jbr;
-    private Object lxdh;
+    private String frdb;
+    private String fzr;
+    private String jbr;
+    private String lxdh;
+
+    public OBDCar() {
+
+    }
+
+    protected OBDCar(Parcel in) {
+        searchValue = in.readString();
+        createBy = in.readString();
+        createTime = in.readString();
+        updateBy = in.readString();
+        updateTime = in.readString();
+        obdbh = in.readString();
+        vin = in.readString();
+        hphm = in.readString();
+        sszz = in.readString();
+        zxcjsj = in.readString();
+        clzt = in.readString();
+        cllx = in.readString();
+        pfbz = in.readString();
+        sbzt = in.readString();
+        rlzl = in.readString();
+        del_flag = in.readString();
+        zdpp = in.readString();
+        clxh = in.readString();
+        fdjxh = in.readString();
+        clscrq = in.readString();
+        nsxrj = in.readString();
+        clsccj = in.readString();
+        fdjgl = in.readString();
+        jzzl = in.readString();
+        clsyr = in.readString();
+        lxhm = in.readString();
+        zcd = in.readString();
+        qyxz = in.readString();
+        jgdm = in.readString();
+        frdb = in.readString();
+    }
+
+    public static final Creator<OBDCar> CREATOR = new Creator<OBDCar>() {
+        @Override
+        public OBDCar createFromParcel(Parcel in) {
+            return new OBDCar(in);
+        }
+
+        @Override
+        public OBDCar[] newArray(int size) {
+            return new OBDCar[size];
+        }
+    };
 
     public String getSearchValue() {
         return searchValue;
@@ -371,35 +422,35 @@ public class OBDCar implements Parcelable {
         this.cltfd = cltfd;
     }
 
-    public Object getFrdb() {
+    public String getFrdb() {
         return frdb;
     }
 
-    public void setFrdb(Object frdb) {
+    public void setFrdb(String frdb) {
         this.frdb = frdb;
     }
 
-    public Object getFzr() {
+    public String getFzr() {
         return fzr;
     }
 
-    public void setFzr(Object fzr) {
+    public void setFzr(String fzr) {
         this.fzr = fzr;
     }
 
-    public Object getJbr() {
+    public String getJbr() {
         return jbr;
     }
 
-    public void setJbr(Object jbr) {
+    public void setJbr(String jbr) {
         this.jbr = jbr;
     }
 
-    public Object getLxdh() {
+    public String getLxdh() {
         return lxdh;
     }
 
-    public void setLxdh(Object lxdh) {
+    public void setLxdh(String lxdh) {
         this.lxdh = lxdh;
     }
 
@@ -410,9 +461,40 @@ public class OBDCar implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-
+        dest.writeString(searchValue);
+        dest.writeString(createBy);
+        dest.writeString(createTime);
+        dest.writeString(updateBy);
+        dest.writeString(updateTime);
+        dest.writeString(obdbh);
+        dest.writeString(vin);
+        dest.writeString(hphm);
+        dest.writeString(sszz);
+        dest.writeString(zxcjsj);
+        dest.writeString(clzt);
+        dest.writeString(cllx);
+        dest.writeString(pfbz);
+        dest.writeString(sbzt);
+        dest.writeString(rlzl);
+        dest.writeString(del_flag);
+        dest.writeString(zdpp);
+        dest.writeString(clxh);
+        dest.writeString(fdjxh);
+        dest.writeString(clscrq);
+        dest.writeString(nsxrj);
+        dest.writeString(clsccj);
+        dest.writeString(fdjgl);
+        dest.writeString(jzzl);
+        dest.writeString(clsyr);
+        dest.writeString(lxhm);
+        dest.writeString(zcd);
+        dest.writeString(qyxz);
+        dest.writeString(jgdm);
+        dest.writeString(frdb);
     }
+
 
     public static class ParamsBean {
     }
 }
+

@@ -12,6 +12,7 @@ import java.util.Locale;
 public class DateUtils {
     public static final String FORMAT = "yyyy-MM-dd HH:mm:ss";
     public static final String FORMAT_Default = "yyyy-MM-dd";
+    public static final String FORMAT_China = "yyyy年MM月dd日";
 
     private static final long year = 32140800000L;
     private static final long month = 2678400000L;
