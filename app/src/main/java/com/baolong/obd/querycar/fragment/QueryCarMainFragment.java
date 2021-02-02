@@ -13,8 +13,8 @@ import com.baolong.obd.querycar.adapter.QueryHistoryListAdapter;
 import com.hwangjr.rxbus.RxBus;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.hwangjr.rxbus.annotation.Subscribe;
 import com.baolong.obd.querycar.event.UpdateHistoryEvent;
@@ -41,7 +41,7 @@ import android.widget.ImageView;
 import android.widget.EditText;
 
 import android.view.View;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.widget.Spinner;
 import android.widget.TextView;
 

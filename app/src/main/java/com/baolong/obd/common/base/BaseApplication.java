@@ -4,12 +4,11 @@ import android.annotation.TargetApi;
 import android.app.Application;
 import android.content.Context;
 import android.os.StrictMode;
-import android.support.multidex.MultiDex;
+import androidx.multidex.MultiDex;
 import android.util.Log;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.baolong.obd.BuildConfig;
-import com.baolong.obd.common.injector.GlobalAppComponent;
 import com.baolong.obd.common.sharepreferemces.UserSP;
 import com.baolong.obd.common.utils.Utils;
 import com.raizlabs.android.dbflow.config.FlowConfig;

@@ -1,6 +1,6 @@
 package com.baolong.obd.common.base;
 
-import android.support.annotation.Keep;
+import androidx.annotation.Keep;
 
 @Keep
 public abstract interface IApplicationDelegate {

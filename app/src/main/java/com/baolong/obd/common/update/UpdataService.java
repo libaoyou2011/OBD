@@ -11,8 +11,8 @@ import android.os.Build;
 import android.os.Environment;
 import android.os.IBinder;
 import android.os.Parcelable;
-import android.support.annotation.Nullable;
-import android.support.v4.content.FileProvider;
+import androidx.annotation.Nullable;
+import androidx.core.content.FileProvider;
 import android.widget.Toast;
 
 import com.baolong.obd.common.base.BaseApplication;

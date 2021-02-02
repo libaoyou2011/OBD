@@ -5,10 +5,10 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.view.LayoutInflater;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 
 import com.baolong.obd.R;

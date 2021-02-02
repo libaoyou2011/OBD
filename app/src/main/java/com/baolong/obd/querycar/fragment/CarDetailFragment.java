@@ -16,16 +16,16 @@ import java.nio.charset.StandardCharsets;
 
 import com.google.gson.Gson;
 
-import android.support.annotation.NonNull;
-import android.support.v4.view.ViewPager;
+import androidx.annotation.NonNull;
+import androidx.viewpager.widget.ViewPager;
 import android.text.TextUtils;
-import android.support.v7.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.ViewGroup;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.baolong.obd.R;
 import com.baolong.obd.common.base.BaseApplication;

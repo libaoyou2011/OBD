@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout android:layout_width="fill_parent"
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -177,4 +177,4 @@
     <!--app:gTouchEffect="ripple" />-->
     <!--</LinearLayout>-->
     <!--</android.support.v4.widget.NestedScrollView>-->
-</android.support.design.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,6 +1,6 @@
 package com.baolong.obd.execution.data.entity;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 public class SpinnerItemMode {
     private String id = "";

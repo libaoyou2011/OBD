@@ -1,6 +1,6 @@
 package com.baolong.obd.querycar.activity;
 
-import android.support.v4.view.PagerAdapter;
+import androidx.viewpager.widget.PagerAdapter;
 import android.view.View;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
@@ -18,15 +18,15 @@ import com.baolong.obd.querycar.fragment.RemoteCheckRecordFragment;
 import com.baolong.obd.common.utils.CommonUtils;
 
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.widget.LinearLayout;
-import android.support.v4.view.ViewPager;
-import android.support.design.widget.TabLayout;
+import androidx.viewpager.widget.ViewPager;
+import com.google.android.material.tabs.TabLayout;
 
 import com.baolong.obd.querycar.adapter.ViewPagerFragmentAdapter;
 
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.Fragment;
 
 import java.util.List;
 

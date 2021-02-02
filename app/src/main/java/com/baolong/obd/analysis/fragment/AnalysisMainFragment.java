@@ -6,7 +6,6 @@ import android.content.Intent;
 
 import com.baolong.obd.BuildConfig;
 import com.baolong.obd.R;
-import com.baolong.obd.analysis.activity.AnalysisCommentActivity;
 import com.baolong.obd.analysis.data.entity.AnalysisLayoutModel;
 import com.baolong.obd.common.base.BaseApplication;
 import com.baolong.obd.common.utils.ActivityUtils;
@@ -20,13 +19,13 @@ import com.hwangjr.rxbus.RxBus;
 
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 //import com.baolong.edsp.analysis.event.UpdateHistoryEvent;
 //import com.baolong.edsp.analysis.data.entity.GetVehicleQueryListResponseModel;
 
-import android.support.v7.widget.GridLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -36,7 +35,7 @@ import android.view.LayoutInflater;
 import android.widget.ImageView;
 
 import android.view.View;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.widget.TextView;
 
 //import com.baolong.edsp.analysis.presenter.QueryCarMainPresenter;

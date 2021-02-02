@@ -1,6 +1,6 @@
 package com.baolong.obd.login.presenter;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.util.Log;
 
 import com.baolong.obd.R;

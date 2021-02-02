@@ -1,12 +1,12 @@
 package com.baolong.obd.login;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.RadioButton;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.View;
 
 import com.baolong.obd.R;

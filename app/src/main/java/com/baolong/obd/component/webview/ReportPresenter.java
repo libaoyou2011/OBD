@@ -1,6 +1,6 @@
 package com.baolong.obd.component.webview;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.util.Log;
 
 import com.baolong.obd.common.network.ResponseWrapper;

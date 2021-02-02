@@ -2,8 +2,6 @@
     <string name="app_name">重柴监管</string>
     <string name="app_full_name">重柴尾气排放监管平台</string>
 
-    <string name="appbar_scrolling_view_behavior">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
-
     <string name="main_viewpager_monitor">实时数据</string>
     <string name="main_black_car">车辆状态</string>
     <string name="main_viewpager_find">统计分析</string>

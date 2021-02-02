@@ -2,8 +2,8 @@ package com.baolong.obd.blackcar.adapter;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,8 +14,6 @@ import android.widget.TextView;
 
 import com.baolong.obd.R;
 import com.baolong.obd.blackcar.data.entity.ExhaustZC;
-import com.baolong.obd.common.widget.XCRoundRectImageView;
-import com.baolong.obd.component.media.AppImageDisplay;
 
 import java.util.ArrayList;
 import java.util.List;

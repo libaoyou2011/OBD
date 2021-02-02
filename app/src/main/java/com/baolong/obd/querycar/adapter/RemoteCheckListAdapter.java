@@ -4,11 +4,11 @@ import com.baolong.obd.R;
 import com.baolong.obd.blackcar.data.entity.Exhaust;
 import com.baolong.obd.common.widget.XCRoundRectImageView;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.widget.TextView;
 import android.widget.RelativeLayout;
 import android.view.LayoutInflater;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.ViewGroup;
 import android.widget.Button;
 

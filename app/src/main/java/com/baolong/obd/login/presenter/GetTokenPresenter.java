@@ -1,6 +1,6 @@
 package com.baolong.obd.login.presenter;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.baolong.obd.common.network.ResponseWrapper;
 import com.baolong.obd.common.network.RetrofitManager;

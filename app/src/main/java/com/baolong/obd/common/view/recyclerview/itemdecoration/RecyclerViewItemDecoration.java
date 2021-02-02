@@ -1,6 +1,6 @@
 package com.baolong.obd.common.view.recyclerview.itemdecoration;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.graphics.Rect;
 

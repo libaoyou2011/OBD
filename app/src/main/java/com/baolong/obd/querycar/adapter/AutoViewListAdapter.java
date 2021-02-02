@@ -3,9 +3,9 @@ package com.baolong.obd.querycar.adapter;
 import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
