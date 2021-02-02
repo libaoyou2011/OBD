@@ -171,18 +171,18 @@
 ################ 日期选择 ###############
 -keep class com.bigkoo.pickerview..**{*;}
 
-#声明第三方jar包,不用管第三方jar包中的.so文件(如果有)
--libraryjars libs/AudioEngineSDK.jar
--libraryjars libs/HCNetSDK.jar
--libraryjars libs/jna.jar
--libraryjars libs/PlayerSDK.jar
-
-################ 海康球机预览 ###############
--keep class com.hikvision.audio.** {*;}
--keep class com.hikvision.netsdk.** {*;}
--keep class com.sun.jna.** {*;}
--keep class com.hikvision.audio.** {*;}
--keep class org.MediaPlayer.PlayM4.** {*;}
+##声明第三方jar包,不用管第三方jar包中的.so文件(如果有)
+#-libraryjars libs/AudioEngineSDK.jar
+#-libraryjars libs/HCNetSDK.jar
+#-libraryjars libs/jna.jar
+#-libraryjars libs/PlayerSDK.jar
+#
+################# 海康球机预览 ###############
+#-keep class com.hikvision.audio.** {*;}
+#-keep class com.hikvision.netsdk.** {*;}
+#-keep class com.sun.jna.** {*;}
+#-keep class com.hikvision.audio.** {*;}
+#-keep class org.MediaPlayer.PlayM4.** {*;}
 
 
 ################ 图表 chart ###############
