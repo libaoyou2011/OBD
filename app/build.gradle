@@ -23,8 +23,8 @@ android {
         applicationId "com.baolong.obd"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0.1"
+        versionCode 2
+        versionName "1.0.2"
         multiDexEnabled true   //项目方法超过了65536个，必须在项目里添加才可以继续编包
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 
