@@ -1,5 +1,6 @@
 package com.baolong.obd.main;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,11 +14,14 @@ import android.widget.Toast;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.baolong.obd.R;
 import com.baolong.obd.common.base.Constance;
+import com.baolong.obd.common.update.CheckVersionService;
+import com.baolong.obd.common.utils.ToastUtils;
 import com.baolong.obd.contract.IContract;
 import com.hwangjr.rxbus.RxBus;
 import com.baolong.obd.common.base.BaseActivity;
 import com.baolong.obd.common.base.BaseApplication;
 import com.baolong.obd.common.base.BaseFragment;
+import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.util.List;
 import java.util.Timer;
@@ -118,6 +122,22 @@ public class MainActivity extends BaseActivity
         initData();
         RxBus.get().register(this);
 //        PermissionFragment.haveAll(this, getSupportFragmentManager());
+
+
+        final RxPermissions rxPermissions = new RxPermissions(this);
+        rxPermissions.request(Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                .subscribe(granted -> {
+                    if (granted) {
+                        // All requested permissions are granted
+                        Intent startIntent = new Intent(this, CheckVersionService.class); //DownloadService
+                        startService(startIntent);
+                        //stopService(stopIntent);
+                    } else {
+                        // At least one permission is denied
+                        ToastUtils.shortToast("请开启读写权限");
+                    }
+                });
     }
 
     @Override

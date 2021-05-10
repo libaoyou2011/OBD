@@ -16,7 +16,6 @@ import com.baolong.obd.common.base.BaseActivity;
 import com.baolong.obd.common.base.BaseApplication;
 import com.baolong.obd.common.network.RetrofitManager;
 import com.baolong.obd.common.sharepreferemces.UserSP;
-import com.baolong.obd.common.update.UpdataService;
 import com.baolong.obd.common.widget.DialogManager;
 import com.baolong.obd.login.presenter.GetTokenPresenter;
 
@@ -50,17 +49,17 @@ public class WelcomeActivityV2 extends BaseActivity
         return false;
     }
 
-    private void startCheckVersion() {
-        Intent intent = new Intent();
-        intent.setClass(this, UpdataService.class);
-        startService(intent);
-    }
+//    private void startCheckVersion() {
+//        Intent intent = new Intent();
+//        intent.setClass(this, UpdataService.class);
+//        startService(intent);
+//    }
 
-    private void stopCheckVision() {
-        Intent intent = new Intent();
-        intent.setClass(this, UpdataService.class);
-        stopService(intent);
-    }
+//    private void stopCheckVision() {
+//        Intent intent = new Intent();
+//        intent.setClass(this, UpdataService.class);
+//        stopService(intent);
+//    }
 
     // 获取token时 界面的状态
     private void UpdateUiGetToken(boolean isGetTokenStatus) {

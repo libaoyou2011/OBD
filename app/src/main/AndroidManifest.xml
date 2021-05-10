@@ -58,9 +58,6 @@
             </intent-filter>
         </activity>
 
-        <service android:name="com.baolong.obd.common.update.UpdataService" />
-
-        <activity android:name="com.baolong.obd.common.update.UpdataActivity" />
         <activity
             android:name="com.baolong.obd.login.LoginActivityV2"
             android:icon="@mipmap/logo"
@@ -202,15 +199,30 @@
             android:screenOrientation="portrait" >
         </activity>
 
+        <!--App更新部分-->
+        <service
+            android:name=".common.update.CheckVersionService"
+            android:enabled="true"
+            android:exported="false"/>
+
+        <activity android:name=".common.update.DialogConfirmActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/UpdateDialogTheme"/>
+
+        <service
+            android:name=".common.update.DownloadService"
+            android:enabled="true"
+            android:exported="false"/>
+
+        <!-- 注意： DownloadService => FileProvider.getUriForFile()的第二个参数要和authorities一致 -->
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.zhihu.matisse.sample.fileprovider2"
+            android:authorities="com.zhihu.matisse.sample.obdfileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths_public">
-
             </meta-data>
         </provider>
 

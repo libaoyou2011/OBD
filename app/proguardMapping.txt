@@ -1,7 +1,7 @@
 # compiler: R8
 # compiler_version: 1.5.69
-# min_api: 15
-# pg_map_id: 6f6b100
+# min_api: 16
+# pg_map_id: cc34899
 android.support.v4.app.INotificationSideChannel$Stub -> android.support.v4.app.INotificationSideChannel$Stub:
     20:22:void <init>() -> <init>
     40:40:android.os.IBinder asBinder() -> asBinder
@@ -16481,24 +16481,24 @@ com.baolong.obd.R$dimen -> com.baolong.obd.R$dimen:
 com.baolong.obd.R$drawable -> com.baolong.obd.R$drawable:
     5974:5974:void <init>() -> <init>
 com.baolong.obd.R$id -> com.baolong.obd.R$id:
-    6185:6185:void <init>() -> <init>
+    6192:6192:void <init>() -> <init>
 com.baolong.obd.R$integer -> com.baolong.obd.R$integer:
-    6734:6734:void <init>() -> <init>
+    6747:6747:void <init>() -> <init>
 com.baolong.obd.R$interpolator -> com.baolong.obd.R$interpolator:
-    6752:6752:void <init>() -> <init>
+    6765:6765:void <init>() -> <init>
 com.baolong.obd.R$layout -> com.baolong.obd.R$layout:
-    6758:6758:void <init>() -> <init>
+    6771:6771:void <init>() -> <init>
 com.baolong.obd.R$mipmap -> com.baolong.obd.R$mipmap:
-    6925:6925:void <init>() -> <init>
+    6939:6939:void <init>() -> <init>
 com.baolong.obd.R$string -> com.baolong.obd.R$string:
-    7019:7019:void <init>() -> <init>
+    7033:7033:void <init>() -> <init>
 com.baolong.obd.R$style -> com.baolong.obd.R$style:
-    7262:7262:void <init>() -> <init>
+    7276:7276:void <init>() -> <init>
 com.baolong.obd.R$styleable -> com.baolong.obd.R$styleable:
-    7859:23846:void <clinit>() -> <clinit>
-    7791:7791:void <init>() -> <init>
+    7874:23861:void <clinit>() -> <clinit>
+    7806:7806:void <init>() -> <init>
 com.baolong.obd.R$xml -> com.baolong.obd.R$xml:
-    23937:23937:void <init>() -> <init>
+    23952:23952:void <init>() -> <init>
 com.baolong.obd.analysis.AnalysisApis$GEtAnalysisCQJR -> com.baolong.obd.b.a:
     rx.Observable req(java.lang.String) -> a
 com.baolong.obd.analysis.AnalysisApis$GEtAnalysisCarFlow -> com.baolong.obd.b.b:
@@ -18938,112 +18938,150 @@ com.baolong.obd.common.presenter.BaseView -> com.baolong.obd.d.b.b:
 com.baolong.obd.common.sharepreferemces.UserSP -> com.baolong.obd.d.c.a:
     39:42:void clearData() -> a
     208:211:void setCookie(java.lang.String) -> a
-    214:217:void setSendMessage(boolean) -> a
     110:110:java.lang.String getCookie() -> b
     184:187:void setStationLocalHost(java.lang.String) -> b
-    114:114:boolean getSendMessage() -> c
+    89:89:java.lang.String getStationLocalHost() -> c
     148:151:void setUserName(java.lang.String) -> c
-    89:89:java.lang.String getStationLocalHost() -> d
+    65:65:java.lang.String getUserName() -> d
     166:169:void setUserPwd(java.lang.String) -> d
-    65:65:java.lang.String getUserName() -> e
+    77:77:java.lang.String getUserPwd() -> e
     172:175:void setUserServerUrl(java.lang.String) -> e
-    77:77:java.lang.String getUserPwd() -> f
+    81:81:java.lang.String getUserServerUrl() -> f
     178:181:void setUserToken(java.lang.String) -> f
-    81:81:java.lang.String getUserServerUrl() -> g
-    85:85:java.lang.String getUserToken() -> h
-com.baolong.obd.common.update.UpdataActivity -> com.baolong.obd.common.update.UpdataActivity:
-    java.lang.String TAG -> g
-    android.widget.TextView mTv_updata_info -> e
-    android.widget.TextView mTv_size -> d
-    com.baolong.obd.common.update.model.CheckVersionResponseModel mModel -> b
-    android.widget.TextView mTv_version -> f
-    java.lang.String mPath -> c
-    26:26:void <clinit>() -> <clinit>
-    24:24:void <init>() -> <init>
-    24:24:java.lang.String access$102(com.baolong.obd.common.update.UpdataActivity,java.lang.String) -> a
-    48:117:void downloadApkFile() -> a
-    24:24:java.lang.String access$000() -> b
-    34:38:void initView() -> c
-    41:45:void showData() -> d
-    121:138:void onActivityResult(int,int,android.content.Intent) -> onActivityResult
-    142:144:void onBackPressed() -> onBackPressed
-    147:150:void onClick(android.view.View) -> onClick
-    154:170:void onCreate(android.os.Bundle) -> onCreate
-com.baolong.obd.common.update.UpdataActivity$1 -> com.baolong.obd.common.update.UpdataActivity$a:
-    com.baolong.obd.common.update.UpdataActivity this$0 -> a
-    50:50:void <init>(com.baolong.obd.common.update.UpdataActivity) -> <init>
-    53:54:void cancle() -> a
-    58:87:void onComplete(java.lang.String) -> a
-    91:93:void onFail(java.lang.Exception) -> a
-    97:110:void onLoading(long,long) -> a
-    114:115:void onStart() -> onStart
-com.baolong.obd.common.update.UpdataActivity$1$1 -> com.baolong.obd.common.update.UpdataActivity$a$a:
-    com.baolong.obd.common.update.UpdataActivity$1 this$1 -> a
-    74:74:void <init>(com.baolong.obd.common.update.UpdataActivity$1) -> <init>
-    76:77:void onSuccess() -> a
-    80:85:void onFail(java.lang.Exception) -> a
-com.baolong.obd.common.update.UpdataActivity$2 -> com.baolong.obd.common.update.UpdataActivity$b:
-    com.baolong.obd.common.update.UpdataActivity this$0 -> a
-    124:124:void <init>(com.baolong.obd.common.update.UpdataActivity) -> <init>
-    126:127:void onSuccess() -> a
-    130:135:void onFail(java.lang.Exception) -> a
-com.baolong.obd.common.update.UpdataApis$CheckVersion -> com.baolong.obd.common.update.a:
-    rx.Observable req(com.baolong.obd.common.update.model.CheckVersionRequestModel) -> a
-com.baolong.obd.common.update.UpdataService -> com.baolong.obd.common.update.UpdataService:
+    85:85:java.lang.String getUserToken() -> g
+com.baolong.obd.common.update.CheckVersionService -> com.baolong.obd.common.update.CheckVersionService:
     com.baolong.obd.common.update.presenter.CheckVersionPresenter mCheckVersionPresenter -> b
     android.content.BroadcastReceiver receiver -> c
-    27:31:void <init>() -> <init>
-    27:27:void setPresenter(java.lang.Object) -> a
-    37:49:void install() -> a
-    102:102:void setPresenter(com.baolong.obd.common.update.presenter.CheckVersionPresenter) -> a
-    105:117:void showData(com.baolong.obd.common.update.model.CheckVersionResponseModel) -> a
-    52:57:void showDialog(com.baolong.obd.common.update.model.CheckVersionResponseModel) -> b
-    71:71:android.os.IBinder onBind(android.content.Intent) -> onBind
-    97:99:void onDestroy() -> onDestroy
-    76:91:int onStartCommand(android.content.Intent,int,int) -> onStartCommand
-com.baolong.obd.common.update.UpdataService$1 -> com.baolong.obd.common.update.UpdataService$a:
-    com.baolong.obd.common.update.UpdataService this$0 -> a
-    79:79:void <init>(com.baolong.obd.common.update.UpdataService) -> <init>
-    82:84:void onReceive(android.content.Context,android.content.Intent) -> onReceive
+    java.lang.String TAG -> d
+    29:29:void <clinit>() -> <clinit>
+    28:33:void <init>() -> <init>
+    28:28:java.lang.String access$000() -> a
+    28:28:void setPresenter(java.lang.Object) -> a
+    126:144:void showData(com.baolong.obd.common.update.model.CheckVersionResponseModel) -> a
+    149:149:void setPresenter(com.baolong.obd.common.update.contract.ICheckVersionContract$Presenter) -> a
+    114:122:void showDialog(com.baolong.obd.common.update.model.CheckVersionResponseModel) -> b
+    41:41:android.os.IBinder onBind(android.content.Intent) -> onBind
+    80:82:void onDestroy() -> onDestroy
+    49:74:int onStartCommand(android.content.Intent,int,int) -> onStartCommand
+com.baolong.obd.common.update.CheckVersionService$1 -> com.baolong.obd.common.update.CheckVersionService$a:
+    49:49:void <init>(com.baolong.obd.common.update.CheckVersionService) -> <init>
+    52:55:void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.baolong.obd.common.update.DialogConfirmActivity -> com.baolong.obd.common.update.DialogConfirmActivity:
+    java.lang.String TAG -> h
+    android.widget.ImageView updateCancelImg -> g
+    android.widget.TextView versionContentTV -> e
+    android.widget.TextView versionCodeTV -> d
+    com.baolong.obd.common.update.model.CheckVersionResponseModel mModel -> c
+    android.widget.TextView updateConfirm -> f
+    boolean isFirstCheck -> b
+    19:19:void <clinit>() -> <clinit>
+    18:18:void <init>() -> <init>
+    18:18:com.baolong.obd.common.update.model.CheckVersionResponseModel access$000(com.baolong.obd.common.update.DialogConfirmActivity) -> a
+    18:18:boolean access$100(com.baolong.obd.common.update.DialogConfirmActivity) -> b
+    95:98:void onBackPressed() -> onBackPressed
+    32:91:void onCreate(android.os.Bundle) -> onCreate
+    108:110:void onDestroy() -> onDestroy
+    102:104:void onResume() -> onResume
+com.baolong.obd.common.update.DialogConfirmActivity$1 -> com.baolong.obd.common.update.DialogConfirmActivity$a:
+    com.baolong.obd.common.update.DialogConfirmActivity this$0 -> b
+    60:60:void <init>(com.baolong.obd.common.update.DialogConfirmActivity) -> <init>
+    64:77:void onClick(android.view.View) -> onClick
+com.baolong.obd.common.update.DialogConfirmActivity$2 -> com.baolong.obd.common.update.DialogConfirmActivity$b:
+    com.baolong.obd.common.update.DialogConfirmActivity this$0 -> b
+    80:80:void <init>(com.baolong.obd.common.update.DialogConfirmActivity) -> <init>
+    83:88:void onClick(android.view.View) -> onClick
+com.baolong.obd.common.update.DownloadService -> com.baolong.obd.common.update.DownloadService:
+    java.lang.String TAG -> f
+    android.content.BroadcastReceiver mBroadcastReceiver -> e
+    long mId -> c
+    java.lang.String url -> b
+    java.lang.String DOWNLOAD_PATH -> d
+    25:25:void <clinit>() -> <clinit>
+    24:29:void <init>() -> <init>
+    24:24:long access$100(com.baolong.obd.common.update.DownloadService) -> a
+    24:24:void access$200(com.baolong.obd.common.update.DownloadService,android.content.Context,long) -> a
+    55:86:void download(java.lang.String) -> a
+    91:124:void receiver() -> a
+    127:141:void installApk(android.content.Context,long) -> a
+    144:153:boolean startInstall(android.content.Context,android.net.Uri) -> a
+    24:24:java.lang.String access$000() -> b
+    162:169:void setPermission(java.lang.String) -> b
+    34:34:android.os.IBinder onBind(android.content.Intent) -> onBind
+    39:40:void onCreate() -> onCreate
+    173:175:void onDestroy() -> onDestroy
+    44:51:int onStartCommand(android.content.Intent,int,int) -> onStartCommand
+com.baolong.obd.common.update.DownloadService$1 -> com.baolong.obd.common.update.DownloadService$a:
+    com.baolong.obd.common.update.DownloadService this$0 -> a
+    91:91:void <init>(com.baolong.obd.common.update.DownloadService) -> <init>
+    94:117:void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.baolong.obd.common.update.UpdataApis$CheckVersion -> com.baolong.obd.common.update.a:
+    rx.Observable req(java.lang.String,java.lang.String,java.lang.String) -> a
 com.baolong.obd.common.update.contract.ICheckVersionContract$Presenter -> com.baolong.obd.common.update.b.a:
 com.baolong.obd.common.update.contract.ICheckVersionContract$View -> com.baolong.obd.common.update.b.b:
     void showData(com.baolong.obd.common.update.model.CheckVersionResponseModel) -> a
-com.baolong.obd.common.update.model.CheckVersionRequestModel -> com.baolong.obd.common.update.model.a:
+com.baolong.obd.common.update.model.CheckVersionRequestModel -> com.baolong.obd.common.update.model.CheckVersionRequestModel:
     3:3:void <init>() -> <init>
-    11:12:void setSystem(java.lang.String) -> a
+    7:7:java.lang.String getSystem() -> getSystem
+    11:12:void setSystem(java.lang.String) -> setSystem
 com.baolong.obd.common.update.model.CheckVersionResponseModel -> com.baolong.obd.common.update.model.CheckVersionResponseModel:
-    java.lang.String versionName -> g
-    java.lang.String versionCode -> f
-    java.lang.String versionSize -> h
-    java.lang.String publishTime -> c
-    java.lang.String downloadUrl -> b
-    java.lang.String updateType -> e
-    java.lang.String updateContent -> d
-    101:101:void <clinit>() -> <clinit>
-    88:89:void <init>() -> <init>
-    91:99:void <init>(android.os.Parcel) -> <init>
-    16:16:java.lang.String getDownloadUrl() -> a
-    24:24:java.lang.String getUpdateContent() -> b
-    32:32:java.lang.String getVersionCode() -> c
-    36:36:java.lang.String getVersionName() -> d
-    74:74:int describeContents() -> describeContents
-    40:40:java.lang.String getVersionSize() -> e
-    79:86:void writeToParcel(android.os.Parcel,int) -> writeToParcel
-com.baolong.obd.common.update.model.CheckVersionResponseModel$1 -> com.baolong.obd.common.update.model.CheckVersionResponseModel$a:
-    101:101:void <init>() -> <init>
-    101:101:java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
-    104:104:com.baolong.obd.common.update.model.CheckVersionResponseModel createFromParcel(android.os.Parcel) -> createFromParcel
-    101:101:java.lang.Object[] newArray(int) -> newArray
-    109:109:com.baolong.obd.common.update.model.CheckVersionResponseModel[] newArray(int) -> newArray
+    61:61:void <clinit>() -> <clinit>
+    49:59:void <init>(android.os.Parcel) -> <init>
+    219:219:int describeContents() -> describeContents
+    170:170:java.lang.String getCategory() -> getCategory
+    82:82:java.lang.Object getCreateBy() -> getCreateBy
+    90:90:java.lang.Object getCreateTime() -> getCreateTime
+    122:122:java.lang.Object getDataScope() -> getDataScope
+    202:202:java.lang.String getFileApp() -> getFileApp
+    210:210:java.lang.Object getFileSize() -> getFileSize
+    138:138:int getId() -> getId
+    130:130:com.baolong.obd.common.update.model.CheckVersionResponseModel$ParamsBean getParams() -> getParams
+    162:162:java.lang.String getPlatform() -> getPlatform
+    186:186:java.lang.Object getPublishStatus() -> getPublishStatus
+    194:194:java.lang.String getPublishTime() -> getPublishTime
+    114:114:java.lang.Object getRemark() -> getRemark
+    74:74:java.lang.Object getSearchValue() -> getSearchValue
+    98:98:java.lang.Object getUpdateBy() -> getUpdateBy
+    178:178:java.lang.String getUpdateContent() -> getUpdateContent
+    106:106:java.lang.String getUpdateTime() -> getUpdateTime
+    146:146:int getVersionCode() -> getVersionCode
+    154:154:java.lang.String getVersionName() -> getVersionName
+    174:175:void setCategory(java.lang.String) -> setCategory
+    86:87:void setCreateBy(java.lang.Object) -> setCreateBy
+    94:95:void setCreateTime(java.lang.Object) -> setCreateTime
+    126:127:void setDataScope(java.lang.Object) -> setDataScope
+    206:207:void setFileApp(java.lang.String) -> setFileApp
+    214:215:void setFileSize(java.lang.Object) -> setFileSize
+    142:143:void setId(int) -> setId
+    134:135:void setParams(com.baolong.obd.common.update.model.CheckVersionResponseModel$ParamsBean) -> setParams
+    166:167:void setPlatform(java.lang.String) -> setPlatform
+    190:191:void setPublishStatus(java.lang.Object) -> setPublishStatus
+    198:199:void setPublishTime(java.lang.String) -> setPublishTime
+    118:119:void setRemark(java.lang.Object) -> setRemark
+    78:79:void setSearchValue(java.lang.Object) -> setSearchValue
+    102:103:void setUpdateBy(java.lang.Object) -> setUpdateBy
+    182:183:void setUpdateContent(java.lang.String) -> setUpdateContent
+    110:111:void setUpdateTime(java.lang.String) -> setUpdateTime
+    150:151:void setVersionCode(int) -> setVersionCode
+    158:159:void setVersionName(java.lang.String) -> setVersionName
+    237:237:java.lang.String toString() -> toString
+    224:233:void writeToParcel(android.os.Parcel,int) -> writeToParcel
+com.baolong.obd.common.update.model.CheckVersionResponseModel$1 -> com.baolong.obd.common.update.model.CheckVersionResponseModel$1:
+    61:61:void <init>() -> <init>
+    61:61:java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    64:64:com.baolong.obd.common.update.model.CheckVersionResponseModel createFromParcel(android.os.Parcel) -> createFromParcel
+    61:61:java.lang.Object[] newArray(int) -> newArray
+    69:69:com.baolong.obd.common.update.model.CheckVersionResponseModel[] newArray(int) -> newArray
+com.baolong.obd.common.update.model.CheckVersionResponseModel$ParamsBean -> com.baolong.obd.common.update.model.CheckVersionResponseModel$ParamsBean:
+    259:259:void <init>() -> <init>
 com.baolong.obd.common.update.presenter.CheckVersionPresenter -> com.baolong.obd.common.update.c.a:
     com.baolong.obd.common.update.contract.ICheckVersionContract$View mCheckVersionView -> a
     20:23:void <init>(com.baolong.obd.common.update.contract.ICheckVersionContract$View) -> <init>
     16:16:com.baolong.obd.common.update.contract.ICheckVersionContract$View access$000(com.baolong.obd.common.update.presenter.CheckVersionPresenter) -> a
-    29:49:void getData(java.lang.String) -> a
+    29:55:void getData(java.lang.String,java.lang.String,java.lang.String) -> a
 com.baolong.obd.common.update.presenter.CheckVersionPresenter$1 -> com.baolong.obd.common.update.c.a$a:
     com.baolong.obd.common.update.presenter.CheckVersionPresenter this$0 -> b
     35:35:void <init>(com.baolong.obd.common.update.presenter.CheckVersionPresenter) -> <init>
-    44:47:void onNext(com.baolong.obd.common.network.ResponseWrapper) -> a
+    44:53:void onNext(com.baolong.obd.common.network.ResponseWrapperList) -> a
     37:37:void onCompleted() -> onCompleted
     40:41:void onError(java.lang.Throwable) -> onError
     35:35:void onNext(java.lang.Object) -> onNext
@@ -20206,78 +20244,78 @@ com.baolong.obd.login.WelcomeActivity -> com.baolong.obd.login.WelcomeActivity:
     android.widget.ProgressBar loadingPb -> u
     android.widget.TextView loadingTxt -> v
     com.baolong.obd.login.presenter.GetTokenPresenter mGetTokenPresenter -> w
-    27:27:void <clinit>() -> <clinit>
-    25:28:void <init>() -> <init>
-    25:25:void access$000(com.baolong.obd.login.WelcomeActivity,boolean) -> a
-    25:25:com.baolong.obd.login.presenter.GetTokenPresenter access$100(com.baolong.obd.login.WelcomeActivity) -> a
-    121:132:void UpdateUiGetToken(boolean) -> a
-    25:25:java.lang.Runnable access$200(com.baolong.obd.login.WelcomeActivity) -> b
-    156:162:void getTokenSuccess(java.lang.String) -> j
-    149:151:void getTokenFail(java.lang.String) -> k
-    136:140:void onCreate(android.os.Bundle) -> onCreate
-    144:145:void onResume() -> onResume
-    66:113:void initView() -> u
-    165:176:void jumpTo() -> v
-    38:40:void gotoLogin() -> w
-    116:117:void initPresenter() -> x
+    26:26:void <clinit>() -> <clinit>
+    24:27:void <init>() -> <init>
+    24:24:void access$000(com.baolong.obd.login.WelcomeActivity,boolean) -> a
+    24:24:com.baolong.obd.login.presenter.GetTokenPresenter access$100(com.baolong.obd.login.WelcomeActivity) -> a
+    120:131:void UpdateUiGetToken(boolean) -> a
+    24:24:java.lang.Runnable access$200(com.baolong.obd.login.WelcomeActivity) -> b
+    155:161:void getTokenSuccess(java.lang.String) -> j
+    148:150:void getTokenFail(java.lang.String) -> k
+    135:139:void onCreate(android.os.Bundle) -> onCreate
+    143:144:void onResume() -> onResume
+    65:112:void initView() -> u
+    164:175:void jumpTo() -> v
+    37:39:void gotoLogin() -> w
+    115:116:void initPresenter() -> x
 com.baolong.obd.login.WelcomeActivity$1 -> com.baolong.obd.login.WelcomeActivity$a:
     com.baolong.obd.login.WelcomeActivity this$0 -> b
-    78:78:void <init>(com.baolong.obd.login.WelcomeActivity) -> <init>
-    80:82:void onClick(android.view.View) -> onClick
+    77:77:void <init>(com.baolong.obd.login.WelcomeActivity) -> <init>
+    79:81:void onClick(android.view.View) -> onClick
 com.baolong.obd.login.WelcomeActivity$2 -> com.baolong.obd.login.WelcomeActivity$b:
     com.baolong.obd.login.WelcomeActivity this$0 -> b
-    84:84:void <init>(com.baolong.obd.login.WelcomeActivity) -> <init>
-    86:88:void onClick(android.view.View) -> onClick
+    83:83:void <init>(com.baolong.obd.login.WelcomeActivity) -> <init>
+    85:87:void onClick(android.view.View) -> onClick
 com.baolong.obd.login.WelcomeActivity$3 -> com.baolong.obd.login.WelcomeActivity$c:
     com.baolong.obd.login.WelcomeActivity this$0 -> b
-    90:90:void <init>(com.baolong.obd.login.WelcomeActivity) -> <init>
-    92:111:void onClick(android.view.View) -> onClick
+    89:89:void <init>(com.baolong.obd.login.WelcomeActivity) -> <init>
+    91:110:void onClick(android.view.View) -> onClick
 com.baolong.obd.login.WelcomeActivity$3$1 -> com.baolong.obd.login.WelcomeActivity$c$a:
-    94:94:void <init>(com.baolong.obd.login.WelcomeActivity$3) -> <init>
-    96:96:void onItemClick(android.view.View,java.lang.String) -> a
+    93:93:void <init>(com.baolong.obd.login.WelcomeActivity$3) -> <init>
+    95:95:void onItemClick(android.view.View,java.lang.String) -> a
 com.baolong.obd.login.WelcomeActivity$3$2 -> com.baolong.obd.login.WelcomeActivity$c$b:
     com.baolong.obd.login.WelcomeActivity$3 this$1 -> a
-    99:99:void <init>(com.baolong.obd.login.WelcomeActivity$3) -> <init>
-    101:106:void onItemClick(android.view.View,java.lang.String) -> a
+    98:98:void <init>(com.baolong.obd.login.WelcomeActivity$3) -> <init>
+    100:105:void onItemClick(android.view.View,java.lang.String) -> a
 com.baolong.obd.login.WelcomeActivity$4 -> com.baolong.obd.login.WelcomeActivity$d:
     com.baolong.obd.login.WelcomeActivity this$0 -> b
-    156:156:void <init>(com.baolong.obd.login.WelcomeActivity) -> <init>
-    158:159:void run() -> run
+    155:155:void <init>(com.baolong.obd.login.WelcomeActivity) -> <init>
+    157:158:void run() -> run
 com.baolong.obd.login.WelcomeActivityV2 -> com.baolong.obd.login.WelcomeActivityV2:
     java.lang.Runnable runnable -> u
     android.widget.Button setServerBtn -> w
     android.widget.Button retryBtn -> v
     android.os.Handler handler -> s
     android.widget.TextView jumpBtn -> t
-    26:26:void <clinit>() -> <clinit>
-    23:27:void <init>() -> <init>
-    23:23:java.lang.Runnable access$000(com.baolong.obd.login.WelcomeActivityV2) -> a
-    143:152:void onCreate(android.os.Bundle) -> onCreate
-    156:157:void onResume() -> onResume
-    81:135:void initView() -> u
-    177:183:void jumpToEvent() -> v
-    38:40:void gotoLogin() -> w
+    25:25:void <clinit>() -> <clinit>
+    22:26:void <init>() -> <init>
+    22:22:java.lang.Runnable access$000(com.baolong.obd.login.WelcomeActivityV2) -> a
+    142:151:void onCreate(android.os.Bundle) -> onCreate
+    155:156:void onResume() -> onResume
+    80:134:void initView() -> u
+    176:182:void jumpToEvent() -> v
+    37:39:void gotoLogin() -> w
 com.baolong.obd.login.WelcomeActivityV2$1 -> com.baolong.obd.login.WelcomeActivityV2$a:
-    93:93:void <init>(com.baolong.obd.login.WelcomeActivityV2) -> <init>
-    97:97:void onClick(android.view.View) -> onClick
+    92:92:void <init>(com.baolong.obd.login.WelcomeActivityV2) -> <init>
+    96:96:void onClick(android.view.View) -> onClick
 com.baolong.obd.login.WelcomeActivityV2$2 -> com.baolong.obd.login.WelcomeActivityV2$b:
     com.baolong.obd.login.WelcomeActivityV2 this$0 -> b
-    99:99:void <init>(com.baolong.obd.login.WelcomeActivityV2) -> <init>
-    101:103:void onClick(android.view.View) -> onClick
+    98:98:void <init>(com.baolong.obd.login.WelcomeActivityV2) -> <init>
+    100:102:void onClick(android.view.View) -> onClick
 com.baolong.obd.login.WelcomeActivityV2$3 -> com.baolong.obd.login.WelcomeActivityV2$c:
     com.baolong.obd.login.WelcomeActivityV2 this$0 -> b
-    105:105:void <init>(com.baolong.obd.login.WelcomeActivityV2) -> <init>
-    107:126:void onClick(android.view.View) -> onClick
+    104:104:void <init>(com.baolong.obd.login.WelcomeActivityV2) -> <init>
+    106:125:void onClick(android.view.View) -> onClick
 com.baolong.obd.login.WelcomeActivityV2$3$1 -> com.baolong.obd.login.WelcomeActivityV2$c$a:
-    109:109:void <init>(com.baolong.obd.login.WelcomeActivityV2$3) -> <init>
-    111:111:void onItemClick(android.view.View,java.lang.String) -> a
+    108:108:void <init>(com.baolong.obd.login.WelcomeActivityV2$3) -> <init>
+    110:110:void onItemClick(android.view.View,java.lang.String) -> a
 com.baolong.obd.login.WelcomeActivityV2$3$2 -> com.baolong.obd.login.WelcomeActivityV2$c$b:
-    114:114:void <init>(com.baolong.obd.login.WelcomeActivityV2$3) -> <init>
-    116:121:void onItemClick(android.view.View,java.lang.String) -> a
+    113:113:void <init>(com.baolong.obd.login.WelcomeActivityV2$3) -> <init>
+    115:120:void onItemClick(android.view.View,java.lang.String) -> a
 com.baolong.obd.login.WelcomeActivityV2$4 -> com.baolong.obd.login.WelcomeActivityV2$d:
     com.baolong.obd.login.WelcomeActivityV2 this$0 -> b
-    128:128:void <init>(com.baolong.obd.login.WelcomeActivityV2) -> <init>
-    131:132:void run() -> run
+    127:127:void <init>(com.baolong.obd.login.WelcomeActivityV2) -> <init>
+    130:131:void run() -> run
 com.baolong.obd.login.contract.IAccessTokenContract$Presenter -> com.baolong.obd.login.d.a:
 com.baolong.obd.login.contract.IAccessTokenContract$View -> com.baolong.obd.login.d.b:
     void getTokenSuccess(java.lang.String) -> j
@@ -20352,6 +20390,8 @@ com.baolong.obd.login.presenter.LoginPresenter$2 -> com.baolong.obd.login.e.b$b:
     77:78:void onCompleted() -> onCompleted
     82:87:void onError(java.lang.Throwable) -> onError
     74:74:void onNext(java.lang.Object) -> onNext
+com.baolong.obd.main.-$$Lambda$MainActivity$Mg6-4dOddXC_THR0Sf2fdtcilsA -> com.baolong.obd.main.a:
+    com.baolong.obd.main.MainActivity f$0 -> a
 com.baolong.obd.main.MainActivity -> com.baolong.obd.main.MainActivity:
     androidx.viewpager.widget.ViewPager mViewPager -> x
     boolean hasOneValidExit -> z
@@ -20361,27 +20401,28 @@ com.baolong.obd.main.MainActivity -> com.baolong.obd.main.MainActivity:
     android.widget.TextView mTv_work -> w
     android.widget.TextView mTv_monitor -> v
     com.baolong.obd.main.ViewPagerFragmentAdapter mViewPagerFragmentAdapter -> y
-    27:154:void <init>() -> <init>
-    44:48:void updateBottomLinearLayoutSelect(boolean[]) -> a
-    186:186:void onPageScrollStateChanged(int) -> a
-    189:189:void onPageScrolled(int,float,int) -> a
-    192:196:void onPageSelected(int) -> b
-    182:183:void finish() -> finish
-    157:176:void onBackPressed() -> onBackPressed
-    93:110:void onClick(android.view.View) -> onClick
-    114:121:void onCreate(android.os.Bundle) -> onCreate
-    150:152:void onDestroy() -> onDestroy
-    125:130:void onResume() -> onResume
-    145:146:void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
-    134:135:void onStart() -> onStart
-    51:63:void initView() -> u
-    66:74:void initViewPager() -> v
-    77:77:void initData() -> w
+    31:174:void <init>() -> <init>
+    48:52:void updateBottomLinearLayoutSelect(boolean[]) -> a
+    131:140:void lambda$onCreate$0(java.lang.Boolean) -> a
+    206:206:void onPageScrollStateChanged(int) -> a
+    209:209:void onPageScrolled(int,float,int) -> a
+    212:216:void onPageSelected(int) -> b
+    202:203:void finish() -> finish
+    177:196:void onBackPressed() -> onBackPressed
+    97:114:void onClick(android.view.View) -> onClick
+    118:141:void onCreate(android.os.Bundle) -> onCreate
+    170:172:void onDestroy() -> onDestroy
+    145:150:void onResume() -> onResume
+    165:166:void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    154:155:void onStart() -> onStart
+    55:67:void initView() -> u
+    70:78:void initViewPager() -> v
+    81:81:void initData() -> w
 com.baolong.obd.main.MainActivity$1 -> com.baolong.obd.main.MainActivity$a:
     com.baolong.obd.main.MainActivity this$0 -> b
-    163:163:void <init>(com.baolong.obd.main.MainActivity) -> <init>
-    166:167:void run() -> run
-com.baolong.obd.main.ViewManager -> com.baolong.obd.main.a:
+    183:183:void <init>(com.baolong.obd.main.MainActivity) -> <init>
+    186:187:void run() -> run
+com.baolong.obd.main.ViewManager -> com.baolong.obd.main.b:
     java.util.Stack activityStack -> a
     com.baolong.obd.main.ViewManager INSTANCE -> c
     com.baolong.obd.common.base.BaseFragment[] fragmentsArray -> b
@@ -20393,7 +20434,7 @@ com.baolong.obd.main.ViewManager -> com.baolong.obd.main.a:
     73:82:void finishAllActivity() -> b
     113:140:java.util.List getAllFragment() -> c
     32:32:com.baolong.obd.main.ViewManager getInstance() -> d
-com.baolong.obd.main.ViewPagerFragmentAdapter -> com.baolong.obd.main.b:
+com.baolong.obd.main.ViewPagerFragmentAdapter -> com.baolong.obd.main.c:
     java.util.List mFragmentList -> f
     15:17:void <init>(androidx.fragment.app.FragmentManager,java.util.List) -> <init>
     21:24:int getCount() -> a
@@ -21815,73 +21856,64 @@ com.baolong.obd.my.data.entity.UserInfoModel -> com.baolong.obd.my.data.entity.U
     70:71:void setUserName(java.lang.String) -> setUserName
 com.baolong.obd.my.event.UpdateDefaultStationEvent -> com.baolong.obd.i.i.a:
     6:8:void <init>(java.lang.String) -> <init>
+com.baolong.obd.my.event.UpdateVersionEvent -> com.baolong.obd.i.i.b:
+    com.baolong.obd.common.update.model.CheckVersionResponseModel model -> a
+    11:13:void <init>(com.baolong.obd.common.update.model.CheckVersionResponseModel) -> <init>
+    16:16:com.baolong.obd.common.update.model.CheckVersionResponseModel getVersionInfo() -> a
 com.baolong.obd.my.fragment.-$$Lambda$MyMainFragment$763omhtSH4UMki7d_A6h6TioPMk -> com.baolong.obd.i.j.a:
     com.baolong.obd.my.fragment.MyMainFragment f$0 -> b
 com.baolong.obd.my.fragment.-$$Lambda$MyMainFragment$SIF4vOLU1zRKHEzm1w_U7lV-WV0 -> com.baolong.obd.i.j.b:
     com.baolong.obd.my.fragment.MyMainFragment f$0 -> b
 com.baolong.obd.my.fragment.-$$Lambda$MyMainFragment$UPDO1st8gOUkK7E1eucyASrSUYU -> com.baolong.obd.i.j.c:
     com.baolong.obd.my.fragment.MyMainFragment f$0 -> b
-com.baolong.obd.my.fragment.-$$Lambda$MyMainFragment$eTzLqe3hd-NIFPa2a6TDBAufivM -> com.baolong.obd.i.j.d:
-    com.baolong.obd.my.fragment.MyMainFragment f$0 -> b
-com.baolong.obd.my.fragment.MyMainFragment -> com.baolong.obd.i.j.e:
-    com.baolong.obd.my.presenter.StationListPresenter stationListPresenter -> m
-    android.widget.TextView mUserInfoTv -> c
+com.baolong.obd.my.fragment.MyMainFragment -> com.baolong.obd.i.j.d:
+    com.baolong.obd.my.presenter.StationListPresenter stationListPresenter -> l
     android.widget.TextView mNameTv -> e
-    android.widget.TextView mCurrentServerUrlTv -> d
-    android.widget.TextView mChoosePhotosTv -> g
-    android.widget.TextView mStationNameTv -> f
-    android.widget.Switch mSendSW -> k
+    com.baolong.obd.common.update.model.CheckVersionResponseModel mModel -> c
+    android.widget.LinearLayout mAppVersionLL -> h
     android.widget.TextView mAppVersionTV -> i
-    android.view.View mView -> b
-    android.widget.TextView mChangePasswordTv -> h
-    android.widget.RelativeLayout mSendRL -> j
-    android.widget.TextView mExit -> l
-    34:34:void <init>() -> <init>
-    34:34:android.widget.TextView access$000(com.baolong.obd.my.fragment.MyMainFragment) -> a
-    34:34:void setPresenter(java.lang.Object) -> a
-    91:93:void lambda$addListener$0(android.view.View) -> a
-    209:209:void setPresenter(com.baolong.obd.my.presenter.StationListPresenter) -> a
-    215:215:void hideLoading() -> a
-    218:219:void showFail(java.lang.String) -> a
-    222:223:void showCurrentStation(com.baolong.obd.my.data.entity.GetDefaultStationResponseModel) -> a
-    106:108:void lambda$addListener$1(android.view.View) -> b
-    212:212:void showLoading() -> b
-    226:226:void showChangeStationSuccess(java.lang.String) -> b
-    229:229:void showStationListAll(java.util.List) -> b
-    110:131:void lambda$addListener$2(android.view.View) -> c
-    173:174:void changeDefaultStation(com.baolong.obd.my.event.UpdateDefaultStationEvent) -> changeDefaultStation
-    145:163:void lambda$addListener$3(android.view.View) -> d
-    206:206:void refresh() -> e
-    90:164:void addListener() -> f
-    169:169:void getDataByPresenter() -> g
-    53:56:void initTitle() -> h
-    59:87:void initView() -> i
-    177:177:com.baolong.obd.my.fragment.MyMainFragment newInstance() -> j
-    192:193:void onActivityCreated(android.os.Bundle) -> onActivityCreated
-    182:187:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
-    201:203:void onDestroyView() -> onDestroyView
-    196:198:void onResume() -> onResume
-com.baolong.obd.my.fragment.MyMainFragment$1 -> com.baolong.obd.i.j.e$a:
+    android.widget.LinearLayout mChangePasswordLL -> g
+    android.widget.LinearLayout mUserInfoLL -> f
+    android.widget.TextView mExit -> k
+    boolean hasNewVersion -> b
+    android.view.View mView -> d
+    android.widget.TextView mNewVersionTV -> j
+    41:41:void <init>() -> <init>
+    41:41:boolean access$000(com.baolong.obd.my.fragment.MyMainFragment) -> a
+    41:41:void setPresenter(java.lang.Object) -> a
+    92:94:void lambda$addListener$0(android.view.View) -> a
+    195:195:void setPresenter(com.baolong.obd.my.presenter.StationListPresenter) -> a
+    201:201:void hideLoading() -> a
+    204:205:void showFail(java.lang.String) -> a
+    208:208:void showCurrentStation(com.baolong.obd.my.data.entity.GetDefaultStationResponseModel) -> a
+    98:100:void lambda$addListener$1(android.view.View) -> b
+    198:198:void showLoading() -> b
+    211:211:void showChangeStationSuccess(java.lang.String) -> b
+    214:214:void showStationListAll(java.util.List) -> b
+    120:138:void lambda$addListener$2(android.view.View) -> c
+    148:149:void changeDefaultStation(com.baolong.obd.my.event.UpdateDefaultStationEvent) -> changeDefaultStation
+    190:190:void refresh() -> e
+    91:139:void addListener() -> f
+    144:144:void getDataByPresenter() -> g
+    60:63:void initTitle() -> h
+    66:88:void initView() -> i
+    161:161:com.baolong.obd.my.fragment.MyMainFragment newInstance() -> j
+    176:177:void onActivityCreated(android.os.Bundle) -> onActivityCreated
+    166:171:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+    185:187:void onDestroyView() -> onDestroyView
+    180:182:void onResume() -> onResume
+    153:157:void updateVersion(com.baolong.obd.my.event.UpdateVersionEvent) -> updateVersion
+com.baolong.obd.my.fragment.MyMainFragment$1 -> com.baolong.obd.i.j.d$a:
     com.baolong.obd.my.fragment.MyMainFragment this$0 -> b
-    94:94:void <init>(com.baolong.obd.my.fragment.MyMainFragment) -> <init>
-    97:99:void onClick(android.view.View) -> onClick
-com.baolong.obd.my.fragment.MyMainFragment$2 -> com.baolong.obd.i.j.f:
-    112:112:void <init>(com.baolong.obd.my.fragment.MyMainFragment) -> <init>
-    116:116:void onItemClick(android.view.View,java.lang.String) -> a
-com.baolong.obd.my.fragment.MyMainFragment$3 -> com.baolong.obd.i.j.g:
-    com.baolong.obd.my.fragment.MyMainFragment this$0 -> a
-    119:119:void <init>(com.baolong.obd.my.fragment.MyMainFragment) -> <init>
-    122:126:void onItemClick(android.view.View,java.lang.String) -> a
-com.baolong.obd.my.fragment.MyMainFragment$4 -> com.baolong.obd.i.j.e$b:
-    132:132:void <init>(com.baolong.obd.my.fragment.MyMainFragment) -> <init>
-    135:142:void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-com.baolong.obd.my.fragment.MyMainFragment$5 -> com.baolong.obd.i.j.h:
-    147:147:void <init>(com.baolong.obd.my.fragment.MyMainFragment) -> <init>
-    151:151:void onClick(android.view.View) -> onClick
-com.baolong.obd.my.fragment.MyMainFragment$6 -> com.baolong.obd.i.j.i:
+    102:102:void <init>(com.baolong.obd.my.fragment.MyMainFragment) -> <init>
+    105:115:void onClick(android.view.View) -> onClick
+com.baolong.obd.my.fragment.MyMainFragment$2 -> com.baolong.obd.i.j.e:
+    122:122:void <init>(com.baolong.obd.my.fragment.MyMainFragment) -> <init>
+    126:126:void onClick(android.view.View) -> onClick
+com.baolong.obd.my.fragment.MyMainFragment$3 -> com.baolong.obd.i.j.f:
     com.baolong.obd.my.fragment.MyMainFragment this$0 -> b
-    153:153:void <init>(com.baolong.obd.my.fragment.MyMainFragment) -> <init>
-    156:160:void onClick(android.view.View) -> onClick
+    128:128:void <init>(com.baolong.obd.my.fragment.MyMainFragment) -> <init>
+    131:135:void onClick(android.view.View) -> onClick
 com.baolong.obd.my.photos.GifSizeFilter -> com.baolong.obd.i.k.a:
     int mMinHeight -> b
     int mMaxSize -> c
@@ -33855,96 +33887,8 @@ com.makeramen.roundedimageview.RoundedTransformationBuilder -> com.makeramen.rou
     46:47:com.makeramen.roundedimageview.RoundedTransformationBuilder scaleType(android.widget.ImageView$ScaleType) -> scaleType
 com.makeramen.roundedimageview.RoundedTransformationBuilder$1 -> com.makeramen.roundedimageview.RoundedTransformationBuilder$a:
     160:160:void <init>(com.makeramen.roundedimageview.RoundedTransformationBuilder) -> <init>
-com.maning.updatelibrary.InstallUtils -> com.maning.updatelibrary.a:
-    boolean isComplete -> m
-    java.lang.String saveName -> g
-    boolean isHttp302 -> n
-    java.lang.String savePath -> f
-    boolean isCancle -> o
-    com.maning.updatelibrary.InstallUtils mInstance -> h
-    int fileCurrentLength -> d
-    android.content.Context context -> j
-    java.util.Timer mTimer -> a
-    int fileLength -> c
-    java.io.File saveFile -> i
-    com.maning.updatelibrary.InstallUtils$DownloadCallBack downloadCallBack -> l
-    android.os.Handler handler -> k
-    java.lang.String httpUrl -> e
-    java.util.TimerTask mTask -> b
-    45:49:void <clinit>() -> <clinit>
-    73:74:void <init>() -> <init>
-    25:25:java.lang.String access$000(com.maning.updatelibrary.InstallUtils) -> a
-    25:25:java.lang.String access$002(com.maning.updatelibrary.InstallUtils,java.lang.String) -> a
-    25:25:boolean access$1202(boolean) -> a
-    25:25:void access$200(com.maning.updatelibrary.InstallUtils,java.lang.Exception) -> a
-    25:25:int access$402(com.maning.updatelibrary.InstallUtils,int) -> a
-    108:115:com.maning.updatelibrary.InstallUtils with(android.content.Context) -> a
-    136:137:com.maning.updatelibrary.InstallUtils setApkUrl(java.lang.String) -> a
-    158:159:com.maning.updatelibrary.InstallUtils setCallBack(com.maning.updatelibrary.InstallUtils$DownloadCallBack) -> a
-    166:285:void startDownload() -> a
-    328:340:void downloadFail(java.lang.Exception) -> a
-    395:418:void installAPK(android.content.Context,java.lang.String,com.maning.updatelibrary.InstallUtils$InstallCallBack) -> a
-    25:25:void access$100(com.maning.updatelibrary.InstallUtils,java.lang.String) -> b
-    25:25:void access$1000(com.maning.updatelibrary.InstallUtils) -> b
-    25:25:android.os.Handler access$1300() -> b
-    25:25:com.maning.updatelibrary.InstallUtils$DownloadCallBack access$1402(com.maning.updatelibrary.InstallUtils$DownloadCallBack) -> b
-    25:25:boolean access$602(boolean) -> b
-    25:25:int access$702(com.maning.updatelibrary.InstallUtils,int) -> b
-    288:296:void downloadAlgin(java.lang.String) -> b
-    25:25:void access$1100(com.maning.updatelibrary.InstallUtils) -> c
-    25:25:com.maning.updatelibrary.InstallUtils$DownloadCallBack access$1400() -> c
-    25:25:boolean access$802(boolean) -> c
-    25:25:java.io.File access$300() -> d
-    25:25:int access$400(com.maning.updatelibrary.InstallUtils) -> d
-    25:25:void access$500(com.maning.updatelibrary.InstallUtils) -> e
-    25:25:boolean access$600() -> e
-    25:25:int access$700(com.maning.updatelibrary.InstallUtils) -> f
-    25:25:boolean access$800() -> f
-    25:25:void access$900(com.maning.updatelibrary.InstallUtils) -> g
-    378:384:void destroyTimer() -> g
-    344:356:void downloadCancle() -> h
-    311:324:void downloadComplete() -> i
-    299:307:void downloadStart() -> j
-    359:374:void initTimer() -> k
-com.maning.updatelibrary.InstallUtils$1 -> com.maning.updatelibrary.a$a:
-    com.maning.updatelibrary.InstallUtils this$0 -> b
-    194:194:void <init>(com.maning.updatelibrary.InstallUtils) -> <init>
-    197:276:void run() -> run
-com.maning.updatelibrary.InstallUtils$2 -> com.maning.updatelibrary.a$b:
-    java.lang.String val$newHttp -> b
-    com.maning.updatelibrary.InstallUtils this$0 -> c
-    288:288:void <init>(com.maning.updatelibrary.InstallUtils,java.lang.String) -> <init>
-    291:294:void run() -> run
-com.maning.updatelibrary.InstallUtils$3 -> com.maning.updatelibrary.a$c:
-    311:311:void <init>(com.maning.updatelibrary.InstallUtils) -> <init>
-    314:318:void run() -> run
-com.maning.updatelibrary.InstallUtils$4 -> com.maning.updatelibrary.a$d:
-    java.lang.Exception val$exception -> b
-    328:328:void <init>(com.maning.updatelibrary.InstallUtils,java.lang.Exception) -> <init>
-    331:335:void run() -> run
-com.maning.updatelibrary.InstallUtils$5 -> com.maning.updatelibrary.a$e:
-    344:344:void <init>(com.maning.updatelibrary.InstallUtils) -> <init>
-    347:351:void run() -> run
-com.maning.updatelibrary.InstallUtils$6 -> com.maning.updatelibrary.a$f:
-    com.maning.updatelibrary.InstallUtils this$0 -> b
-    360:360:void <init>(com.maning.updatelibrary.InstallUtils) -> <init>
-    363:371:void run() -> run
-com.maning.updatelibrary.InstallUtils$6$1 -> com.maning.updatelibrary.a$f$a:
-    com.maning.updatelibrary.InstallUtils$6 this$1 -> b
-    363:363:void <init>(com.maning.updatelibrary.InstallUtils$6) -> <init>
-    366:369:void run() -> run
-com.maning.updatelibrary.InstallUtils$DownloadCallBack -> com.maning.updatelibrary.a$g:
-    void cancle() -> a
-    void onComplete(java.lang.String) -> a
-    void onFail(java.lang.Exception) -> a
-    void onLoading(long,long) -> a
-com.maning.updatelibrary.InstallUtils$InstallCallBack -> com.maning.updatelibrary.a$h:
-    void onFail(java.lang.Exception) -> a
-    void onSuccess() -> a
 com.maning.updatelibrary.MNUpdateApkFileProvider -> com.maning.updatelibrary.MNUpdateApkFileProvider:
     14:14:void <init>() -> <init>
-com.maning.updatelibrary.MNUtils -> com.maning.updatelibrary.b:
-    28:36:java.lang.String getCachePath(android.content.Context) -> a
 com.maning.updatelibrary.R$anim -> com.maning.updatelibrary.R$anim:
     13:13:void <init>() -> <init>
 com.maning.updatelibrary.R$attr -> com.maning.updatelibrary.R$attr:
@@ -37171,6 +37115,8 @@ io.reactivex.Observable -> c.a.d:
     8304:8304:io.reactivex.Observable flatMap(io.reactivex.functions.Function,boolean) -> a
     8337:8337:io.reactivex.Observable flatMap(io.reactivex.functions.Function,boolean,int) -> a
     8373:8384:io.reactivex.Observable flatMap(io.reactivex.functions.Function,boolean,int,int) -> a
+    11925:11925:io.reactivex.disposables.Disposable subscribe(io.reactivex.functions.Consumer) -> a
+    12015:12024:io.reactivex.disposables.Disposable subscribe(io.reactivex.functions.Consumer,io.reactivex.functions.Consumer,io.reactivex.functions.Action,io.reactivex.functions.Consumer) -> a
     12030:12038:void subscribe(io.reactivex.Observer) -> a
     void subscribeActual(io.reactivex.Observer) -> b
     166:166:int bufferSize() -> b
@@ -37280,12 +37226,17 @@ io.reactivex.internal.disposables.EmptyDisposable -> c.a.n.a.b:
     28:28:io.reactivex.internal.disposables.EmptyDisposable valueOf(java.lang.String) -> valueOf
     28:28:io.reactivex.internal.disposables.EmptyDisposable[] values() -> values
 io.reactivex.internal.functions.Functions -> c.a.n.b.a:
+    io.reactivex.functions.Consumer EMPTY_CONSUMER -> c
+    io.reactivex.functions.Consumer ON_ERROR_MISSING -> d
     io.reactivex.functions.Function IDENTITY -> a
+    io.reactivex.functions.Action EMPTY_ACTION -> b
     81:514:void <clinit>() -> <clinit>
-    90:90:io.reactivex.functions.Function identity() -> a
+    106:106:io.reactivex.functions.Consumer emptyConsumer() -> a
     199:199:java.util.concurrent.Callable justCallable(java.lang.Object) -> a
+    90:90:io.reactivex.functions.Function identity() -> b
 io.reactivex.internal.functions.Functions$EmptyAction -> c.a.n.b.a$a:
     674:674:void <init>() -> <init>
+    676:676:void run() -> run
     680:680:java.lang.String toString() -> toString
 io.reactivex.internal.functions.Functions$EmptyConsumer -> c.a.n.b.a$b:
     684:684:void <init>() -> <init>
@@ -37377,6 +37328,18 @@ io.reactivex.internal.observers.BlockingMultiObserver -> c.a.n.d.c:
     80:91:java.lang.Object blockingGet() -> a
     42:47:void dispose() -> b
     65:67:void onError(java.lang.Throwable) -> onError
+io.reactivex.internal.observers.LambdaObserver -> c.a.n.d.d:
+    io.reactivex.functions.Consumer onError -> c
+    io.reactivex.functions.Consumer onNext -> b
+    io.reactivex.functions.Consumer onSubscribe -> e
+    io.reactivex.functions.Action onComplete -> d
+    39:44:void <init>(io.reactivex.functions.Consumer,io.reactivex.functions.Consumer,io.reactivex.functions.Action,io.reactivex.functions.Consumer) -> <init>
+    48:57:void onSubscribe(io.reactivex.disposables.Disposable) -> a
+    89:98:void onComplete() -> a
+    102:103:void dispose() -> b
+    107:107:boolean isDisposed() -> c
+    74:85:void onError(java.lang.Throwable) -> onError
+    61:70:void onNext(java.lang.Object) -> onNext
 io.reactivex.internal.operators.observable.AbstractObservableWithUpstream -> c.a.n.e.a.a:
     io.reactivex.ObservableSource source -> b
     34:36:void <init>(io.reactivex.ObservableSource) -> <init>
@@ -37786,7 +37749,8 @@ io.reactivex.internal.util.NotificationLite$ErrorNotification -> c.a.n.g.g$b:
     43:43:java.lang.String toString() -> toString
 io.reactivex.internal.util.Pow2 -> c.a.n.g.h:
     34:34:int roundToPowerOfTwo(int) -> a
-io.reactivex.observers.SerializedObserver -> c.a.o.a:
+io.reactivex.observers.LambdaConsumerIntrospection -> c.a.o.a:
+io.reactivex.observers.SerializedObserver -> c.a.o.b:
     boolean emitting -> e
     boolean done -> g
     io.reactivex.internal.util.AppendOnlyLinkedArrayList queue -> f

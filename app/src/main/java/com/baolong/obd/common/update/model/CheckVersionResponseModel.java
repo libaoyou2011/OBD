@@ -4,70 +4,215 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class CheckVersionResponseModel implements Parcelable {
-    private String downloadUrl;
-    private String publishTime;
-    private String updateContent;
-    private String updateType;
-    private String versionCode;
+
+    /**
+     * searchValue : null
+     * createBy : null
+     * createTime : null
+     * updateBy : null
+     * updateTime : 2021-05-06
+     * remark : null
+     * dataScope : null
+     * params : {}
+     * id : 1
+     * versionCode : 2
+     * versionName : 1.0.2
+     * platform : Android
+     * category : 车主版
+     * updateContent : 1.修复部分bug
+     * publishStatus : null
+     * publishTime : 2021-05-06
+     * fileApp : http://10.10.10.142:81/dev-api/profile/1.0.2.apk
+     * fileSize : null
+     */
+
+    private Object searchValue;
+    private Object createBy;
+    private Object createTime;
+    private Object updateBy;
+    private String updateTime;
+    private Object remark;
+    private Object dataScope;
+    private ParamsBean params;
+    private int id;
+    private int versionCode;
     private String versionName;
-    private String versionSize;
+    private String platform;
+    private String category;
+    private String updateContent;
+    private Object publishStatus;
+    private String publishTime;
+    private String fileApp;
+    private Object fileSize;
 
-    public String getDownloadUrl() {
-        return this.downloadUrl;
+
+    public CheckVersionResponseModel(Parcel in) {
+        updateTime = in.readString();
+        id = in.readInt();
+        versionCode = in.readInt();
+        versionName = in.readString();
+        platform = in.readString();
+        category = in.readString();
+        updateContent = in.readString();
+        publishTime = in.readString();
+        fileApp = in.readString();
     }
 
-    public String getPublishTime() {
-        return this.publishTime;
+    public static final Creator<CheckVersionResponseModel> CREATOR = new Creator<CheckVersionResponseModel>() {
+        @Override
+        public CheckVersionResponseModel createFromParcel(Parcel in) {
+            return new CheckVersionResponseModel(in);
+        }
+
+        @Override
+        public CheckVersionResponseModel[] newArray(int size) {
+            return new CheckVersionResponseModel[size];
+        }
+    };
+
+    public Object getSearchValue() {
+        return searchValue;
     }
 
-    public String getUpdateContent() {
-        return this.updateContent;
+    public void setSearchValue(Object searchValue) {
+        this.searchValue = searchValue;
     }
 
-    public String getUpdateType() {
-        return this.updateType;
+    public Object getCreateBy() {
+        return createBy;
     }
 
-    public String getVersionCode() {
-        return this.versionCode;
+    public void setCreateBy(Object createBy) {
+        this.createBy = createBy;
+    }
+
+    public Object getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Object createTime) {
+        this.createTime = createTime;
+    }
+
+    public Object getUpdateBy() {
+        return updateBy;
+    }
+
+    public void setUpdateBy(Object updateBy) {
+        this.updateBy = updateBy;
+    }
+
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public Object getRemark() {
+        return remark;
+    }
+
+    public void setRemark(Object remark) {
+        this.remark = remark;
+    }
+
+    public Object getDataScope() {
+        return dataScope;
+    }
+
+    public void setDataScope(Object dataScope) {
+        this.dataScope = dataScope;
+    }
+
+    public ParamsBean getParams() {
+        return params;
+    }
+
+    public void setParams(ParamsBean params) {
+        this.params = params;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getVersionCode() {
+        return versionCode;
+    }
+
+    public void setVersionCode(int versionCode) {
+        this.versionCode = versionCode;
     }
 
     public String getVersionName() {
-        return this.versionName;
+        return versionName;
     }
 
-    public String getVersionSize() {
-        return this.versionSize;
+    public void setVersionName(String versionName) {
+        this.versionName = versionName;
     }
 
-    public void setDownloadUrl(String paramString) {
-        this.downloadUrl = paramString;
+    public String getPlatform() {
+        return platform;
     }
 
-    public void setPublishTime(String paramString) {
-        this.publishTime = paramString;
+    public void setPlatform(String platform) {
+        this.platform = platform;
     }
 
-    public void setUpdateContent(String paramString) {
-        this.updateContent = paramString;
+    public String getCategory() {
+        return category;
     }
 
-    public void setUpdateType(String paramString) {
-        this.updateType = paramString;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
-    public void setVersionCode(String paramString) {
-        this.versionCode = paramString;
+    public String getUpdateContent() {
+        return updateContent;
     }
 
-    public void setVersionName(String paramString) {
-        this.versionName = paramString;
+    public void setUpdateContent(String updateContent) {
+        this.updateContent = updateContent;
     }
 
-    public void setVersionSize(String paramString) {
-        this.versionSize = paramString;
+    public Object getPublishStatus() {
+        return publishStatus;
     }
 
+    public void setPublishStatus(Object publishStatus) {
+        this.publishStatus = publishStatus;
+    }
+
+    public String getPublishTime() {
+        return publishTime;
+    }
+
+    public void setPublishTime(String publishTime) {
+        this.publishTime = publishTime;
+    }
+
+    public String getFileApp() {
+        return fileApp;
+    }
+
+    public void setFileApp(String fileApp) {
+        this.fileApp = fileApp;
+    }
+
+    public Object getFileSize() {
+        return fileSize;
+    }
+
+    public void setFileSize(Object fileSize) {
+        this.fileSize = fileSize;
+    }
 
     @Override
     public int describeContents() {
@@ -76,37 +221,41 @@ public class CheckVersionResponseModel implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(this.downloadUrl);
-        dest.writeString(this.publishTime);
-        dest.writeString(this.updateContent);
-        dest.writeString(this.updateType);
-        dest.writeString(this.versionCode);
-        dest.writeString(this.versionName);
-        dest.writeString(this.versionSize);
+        dest.writeString(updateTime);
+        dest.writeInt(id);
+        dest.writeInt(versionCode);
+        dest.writeString(versionName);
+        dest.writeString(platform);
+        dest.writeString(category);
+        dest.writeString(updateContent);
+        dest.writeString(publishTime);
+        dest.writeString(fileApp);
     }
 
-    public CheckVersionResponseModel() {
+    @Override
+    public String toString() {
+        return "CheckVersionResponseModel{" +
+                "searchValue=" + searchValue +
+                ", createBy=" + createBy +
+                ", createTime=" + createTime +
+                ", updateBy=" + updateBy +
+                ", updateTime='" + updateTime + '\'' +
+                ", remark=" + remark +
+                ", dataScope=" + dataScope +
+                ", params=" + params +
+                ", id=" + id +
+                ", versionCode=" + versionCode +
+                ", versionName='" + versionName + '\'' +
+                ", platform='" + platform + '\'' +
+                ", category='" + category + '\'' +
+                ", updateContent='" + updateContent + '\'' +
+                ", publishStatus=" + publishStatus +
+                ", publishTime='" + publishTime + '\'' +
+                ", fileApp='" + fileApp + '\'' +
+                ", fileSize=" + fileSize +
+                '}';
     }
 
-    protected CheckVersionResponseModel(Parcel in) {
-        this.downloadUrl = in.readString();
-        this.publishTime = in.readString();
-        this.updateContent = in.readString();
-        this.updateType = in.readString();
-        this.versionCode = in.readString();
-        this.versionName = in.readString();
-        this.versionSize = in.readString();
+    public static class ParamsBean {
     }
-
-    public static final Creator<CheckVersionResponseModel> CREATOR = new Creator<CheckVersionResponseModel>() {
-        @Override
-        public CheckVersionResponseModel createFromParcel(Parcel source) {
-            return new CheckVersionResponseModel(source);
-        }
-
-        @Override
-        public CheckVersionResponseModel[] newArray(int size) {
-            return new CheckVersionResponseModel[size];
-        }
-    };
 }

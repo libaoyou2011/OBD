@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/background_my"
+    android:background="@color/background"
     android:orientation="vertical">
 
     <include layout="@layout/title" />
@@ -43,7 +43,7 @@
             android:text="瑶海监测站"
             android:textColor="@color/textColor_666666"
             android:textSize="@dimen/font_16"
-            android:visibility="gone"/>
+            android:visibility="gone" />
     </LinearLayout>
 
     <LinearLayout
@@ -54,115 +54,103 @@
         android:orientation="vertical"
         android:showDividers="middle">
 
-        <TextView
-            android:id="@+id/tv_user_info"
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:id="@+id/ll_user_info"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_my_xinxi"
-            android:drawablePadding="@dimen/x15"
-            android:paddingLeft="@dimen/x50"
-            android:paddingTop="@dimen/x30"
-            android:paddingRight="@dimen/x60"
-            android:paddingBottom="@dimen/x30"
-            android:text="我的信息"
-            android:textColor="@color/textColor_666666"
-            android:gravity="center_vertical"/>
-
-        <TextView
-            android:id="@+id/tv_choose_photos"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_my_info"
-            android:drawablePadding="@dimen/x15"
-            android:paddingLeft="@dimen/x50"
-            android:paddingTop="@dimen/x30"
-            android:paddingRight="@dimen/x60"
-            android:paddingBottom="@dimen/x30"
-            android:text="拍照处理上传"
-            android:visibility="gone"
-            android:gravity="center_vertical"/>
-
-        <TextView
-            android:id="@+id/tv_station_set"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_my_jiancezhan"
-            android:drawablePadding="@dimen/x15"
-            android:paddingLeft="@dimen/x50"
-            android:paddingTop="@dimen/x30"
-            android:paddingRight="@dimen/x60"
-            android:paddingBottom="@dimen/x30"
-            android:text="监测站设置"
-            android:gravity="center_vertical"
-            android:visibility="gone"/>
-
-        <TextView
-            android:id="@+id/tv_authentication"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_my_mima"
-            android:drawablePadding="@dimen/x15"
-            android:paddingLeft="@dimen/x50"
-            android:paddingTop="@dimen/x30"
-            android:paddingRight="@dimen/x60"
-            android:paddingBottom="@dimen/x30"
-            android:text="修改密码"
-            android:gravity="center_vertical"/>
-
-        <TextView
-            android:id="@+id/tv_current_server"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:drawablePadding="@dimen/x15"
-            android:paddingLeft="@dimen/x50"
-            android:paddingTop="@dimen/x30"
-            android:paddingRight="@dimen/x60"
-            android:paddingBottom="@dimen/x30"
-            android:text="当前服务地址:"
-            android:gravity="center_vertical"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/tv_current_version"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_my_version"
-            android:drawablePadding="@dimen/x15"
-            android:paddingLeft="@dimen/x50"
-            android:paddingTop="@dimen/x30"
-            android:paddingRight="@dimen/x60"
-            android:paddingBottom="@dimen/x30"
-            android:text="当前版本"
-            android:gravity="center_vertical"/>
-
-        <RelativeLayout
-            android:id="@+id/rl_send"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/x50"
-            android:paddingTop="@dimen/x30"
-            android:paddingRight="@dimen/x60"
-            android:paddingBottom="@dimen/x30">
+            android:gravity="center_vertical">
 
             <TextView
-                android:id="@+id/tv_send"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_user_info"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_my_send"
+                android:drawableLeft="@drawable/ic_my_xinxi"
                 android:drawablePadding="@dimen/x15"
-                android:text="监管发送设置"
-                android:gravity="center_vertical"/>
+                android:paddingLeft="@dimen/x50"
+                android:paddingRight="@dimen/x60"
+                android:paddingTop="@dimen/x26"
+                android:paddingBottom="@dimen/x26"
+                android:text="我的信息"
+                android:textColor="@color/textColor_666666"
+                android:gravity="center_vertical" />
 
-            <Switch
-                android:id="@+id/switch_send"
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="@dimen/x26"
-                android:switchMinWidth="40dp"/>
-        </RelativeLayout>
+                android:layout_marginRight="@dimen/x40"
+                android:src="@mipmap/arrow_right"
+                android:layout_marginEnd="@dimen/x40" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_authentication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_authentication"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_my_mima"
+                android:drawablePadding="@dimen/x15"
+                android:paddingLeft="@dimen/x50"
+                android:paddingTop="@dimen/x26"
+                android:paddingRight="@dimen/x60"
+                android:paddingBottom="@dimen/x26"
+                android:text="修改密码"
+                android:gravity="center_vertical" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x40"
+                android:src="@mipmap/arrow_right"
+                android:layout_marginEnd="@dimen/x40" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_current_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_current_version"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_my_version"
+                android:drawablePadding="@dimen/x15"
+                android:paddingLeft="@dimen/x50"
+                android:paddingTop="@dimen/x30"
+                android:paddingRight="@dimen/x60"
+                android:paddingBottom="@dimen/x30"
+                android:text="当前版本"
+                android:gravity="center_vertical" />
+
+            <TextView
+                android:id="@+id/tv_new_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/x10"
+                android:textColor="@color/text_red_times"
+                android:textSize="@dimen/x26"
+                android:text="新版本"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x40"
+                android:src="@mipmap/arrow_right"
+                android:layout_marginEnd="@dimen/x40" />
+        </LinearLayout>
 
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="fill_parent"

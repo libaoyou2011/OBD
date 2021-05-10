@@ -39,7 +39,7 @@ import okhttp3.MediaType;
 import okhttp3.RequestBody;
 
 @Route(path = Constance.ACTIVITY_URL_CarDetailActivity)
-public class CarDetailActivity extends BaseActivity  {
+public class CarDetailActivity extends BaseActivity {
     private static final String TAG = CarDetailActivity.class.getSimpleName();
     private OBDCar mExhaust;
     private boolean isOnlyDisplay = true; //true: 预览   false：新增/修改

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   Copyright 2017 Zhihu Inc.
 
   Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,5 +16,17 @@
 <paths>
     <external-path
         name="my_images"
-        path="Pictures"/>
+        path="Pictures" />
+
+    <!-- 这段代码很重要，这里的路径+android.permission.REQUEST_INSTALL_PACKAGES权限就可以解决，8.0及以上版本，不能自动安装下载包的问题 -->
+    <external-path
+        name="external_storage_root"
+        path="." />
+    <external-path
+        name="external_storage_download"
+        path="Download" />
+    <root-path
+        name="root"
+        path="" />
+
 </paths>

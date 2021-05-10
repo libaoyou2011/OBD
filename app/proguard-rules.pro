@@ -208,6 +208,8 @@
 -keep class com.baolong.obd.querycar.data.entity.**{*;}
 -keep class com.baolong.obd.analysis.data.entity.**{*;}
 -keep class com.baolong.obd.my.data.entity.**{*;}
+-keep class com.baolong.obd.common.update.model.**{*;}
+
 #-------------------------------------------------------------------------
 
 

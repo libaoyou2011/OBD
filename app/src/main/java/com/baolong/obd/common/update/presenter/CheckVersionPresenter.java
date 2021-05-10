@@ -2,7 +2,7 @@ package com.baolong.obd.common.update.presenter;
 
 import androidx.annotation.NonNull;
 
-import com.baolong.obd.common.network.ResponseWrapper;
+import com.baolong.obd.common.network.ResponseWrapperList;
 import com.baolong.obd.common.network.RetrofitManager;
 import com.baolong.obd.common.update.UpdataApis;
 import com.baolong.obd.common.update.contract.ICheckVersionContract;
@@ -25,14 +25,14 @@ public class CheckVersionPresenter implements ICheckVersionContract.Presenter {
     public void dropView() {
     }
 
-    public void getData(String s) {
+    public void getData(String platform, String category, String versionCode) {
         CheckVersionRequestModel checkVersionRequestModel = new CheckVersionRequestModel();
         checkVersionRequestModel.setSystem("0");
         RetrofitManager.getInstance().createReq(UpdataApis.CheckVersion.class)
-                .req(checkVersionRequestModel)
+                .req(platform, category, versionCode)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<ResponseWrapper<CheckVersionResponseModel>>() {
+                .subscribe(new Observer<ResponseWrapperList<CheckVersionResponseModel>>() {
                     public void onCompleted() {
                     }
 
@@ -40,9 +40,15 @@ public class CheckVersionPresenter implements ICheckVersionContract.Presenter {
                         t.printStackTrace();
                     }
 
-                    public void onNext(ResponseWrapper<CheckVersionResponseModel> responseWrapper) {
+                    public void onNext(ResponseWrapperList<CheckVersionResponseModel> responseWrapperList) {
                         if (CheckVersionPresenter.this.mCheckVersionView != null) {
-                            CheckVersionPresenter.this.mCheckVersionView.showData(responseWrapper.getData());
+                            if (responseWrapperList != null) {
+                                if (responseWrapperList.getRows() != null && responseWrapperList.getRows().size() > 0) {
+                                    CheckVersionPresenter.this.mCheckVersionView.showData(responseWrapperList.getRows().get(0));
+                                }
+
+                            }
+
                         }
                     }
                 });
